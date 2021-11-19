@@ -12,10 +12,10 @@ from PySide2 import *
 
 
 def set_labels(gui_window, machine):
-    gui_window.ui.label_name.setText(machine1.identification)
-    gui_window.ui.label_temperature.setText(str(machine1.temperature))
-    gui_window.ui.label_nas.setText(str(machine1.nas))
-    gui_window.ui.label_time.setText(str(machine1.runtime))
+    gui_window.ui.label_name.setText(machine.identification)
+    gui_window.ui.label_temperature.setText(str(machine.temperature))
+    gui_window.ui.label_nas.setText(str(machine.nas))
+    gui_window.ui.label_time.setText(str(machine.runtime))
 
 
 if __name__ == "__main__":

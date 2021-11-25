@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>822</width>
-    <height>610</height>
+    <width>813</width>
+    <height>627</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -99,8 +99,8 @@ border:none;</string>
              <string>Menu</string>
             </property>
             <property name="icon">
-             <iconset resource="../../icons/icons.qrc">
-              <normaloff>:/prefix/menu.png</normaloff>:/prefix/menu.png</iconset>
+             <iconset resource="../icons.qrc">
+              <normaloff>:/prefix/icons/menu.png</normaloff>:/prefix/icons/menu.png</iconset>
             </property>
             <property name="iconSize">
              <size>
@@ -132,15 +132,15 @@ border:none;</string>
            <widget class="QLabel" name="label">
             <property name="maximumSize">
              <size>
-              <width>41</width>
-              <height>31</height>
+              <width>20</width>
+              <height>20</height>
              </size>
             </property>
             <property name="text">
              <string/>
             </property>
             <property name="pixmap">
-             <pixmap resource="../../icons/icons.qrc">:/prefix/hammer.png</pixmap>
+             <pixmap resource="../icons.qrc">:/prefix/icons/hammer.png</pixmap>
             </property>
             <property name="scaledContents">
              <bool>true</bool>
@@ -195,8 +195,8 @@ border:none;</string>
              <string/>
             </property>
             <property name="icon">
-             <iconset resource="../../icons/icons.qrc">
-              <normaloff>:/prefix/remove.png</normaloff>:/prefix/remove.png</iconset>
+             <iconset resource="../icons.qrc">
+              <normaloff>:/prefix/icons/remove.png</normaloff>:/prefix/icons/remove.png</iconset>
             </property>
             <property name="iconSize">
              <size>
@@ -212,8 +212,8 @@ border:none;</string>
              <string/>
             </property>
             <property name="icon">
-             <iconset resource="../../icons/icons.qrc">
-              <normaloff>:/prefix/copy.png</normaloff>:/prefix/copy.png</iconset>
+             <iconset resource="../icons.qrc">
+              <normaloff>:/prefix/icons/copy.png</normaloff>:/prefix/icons/copy.png</iconset>
             </property>
             <property name="iconSize">
              <size>
@@ -229,8 +229,8 @@ border:none;</string>
              <string/>
             </property>
             <property name="icon">
-             <iconset resource="../../icons/icons.qrc">
-              <normaloff>:/prefix/close.png</normaloff>:/prefix/close.png</iconset>
+             <iconset resource="../icons.qrc">
+              <normaloff>:/prefix/icons/close.png</normaloff>:/prefix/icons/close.png</iconset>
             </property>
             <property name="iconSize">
              <size>
@@ -286,7 +286,7 @@ border:none;</string>
          </property>
          <property name="maximumSize">
           <size>
-           <width>20</width>
+           <width>200</width>
            <height>16777215</height>
           </size>
          </property>
@@ -356,8 +356,8 @@ border:none;</string>
                 <string/>
                </property>
                <property name="icon">
-                <iconset resource="../../icons/icons.qrc">
-                 <normaloff>:/prefix/hardware-chip.png</normaloff>:/prefix/hardware-chip.png</iconset>
+                <iconset resource="../icons.qrc">
+                 <normaloff>:/prefix/icons/hardware-chip.png</normaloff>:/prefix/icons/hardware-chip.png</iconset>
                </property>
                <property name="iconSize">
                 <size>
@@ -392,7 +392,7 @@ border:none;</string>
                 </font>
                </property>
                <property name="text">
-                <string>Testing</string>
+                <string>Statistics</string>
                </property>
                <property name="margin">
                 <number>5</number>
@@ -405,8 +405,8 @@ border:none;</string>
                 <string/>
                </property>
                <property name="icon">
-                <iconset resource="../../icons/icons.qrc">
-                 <normaloff>:/prefix/construct.png</normaloff>:/prefix/construct.png</iconset>
+                <iconset resource="../icons.qrc">
+                 <normaloff>:/prefix/icons/construct.png</normaloff>:/prefix/icons/construct.png</iconset>
                </property>
                <property name="iconSize">
                 <size>
@@ -438,8 +438,8 @@ border:none;</string>
                 <string/>
                </property>
                <property name="icon">
-                <iconset resource="../../icons/icons.qrc">
-                 <normaloff>:/prefix/factory.png</normaloff>:/prefix/factory.png</iconset>
+                <iconset resource="../icons.qrc">
+                 <normaloff>:/prefix/icons/factory.png</normaloff>:/prefix/icons/factory.png</iconset>
                </property>
                <property name="iconSize">
                 <size>
@@ -450,13 +450,13 @@ border:none;</string>
               </widget>
              </item>
              <item row="2" column="0">
-              <widget class="QPushButton" name="tests_button">
+              <widget class="QPushButton" name="stats_button">
                <property name="text">
                 <string/>
                </property>
                <property name="icon">
-                <iconset resource="../../icons/icons.qrc">
-                 <normaloff>:/prefix/analytics.png</normaloff>:/prefix/analytics.png</iconset>
+                <iconset resource="../icons.qrc">
+                 <normaloff>:/prefix/icons/analytics.png</normaloff>:/prefix/icons/analytics.png</iconset>
                </property>
                <property name="iconSize">
                 <size>
@@ -484,11 +484,252 @@ border:none;</string>
           <enum>QFrame::Raised</enum>
          </property>
          <layout class="QVBoxLayout" name="verticalLayout_2">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
           <item>
            <widget class="QStackedWidget" name="stackedWidget">
-            <property name="currentIndex">
-             <number>5</number>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>16777215</height>
+             </size>
             </property>
+            <property name="currentIndex">
+             <number>6</number>
+            </property>
+            <widget class="QWidget" name="main_menu_page">
+             <layout class="QVBoxLayout" name="verticalLayout_10">
+              <item>
+               <widget class="QFrame" name="main_menu_label">
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>60</height>
+                 </size>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_18">
+                 <item>
+                  <widget class="QLabel" name="label_27">
+                   <property name="font">
+                    <font>
+                     <family>Nirmala UI</family>
+                     <pointsize>18</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="layoutDirection">
+                    <enum>Qt::LeftToRight</enum>
+                   </property>
+                   <property name="autoFillBackground">
+                    <bool>false</bool>
+                   </property>
+                   <property name="text">
+                    <string>MAIN MENU</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item alignment="Qt::AlignTop">
+               <widget class="QFrame" name="main_menu_buttons_frame">
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QGridLayout" name="gridLayout_6">
+                 <item row="1" column="1">
+                  <widget class="QPushButton" name="pushButton_9">
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>50</height>
+                    </size>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Nirmala UI</family>
+                     <pointsize>10</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">background-color: rgb(80, 170, 255);</string>
+                   </property>
+                   <property name="text">
+                    <string>  Machines</string>
+                   </property>
+                   <property name="icon">
+                    <iconset resource="../icons.qrc">
+                     <normaloff>:/prefix/icons/hardware-chip.png</normaloff>:/prefix/icons/hardware-chip.png</iconset>
+                   </property>
+                   <property name="iconSize">
+                    <size>
+                     <width>32</width>
+                     <height>32</height>
+                    </size>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="3" column="0">
+                  <widget class="QPushButton" name="pushButton_10">
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>50</height>
+                    </size>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Nirmala UI</family>
+                     <pointsize>10</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">background-color: rgb(80, 170, 255);</string>
+                   </property>
+                   <property name="text">
+                    <string>  Statistics</string>
+                   </property>
+                   <property name="icon">
+                    <iconset resource="../icons.qrc">
+                     <normaloff>:/prefix/icons/analytics.png</normaloff>:/prefix/icons/analytics.png</iconset>
+                   </property>
+                   <property name="iconSize">
+                    <size>
+                     <width>32</width>
+                     <height>32</height>
+                    </size>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="3" column="1">
+                  <widget class="QPushButton" name="pushButton_11">
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>50</height>
+                    </size>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Nirmala UI</family>
+                     <pointsize>10</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">background-color: rgb(80, 170, 255);</string>
+                   </property>
+                   <property name="text">
+                    <string>  Settings</string>
+                   </property>
+                   <property name="icon">
+                    <iconset resource="../icons.qrc">
+                     <normaloff>:/prefix/icons/construct.png</normaloff>:/prefix/icons/construct.png</iconset>
+                   </property>
+                   <property name="iconSize">
+                    <size>
+                     <width>32</width>
+                     <height>32</height>
+                    </size>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="0">
+                  <widget class="QPushButton" name="pushButton_8">
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>50</height>
+                    </size>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Nirmala UI</family>
+                     <pointsize>10</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">background-color: rgb(80, 170, 255);</string>
+                   </property>
+                   <property name="text">
+                    <string>  Industry halls </string>
+                   </property>
+                   <property name="icon">
+                    <iconset resource="../icons.qrc">
+                     <normaloff>:/prefix/icons/factory.png</normaloff>:/prefix/icons/factory.png</iconset>
+                   </property>
+                   <property name="iconSize">
+                    <size>
+                     <width>32</width>
+                     <height>32</height>
+                    </size>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="0">
+                  <widget class="QFrame" name="spacer">
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="2" column="0">
+                  <widget class="QFrame" name="spacer2">
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </widget>
             <widget class="QWidget" name="halls_list_page">
              <layout class="QVBoxLayout" name="verticalLayout_6">
               <item>
@@ -553,7 +794,7 @@ border:none;</string>
                     <string/>
                    </property>
                    <property name="pixmap">
-                    <pixmap resource="../../icons/icons.qrc">:/prefix/search.png</pixmap>
+                    <pixmap>:/prefix/search.png</pixmap>
                    </property>
                    <property name="scaledContents">
                     <bool>true</bool>
@@ -865,7 +1106,7 @@ border:none;</string>
                     <string/>
                    </property>
                    <property name="pixmap">
-                    <pixmap resource="../../icons/icons.qrc">:/prefix/search.png</pixmap>
+                    <pixmap>:/prefix/search.png</pixmap>
                    </property>
                    <property name="scaledContents">
                     <bool>true</bool>
@@ -1288,7 +1529,7 @@ border:none;</string>
                     </font>
                    </property>
                    <property name="text">
-                    <string>TESTS                                                                                              </string>
+                    <string>Statistics</string>
                    </property>
                   </widget>
                  </item>
@@ -1333,7 +1574,77 @@ border:none;</string>
               </item>
              </layout>
             </widget>
-            <widget class="QWidget" name="settings_page"/>
+            <widget class="QWidget" name="settings_page">
+             <layout class="QVBoxLayout" name="verticalLayout_9">
+              <item>
+               <widget class="QFrame" name="test_top_frame_2">
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>50</height>
+                 </size>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_17">
+                 <item>
+                  <widget class="QLabel" name="label_26">
+                   <property name="font">
+                    <font>
+                     <family>Nirmala UI</family>
+                     <pointsize>12</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>Settings</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="pushButton_7">
+                   <property name="maximumSize">
+                    <size>
+                     <width>80</width>
+                     <height>30</height>
+                    </size>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Nirmala UI</family>
+                     <pointsize>8</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">background-color: rgb(85, 170, 255);</string>
+                   </property>
+                   <property name="text">
+                    <string>BACK</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="frame_3">
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
            </widget>
           </item>
          </layout>
@@ -1436,7 +1747,7 @@ border:none;
   </widget>
  </widget>
  <resources>
-  <include location="../../icons/icons.qrc"/>
+  <include location="../icons.qrc"/>
  </resources>
  <connections/>
 </ui>

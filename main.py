@@ -9,6 +9,7 @@ import sys
 import os
 from view.interface import *
 from PySide2 import *
+from qt_material import *
 
 
 def set_labels(gui_window, machine):
@@ -42,11 +43,9 @@ if __name__ == "__main__":
     app = QApplication(sys.argv)
     window = MainWindow()
     window.show()
-
     while True:
         QApplication.processEvents()
         schedule.run_pending()
-        set_labels(window, machine1)
         time.sleep(0.1)
 
     app.exec_()

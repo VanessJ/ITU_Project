@@ -20,19 +20,17 @@ def set_labels(gui_window, machine):
 
 
 if __name__ == "__main__":
-
-    schedule.every(1).seconds.do(lambda: group_all.print_values())
     schedule.every(5).seconds.do(lambda: sim.operating_update())
     schedule.every(1).seconds.do(lambda: sim.stopped_update())
     schedule.every(10).seconds.do(lambda: sim.not_filtering_update())
     schedule.every(1).seconds.do(lambda: sim.filtering_update())
     schedule.every(1).seconds.do(lambda: sim.runtime_update())
 
-    machine1 = Machine("Machine 1")
-    machine2 = Machine("Machine 2")
-    machine3 = Machine("Machine 3")
+    machine1 = Machine("M1")
+    machine2 = Machine("M2")
+    machine3 = Machine("M3")
 
-    group_all = MachineGroup("All")
+    group_all = MachineGroup("Hall A")
     group_all.add_machine(machine1)
     group_all.add_machine(machine2)
     group_all.add_machine(machine3)
@@ -42,11 +40,12 @@ if __name__ == "__main__":
 
     app = QApplication(sys.argv)
     window = MainWindow()
+    window.ui.stackedWidget.setCurrentWidget(window.ui.main_menu_page)
     window.show()
     while True:
         QApplication.processEvents()
         schedule.run_pending()
-        time.sleep(0.1)
+        time.sleep(0.05)
 
     app.exec_()
 
@@ -54,31 +53,6 @@ if __name__ == "__main__":
 
 
 
-# Command line test
-""" 
-machine1 = Machine("Machine 1")
-machine2 = Machine("Machine 2")
-machine3 = Machine("Machine 3")
 
-group_all = MachineGroup("All")
-group_all.add_machine(machine1)
-group_all.add_machine(machine2)
-group_all.add_machine(machine3)
-
-sim = Simulation(group_all.machines)
-sim.start_all()
-
-# print current values
-schedule.every(1).seconds.do(lambda: group_all.print_values())
-schedule.every(5).seconds.do(lambda: sim.operating_update())
-schedule.every(1).seconds.do(lambda: sim.stopped_update())
-schedule.every(10).seconds.do(lambda: sim.not_filtering_update())
-schedule.every(1).seconds.do(lambda: sim.filtering_update())
-
-
-while True:
-    schedule.run_pending()
-    time.sleep(1)
-"""
 
 

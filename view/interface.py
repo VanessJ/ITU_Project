@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'mainVQdjpO.ui'
+## Form generated from reading UI file 'mainfmolcZ.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -12,6 +12,7 @@ from PySide2.QtCore import *
 from PySide2.QtGui import *
 from PySide2.QtWidgets import *
 
+import icons_rc
 import icons_rc
 
 class Ui_MainWindow(object):
@@ -44,20 +45,20 @@ class Ui_MainWindow(object):
         self.horizontalLayout_4.setSpacing(0)
         self.horizontalLayout_4.setObjectName(u"horizontalLayout_4")
         self.horizontalLayout_4.setContentsMargins(3, 0, 0, 0)
-        self.pushButton = QPushButton(self.header_left)
-        self.pushButton.setObjectName(u"pushButton")
+        self.menu_button = QPushButton(self.header_left)
+        self.menu_button.setObjectName(u"menu_button")
         font = QFont()
         font.setFamily(u"Nirmala UI")
         font.setPointSize(10)
         font.setBold(False)
         font.setWeight(50)
-        self.pushButton.setFont(font)
+        self.menu_button.setFont(font)
         icon = QIcon()
         icon.addFile(u":/prefix/icons/menu.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.pushButton.setIcon(icon)
-        self.pushButton.setIconSize(QSize(32, 32))
+        self.menu_button.setIcon(icon)
+        self.menu_button.setIconSize(QSize(32, 32))
 
-        self.horizontalLayout_4.addWidget(self.pushButton)
+        self.horizontalLayout_4.addWidget(self.menu_button)
 
 
         self.horizontalLayout.addWidget(self.header_left, 0, Qt.AlignLeft)
@@ -200,6 +201,7 @@ class Ui_MainWindow(object):
 
         self.settings_button = QPushButton(self.menu_frame)
         self.settings_button.setObjectName(u"settings_button")
+        self.settings_button.setMouseTracking(False)
         icon5 = QIcon()
         icon5.addFile(u":/prefix/icons/construct.png", QSize(), QIcon.Normal, QIcon.Off)
         self.settings_button.setIcon(icon5)
@@ -284,45 +286,45 @@ class Ui_MainWindow(object):
         self.main_menu_buttons_frame.setFrameShadow(QFrame.Raised)
         self.gridLayout_6 = QGridLayout(self.main_menu_buttons_frame)
         self.gridLayout_6.setObjectName(u"gridLayout_6")
-        self.pushButton_9 = QPushButton(self.main_menu_buttons_frame)
-        self.pushButton_9.setObjectName(u"pushButton_9")
-        self.pushButton_9.setMinimumSize(QSize(0, 50))
-        self.pushButton_9.setFont(font1)
-        self.pushButton_9.setStyleSheet(u"background-color: rgb(80, 170, 255);")
-        self.pushButton_9.setIcon(icon4)
-        self.pushButton_9.setIconSize(QSize(32, 32))
+        self.main_menu_machines_button = QPushButton(self.main_menu_buttons_frame)
+        self.main_menu_machines_button.setObjectName(u"main_menu_machines_button")
+        self.main_menu_machines_button.setMinimumSize(QSize(0, 50))
+        self.main_menu_machines_button.setFont(font1)
+        self.main_menu_machines_button.setStyleSheet(u"background-color: rgb(80, 170, 255);")
+        self.main_menu_machines_button.setIcon(icon4)
+        self.main_menu_machines_button.setIconSize(QSize(32, 32))
 
-        self.gridLayout_6.addWidget(self.pushButton_9, 1, 1, 1, 1)
+        self.gridLayout_6.addWidget(self.main_menu_machines_button, 1, 1, 1, 1)
 
-        self.pushButton_10 = QPushButton(self.main_menu_buttons_frame)
-        self.pushButton_10.setObjectName(u"pushButton_10")
-        self.pushButton_10.setMinimumSize(QSize(0, 50))
-        self.pushButton_10.setFont(font1)
-        self.pushButton_10.setStyleSheet(u"background-color: rgb(80, 170, 255);")
-        self.pushButton_10.setIcon(icon7)
-        self.pushButton_10.setIconSize(QSize(32, 32))
+        self.main_menu_stat_button = QPushButton(self.main_menu_buttons_frame)
+        self.main_menu_stat_button.setObjectName(u"main_menu_stat_button")
+        self.main_menu_stat_button.setMinimumSize(QSize(0, 50))
+        self.main_menu_stat_button.setFont(font1)
+        self.main_menu_stat_button.setStyleSheet(u"background-color: rgb(80, 170, 255);")
+        self.main_menu_stat_button.setIcon(icon7)
+        self.main_menu_stat_button.setIconSize(QSize(32, 32))
 
-        self.gridLayout_6.addWidget(self.pushButton_10, 3, 0, 1, 1)
+        self.gridLayout_6.addWidget(self.main_menu_stat_button, 3, 0, 1, 1)
 
-        self.pushButton_11 = QPushButton(self.main_menu_buttons_frame)
-        self.pushButton_11.setObjectName(u"pushButton_11")
-        self.pushButton_11.setMinimumSize(QSize(0, 50))
-        self.pushButton_11.setFont(font1)
-        self.pushButton_11.setStyleSheet(u"background-color: rgb(80, 170, 255);")
-        self.pushButton_11.setIcon(icon5)
-        self.pushButton_11.setIconSize(QSize(32, 32))
+        self.main_menu_settings_button = QPushButton(self.main_menu_buttons_frame)
+        self.main_menu_settings_button.setObjectName(u"main_menu_settings_button")
+        self.main_menu_settings_button.setMinimumSize(QSize(0, 50))
+        self.main_menu_settings_button.setFont(font1)
+        self.main_menu_settings_button.setStyleSheet(u"background-color: rgb(80, 170, 255);")
+        self.main_menu_settings_button.setIcon(icon5)
+        self.main_menu_settings_button.setIconSize(QSize(32, 32))
 
-        self.gridLayout_6.addWidget(self.pushButton_11, 3, 1, 1, 1)
+        self.gridLayout_6.addWidget(self.main_menu_settings_button, 3, 1, 1, 1)
 
-        self.pushButton_8 = QPushButton(self.main_menu_buttons_frame)
-        self.pushButton_8.setObjectName(u"pushButton_8")
-        self.pushButton_8.setMinimumSize(QSize(0, 50))
-        self.pushButton_8.setFont(font1)
-        self.pushButton_8.setStyleSheet(u"background-color: rgb(80, 170, 255);")
-        self.pushButton_8.setIcon(icon6)
-        self.pushButton_8.setIconSize(QSize(32, 32))
+        self.main_menu_halls_button = QPushButton(self.main_menu_buttons_frame)
+        self.main_menu_halls_button.setObjectName(u"main_menu_halls_button")
+        self.main_menu_halls_button.setMinimumSize(QSize(0, 50))
+        self.main_menu_halls_button.setFont(font1)
+        self.main_menu_halls_button.setStyleSheet(u"background-color: rgb(80, 170, 255);")
+        self.main_menu_halls_button.setIcon(icon6)
+        self.main_menu_halls_button.setIconSize(QSize(32, 32))
 
-        self.gridLayout_6.addWidget(self.pushButton_8, 1, 0, 1, 1)
+        self.gridLayout_6.addWidget(self.main_menu_halls_button, 1, 0, 1, 1)
 
         self.spacer = QFrame(self.main_menu_buttons_frame)
         self.spacer.setObjectName(u"spacer")
@@ -439,18 +441,18 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_11.addWidget(self.label_8)
 
-        self.pushButton_3 = QPushButton(self.top_add_hall_form)
-        self.pushButton_3.setObjectName(u"pushButton_3")
-        self.pushButton_3.setMaximumSize(QSize(80, 30))
+        self.add_hall_back_button = QPushButton(self.top_add_hall_form)
+        self.add_hall_back_button.setObjectName(u"add_hall_back_button")
+        self.add_hall_back_button.setMaximumSize(QSize(80, 30))
         font7 = QFont()
         font7.setFamily(u"Nirmala UI")
         font7.setPointSize(8)
         font7.setBold(True)
         font7.setWeight(75)
-        self.pushButton_3.setFont(font7)
-        self.pushButton_3.setStyleSheet(u"background-color: rgb(85, 170, 255);")
+        self.add_hall_back_button.setFont(font7)
+        self.add_hall_back_button.setStyleSheet(u"background-color: rgb(85, 170, 255);")
 
-        self.horizontalLayout_11.addWidget(self.pushButton_3)
+        self.horizontalLayout_11.addWidget(self.add_hall_back_button)
 
 
         self.verticalLayout_3.addWidget(self.top_add_hall_form)
@@ -607,13 +609,13 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_13.addWidget(self.label_13)
 
-        self.pushButton_4 = QPushButton(self.top_add_hall_form_2)
-        self.pushButton_4.setObjectName(u"pushButton_4")
-        self.pushButton_4.setMaximumSize(QSize(80, 30))
-        self.pushButton_4.setFont(font7)
-        self.pushButton_4.setStyleSheet(u"background-color: rgb(85, 170, 255);")
+        self.add_machine_back_button = QPushButton(self.top_add_hall_form_2)
+        self.add_machine_back_button.setObjectName(u"add_machine_back_button")
+        self.add_machine_back_button.setMaximumSize(QSize(80, 30))
+        self.add_machine_back_button.setFont(font7)
+        self.add_machine_back_button.setStyleSheet(u"background-color: rgb(85, 170, 255);")
 
-        self.horizontalLayout_13.addWidget(self.pushButton_4)
+        self.horizontalLayout_13.addWidget(self.add_machine_back_button)
 
 
         self.verticalLayout_4.addWidget(self.top_add_hall_form_2)
@@ -702,13 +704,13 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_14.addWidget(self.label_18)
 
-        self.pushButton_5 = QPushButton(self.top_add_hall_form_3)
-        self.pushButton_5.setObjectName(u"pushButton_5")
-        self.pushButton_5.setMaximumSize(QSize(80, 30))
-        self.pushButton_5.setFont(font7)
-        self.pushButton_5.setStyleSheet(u"background-color: rgb(85, 170, 255);")
+        self.machine_info_back_button = QPushButton(self.top_add_hall_form_3)
+        self.machine_info_back_button.setObjectName(u"machine_info_back_button")
+        self.machine_info_back_button.setMaximumSize(QSize(80, 30))
+        self.machine_info_back_button.setFont(font7)
+        self.machine_info_back_button.setStyleSheet(u"background-color: rgb(85, 170, 255);")
 
-        self.horizontalLayout_14.addWidget(self.pushButton_5)
+        self.horizontalLayout_14.addWidget(self.machine_info_back_button)
 
 
         self.verticalLayout_7.addWidget(self.top_add_hall_form_3)
@@ -800,13 +802,13 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_15.addWidget(self.label_25)
 
-        self.pushButton_6 = QPushButton(self.test_top_frame)
-        self.pushButton_6.setObjectName(u"pushButton_6")
-        self.pushButton_6.setMaximumSize(QSize(80, 30))
-        self.pushButton_6.setFont(font7)
-        self.pushButton_6.setStyleSheet(u"background-color: rgb(85, 170, 255);")
+        self.statistics_back_button = QPushButton(self.test_top_frame)
+        self.statistics_back_button.setObjectName(u"statistics_back_button")
+        self.statistics_back_button.setMaximumSize(QSize(80, 30))
+        self.statistics_back_button.setFont(font7)
+        self.statistics_back_button.setStyleSheet(u"background-color: rgb(85, 170, 255);")
 
-        self.horizontalLayout_15.addWidget(self.pushButton_6)
+        self.horizontalLayout_15.addWidget(self.statistics_back_button)
 
 
         self.verticalLayout_8.addWidget(self.test_top_frame)
@@ -846,13 +848,13 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_17.addWidget(self.label_26)
 
-        self.pushButton_7 = QPushButton(self.test_top_frame_2)
-        self.pushButton_7.setObjectName(u"pushButton_7")
-        self.pushButton_7.setMaximumSize(QSize(80, 30))
-        self.pushButton_7.setFont(font7)
-        self.pushButton_7.setStyleSheet(u"background-color: rgb(85, 170, 255);")
+        self.settings_back_button = QPushButton(self.test_top_frame_2)
+        self.settings_back_button.setObjectName(u"settings_back_button")
+        self.settings_back_button.setMaximumSize(QSize(80, 30))
+        self.settings_back_button.setFont(font7)
+        self.settings_back_button.setStyleSheet(u"background-color: rgb(85, 170, 255);")
 
-        self.horizontalLayout_17.addWidget(self.pushButton_7)
+        self.horizontalLayout_17.addWidget(self.settings_back_button)
 
 
         self.verticalLayout_9.addWidget(self.test_top_frame_2)
@@ -936,7 +938,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.stackedWidget.setCurrentIndex(6)
+        self.stackedWidget.setCurrentIndex(4)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -944,7 +946,7 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
-        self.pushButton.setText(QCoreApplication.translate("MainWindow", u"Menu", None))
+        self.menu_button.setText(QCoreApplication.translate("MainWindow", u"Menu", None))
         self.label.setText("")
         self.label_2.setText(QCoreApplication.translate("MainWindow", u"MACHINE MANAGER", None))
         self.minimze_window_button.setText("")
@@ -959,10 +961,10 @@ class Ui_MainWindow(object):
         self.halls_button.setText("")
         self.stats_button.setText("")
         self.label_27.setText(QCoreApplication.translate("MainWindow", u"MAIN MENU", None))
-        self.pushButton_9.setText(QCoreApplication.translate("MainWindow", u"  Machines", None))
-        self.pushButton_10.setText(QCoreApplication.translate("MainWindow", u"  Statistics", None))
-        self.pushButton_11.setText(QCoreApplication.translate("MainWindow", u"  Settings", None))
-        self.pushButton_8.setText(QCoreApplication.translate("MainWindow", u"  Industry halls ", None))
+        self.main_menu_machines_button.setText(QCoreApplication.translate("MainWindow", u"  Machines", None))
+        self.main_menu_stat_button.setText(QCoreApplication.translate("MainWindow", u"  Statistics", None))
+        self.main_menu_settings_button.setText(QCoreApplication.translate("MainWindow", u"  Settings", None))
+        self.main_menu_halls_button.setText(QCoreApplication.translate("MainWindow", u"  Industry halls ", None))
         self.halls_label.setText(QCoreApplication.translate("MainWindow", u"INDUSTRY HALLS                                       ", None))
         self.add_hall_button.setText(QCoreApplication.translate("MainWindow", u" ADD HALL ", None))
         self.search_label.setText("")
@@ -978,7 +980,7 @@ class Ui_MainWindow(object):
         ___qtablewidgetitem4 = self.halls_table.verticalHeaderItem(1)
         ___qtablewidgetitem4.setText(QCoreApplication.translate("MainWindow", u"Hall 2", None));
         self.label_8.setText(QCoreApplication.translate("MainWindow", u"ADD NEW HALL                                                                           ", None))
-        self.pushButton_3.setText(QCoreApplication.translate("MainWindow", u"BACK", None))
+        self.add_hall_back_button.setText(QCoreApplication.translate("MainWindow", u"BACK", None))
         self.label_10.setText(QCoreApplication.translate("MainWindow", u"City:", None))
         self.label_9.setText(QCoreApplication.translate("MainWindow", u"Hall name:", None))
         self.label_11.setText(QCoreApplication.translate("MainWindow", u"Street and number:", None))
@@ -1005,14 +1007,14 @@ class Ui_MainWindow(object):
         ___qtablewidgetitem12 = self.machines_table.verticalHeaderItem(2)
         ___qtablewidgetitem12.setText(QCoreApplication.translate("MainWindow", u"Machine 3", None));
         self.label_13.setText(QCoreApplication.translate("MainWindow", u"ADD NEW MACHINE                                                                        ", None))
-        self.pushButton_4.setText(QCoreApplication.translate("MainWindow", u"BACK", None))
+        self.add_machine_back_button.setText(QCoreApplication.translate("MainWindow", u"BACK", None))
         self.label_16.setText(QCoreApplication.translate("MainWindow", u"Hall:", None))
         self.label_14.setText(QCoreApplication.translate("MainWindow", u"ID:", None))
         self.label_15.setText(QCoreApplication.translate("MainWindow", u"Machine name:", None))
         self.label_17.setText(QCoreApplication.translate("MainWindow", u"Sensors ID:", None))
         self.confirm_add_button_2.setText(QCoreApplication.translate("MainWindow", u"CONFIRM", None))
         self.label_18.setText(QCoreApplication.translate("MainWindow", u"MACHINE INFO AND STATISTICS                                                  ", None))
-        self.pushButton_5.setText(QCoreApplication.translate("MainWindow", u"BACK", None))
+        self.machine_info_back_button.setText(QCoreApplication.translate("MainWindow", u"BACK", None))
         self.label_22.setText(QCoreApplication.translate("MainWindow", u"N/A", None))
         self.label_19.setText(QCoreApplication.translate("MainWindow", u"ID:", None))
         self.label_20.setText(QCoreApplication.translate("MainWindow", u"N/A", None))
@@ -1022,9 +1024,9 @@ class Ui_MainWindow(object):
         self.temperature_label.setText(QCoreApplication.translate("MainWindow", u"Temperature:", None))
         self.NA_label.setText(QCoreApplication.translate("MainWindow", u"NAS:", None))
         self.label_25.setText(QCoreApplication.translate("MainWindow", u"Statistics", None))
-        self.pushButton_6.setText(QCoreApplication.translate("MainWindow", u"BACK", None))
+        self.statistics_back_button.setText(QCoreApplication.translate("MainWindow", u"BACK", None))
         self.label_26.setText(QCoreApplication.translate("MainWindow", u"Settings", None))
-        self.pushButton_7.setText(QCoreApplication.translate("MainWindow", u"BACK", None))
+        self.settings_back_button.setText(QCoreApplication.translate("MainWindow", u"BACK", None))
         self.label_3.setText(QCoreApplication.translate("MainWindow", u"Version 1.0 | ITU | Copyright RHVJTH", None))
         self.pushButton_2.setText(QCoreApplication.translate("MainWindow", u"?", None))
     # retranslateUi

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'mainfmolcZ.ui'
+## Form generated from reading UI file 'mainCmlliT.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -13,13 +13,12 @@ from PySide2.QtGui import *
 from PySide2.QtWidgets import *
 
 import icons_rc
-import icons_rc
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(813, 627)
+        MainWindow.resize(793, 627)
         MainWindow.setStyleSheet(u"")
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
@@ -53,6 +52,11 @@ class Ui_MainWindow(object):
         font.setBold(False)
         font.setWeight(50)
         self.menu_button.setFont(font)
+        self.menu_button.setStyleSheet(u"QPushButton:hover{\n"
+"	border-radius: 5px;\n"
+"	border: 1px solid White;\n"
+"	background-color: #00aaff;\n"
+"}")
         icon = QIcon()
         icon.addFile(u":/prefix/icons/menu.png", QSize(), QIcon.Normal, QIcon.Off)
         self.menu_button.setIcon(icon)
@@ -149,7 +153,7 @@ class Ui_MainWindow(object):
         self.left_menu_frame = QFrame(self.main_body_frame)
         self.left_menu_frame.setObjectName(u"left_menu_frame")
         self.left_menu_frame.setMinimumSize(QSize(50, 0))
-        self.left_menu_frame.setMaximumSize(QSize(200, 16777215))
+        self.left_menu_frame.setMaximumSize(QSize(50, 16777215))
         self.left_menu_frame.setStyleSheet(u"background-color: rgb(85, 170, 255);\n"
 "border:none;")
         self.left_menu_frame.setFrameShape(QFrame.StyledPanel)
@@ -174,65 +178,104 @@ class Ui_MainWindow(object):
         self.label_4.setFont(font2)
         self.label_4.setMargin(5)
 
-        self.gridLayout.addWidget(self.label_4, 0, 1, 1, 1)
-
-        self.machines_button = QPushButton(self.menu_frame)
-        self.machines_button.setObjectName(u"machines_button")
-        icon4 = QIcon()
-        icon4.addFile(u":/prefix/icons/hardware-chip.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.machines_button.setIcon(icon4)
-        self.machines_button.setIconSize(QSize(32, 32))
-
-        self.gridLayout.addWidget(self.machines_button, 1, 0, 1, 1)
-
-        self.label_5 = QLabel(self.menu_frame)
-        self.label_5.setObjectName(u"label_5")
-        self.label_5.setFont(font2)
-        self.label_5.setMargin(5)
-
-        self.gridLayout.addWidget(self.label_5, 1, 1, 1, 1)
-
-        self.label_6 = QLabel(self.menu_frame)
-        self.label_6.setObjectName(u"label_6")
-        self.label_6.setFont(font2)
-        self.label_6.setMargin(5)
-
-        self.gridLayout.addWidget(self.label_6, 2, 1, 1, 1)
-
-        self.settings_button = QPushButton(self.menu_frame)
-        self.settings_button.setObjectName(u"settings_button")
-        self.settings_button.setMouseTracking(False)
-        icon5 = QIcon()
-        icon5.addFile(u":/prefix/icons/construct.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.settings_button.setIcon(icon5)
-        self.settings_button.setIconSize(QSize(32, 32))
-
-        self.gridLayout.addWidget(self.settings_button, 3, 0, 1, 1)
+        self.gridLayout.addWidget(self.label_4, 1, 1, 1, 1)
 
         self.label_7 = QLabel(self.menu_frame)
         self.label_7.setObjectName(u"label_7")
         self.label_7.setFont(font2)
         self.label_7.setMargin(5)
 
-        self.gridLayout.addWidget(self.label_7, 3, 1, 1, 1)
+        self.gridLayout.addWidget(self.label_7, 4, 1, 1, 1)
 
-        self.halls_button = QPushButton(self.menu_frame)
-        self.halls_button.setObjectName(u"halls_button")
-        icon6 = QIcon()
-        icon6.addFile(u":/prefix/icons/factory.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.halls_button.setIcon(icon6)
-        self.halls_button.setIconSize(QSize(32, 32))
+        self.label_5 = QLabel(self.menu_frame)
+        self.label_5.setObjectName(u"label_5")
+        self.label_5.setFont(font2)
+        self.label_5.setMargin(5)
 
-        self.gridLayout.addWidget(self.halls_button, 0, 0, 1, 1)
+        self.gridLayout.addWidget(self.label_5, 2, 1, 1, 1)
+
+        self.label_6 = QLabel(self.menu_frame)
+        self.label_6.setObjectName(u"label_6")
+        self.label_6.setFont(font2)
+        self.label_6.setMargin(5)
+
+        self.gridLayout.addWidget(self.label_6, 3, 1, 1, 1)
+
+        self.settings_button = QPushButton(self.menu_frame)
+        self.settings_button.setObjectName(u"settings_button")
+        self.settings_button.setStyleSheet(u"QPushButton:hover{\n"
+"	border-radius: 5px;\n"
+"	border: 1px solid White;\n"
+"	background-color: #00aaff;\n"
+"}")
+        icon4 = QIcon()
+        icon4.addFile(u":/prefix/icons/construct.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.settings_button.setIcon(icon4)
+        self.settings_button.setIconSize(QSize(32, 32))
+
+        self.gridLayout.addWidget(self.settings_button, 4, 0, 1, 1)
 
         self.stats_button = QPushButton(self.menu_frame)
         self.stats_button.setObjectName(u"stats_button")
-        icon7 = QIcon()
-        icon7.addFile(u":/prefix/icons/analytics.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.stats_button.setIcon(icon7)
+        self.stats_button.setStyleSheet(u"QPushButton:hover{\n"
+"	border-radius: 5px;\n"
+"	border: 1px solid White;\n"
+"	background-color: #00aaff;\n"
+"}")
+        icon5 = QIcon()
+        icon5.addFile(u":/prefix/icons/analytics.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.stats_button.setIcon(icon5)
         self.stats_button.setIconSize(QSize(32, 32))
 
-        self.gridLayout.addWidget(self.stats_button, 2, 0, 1, 1)
+        self.gridLayout.addWidget(self.stats_button, 3, 0, 1, 1)
+
+        self.machines_button = QPushButton(self.menu_frame)
+        self.machines_button.setObjectName(u"machines_button")
+        self.machines_button.setStyleSheet(u"QPushButton:hover{\n"
+"	border-radius: 5px;\n"
+"	border: 1px solid White;\n"
+"	background-color: #00aaff;\n"
+"}")
+        icon6 = QIcon()
+        icon6.addFile(u":/prefix/icons/hardware-chip.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.machines_button.setIcon(icon6)
+        self.machines_button.setIconSize(QSize(32, 32))
+
+        self.gridLayout.addWidget(self.machines_button, 2, 0, 1, 1)
+
+        self.halls_button = QPushButton(self.menu_frame)
+        self.halls_button.setObjectName(u"halls_button")
+        self.halls_button.setStyleSheet(u"QPushButton:hover{\n"
+"	border-radius: 5px;\n"
+"	border: 1px solid White;\n"
+"	background-color: #00aaff;\n"
+"}")
+        icon7 = QIcon()
+        icon7.addFile(u":/prefix/icons/factory.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.halls_button.setIcon(icon7)
+        self.halls_button.setIconSize(QSize(32, 32))
+
+        self.gridLayout.addWidget(self.halls_button, 1, 0, 1, 1)
+
+        self.label_28 = QLabel(self.menu_frame)
+        self.label_28.setObjectName(u"label_28")
+        self.label_28.setFont(font2)
+
+        self.gridLayout.addWidget(self.label_28, 0, 1, 1, 1)
+
+        self.home_button = QPushButton(self.menu_frame)
+        self.home_button.setObjectName(u"home_button")
+        self.home_button.setStyleSheet(u"QPushButton:hover{\n"
+"	border-radius: 5px;\n"
+"	border: 1px solid White;\n"
+"	background-color: #00aaff;\n"
+"}")
+        icon8 = QIcon()
+        icon8.addFile(u":/prefix/icons/cube.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.home_button.setIcon(icon8)
+        self.home_button.setIconSize(QSize(32, 32))
+
+        self.gridLayout.addWidget(self.home_button, 0, 0, 1, 1)
 
 
         self.horizontalLayout_9.addWidget(self.menu_frame, 0, Qt.AlignLeft|Qt.AlignTop)
@@ -290,28 +333,49 @@ class Ui_MainWindow(object):
         self.main_menu_machines_button.setObjectName(u"main_menu_machines_button")
         self.main_menu_machines_button.setMinimumSize(QSize(0, 50))
         self.main_menu_machines_button.setFont(font1)
-        self.main_menu_machines_button.setStyleSheet(u"background-color: rgb(80, 170, 255);")
-        self.main_menu_machines_button.setIcon(icon4)
+        self.main_menu_machines_button.setStyleSheet(u"QPushButton{\n"
+"	background-color: rgb(80, 170, 255);\n"
+"	border: 1px solid black;\n"
+"	border-radius: 10px;\n"
+"}\n"
+"QPushButton:hover{\n"
+"	background-color: #00aaff;\n"
+"}")
+        self.main_menu_machines_button.setIcon(icon6)
         self.main_menu_machines_button.setIconSize(QSize(32, 32))
 
         self.gridLayout_6.addWidget(self.main_menu_machines_button, 1, 1, 1, 1)
 
-        self.main_menu_stat_button = QPushButton(self.main_menu_buttons_frame)
-        self.main_menu_stat_button.setObjectName(u"main_menu_stat_button")
-        self.main_menu_stat_button.setMinimumSize(QSize(0, 50))
-        self.main_menu_stat_button.setFont(font1)
-        self.main_menu_stat_button.setStyleSheet(u"background-color: rgb(80, 170, 255);")
-        self.main_menu_stat_button.setIcon(icon7)
-        self.main_menu_stat_button.setIconSize(QSize(32, 32))
+        self.main_menu_stats_button = QPushButton(self.main_menu_buttons_frame)
+        self.main_menu_stats_button.setObjectName(u"main_menu_stats_button")
+        self.main_menu_stats_button.setMinimumSize(QSize(0, 50))
+        self.main_menu_stats_button.setFont(font1)
+        self.main_menu_stats_button.setStyleSheet(u"QPushButton{\n"
+"	background-color: rgb(80, 170, 255);\n"
+"	border: 1px solid black;\n"
+"	border-radius: 10px;\n"
+"}\n"
+"QPushButton:hover{\n"
+"	background-color: #00aaff;\n"
+"}")
+        self.main_menu_stats_button.setIcon(icon5)
+        self.main_menu_stats_button.setIconSize(QSize(32, 32))
 
-        self.gridLayout_6.addWidget(self.main_menu_stat_button, 3, 0, 1, 1)
+        self.gridLayout_6.addWidget(self.main_menu_stats_button, 3, 0, 1, 1)
 
         self.main_menu_settings_button = QPushButton(self.main_menu_buttons_frame)
         self.main_menu_settings_button.setObjectName(u"main_menu_settings_button")
         self.main_menu_settings_button.setMinimumSize(QSize(0, 50))
         self.main_menu_settings_button.setFont(font1)
-        self.main_menu_settings_button.setStyleSheet(u"background-color: rgb(80, 170, 255);")
-        self.main_menu_settings_button.setIcon(icon5)
+        self.main_menu_settings_button.setStyleSheet(u"QPushButton{\n"
+"	background-color: rgb(80, 170, 255);\n"
+"	border: 1px solid black;\n"
+"	border-radius: 10px;\n"
+"}\n"
+"QPushButton:hover{\n"
+"	background-color: #00aaff;\n"
+"}")
+        self.main_menu_settings_button.setIcon(icon4)
         self.main_menu_settings_button.setIconSize(QSize(32, 32))
 
         self.gridLayout_6.addWidget(self.main_menu_settings_button, 3, 1, 1, 1)
@@ -320,8 +384,15 @@ class Ui_MainWindow(object):
         self.main_menu_halls_button.setObjectName(u"main_menu_halls_button")
         self.main_menu_halls_button.setMinimumSize(QSize(0, 50))
         self.main_menu_halls_button.setFont(font1)
-        self.main_menu_halls_button.setStyleSheet(u"background-color: rgb(80, 170, 255);")
-        self.main_menu_halls_button.setIcon(icon6)
+        self.main_menu_halls_button.setStyleSheet(u"QPushButton{\n"
+"	background-color: rgb(80, 170, 255);\n"
+"	border: 1px solid black;\n"
+"	border-radius: 10px;\n"
+"}\n"
+"QPushButton:hover{\n"
+"	background-color: #00aaff;\n"
+"}")
+        self.main_menu_halls_button.setIcon(icon7)
         self.main_menu_halls_button.setIconSize(QSize(32, 32))
 
         self.gridLayout_6.addWidget(self.main_menu_halls_button, 1, 0, 1, 1)
@@ -369,26 +440,28 @@ class Ui_MainWindow(object):
 
         self.add_hall_button = QPushButton(self.frame)
         self.add_hall_button.setObjectName(u"add_hall_button")
+        self.add_hall_button.setMinimumSize(QSize(0, 25))
+        self.add_hall_button.setMaximumSize(QSize(90, 16777215))
         font5 = QFont()
         font5.setFamily(u"Nirmala UI")
         font5.setBold(True)
         font5.setWeight(75)
         self.add_hall_button.setFont(font5)
         self.add_hall_button.setAutoFillBackground(False)
-        self.add_hall_button.setStyleSheet(u"background-color: rgb(85, 170, 255);")
+        self.add_hall_button.setStyleSheet(u"QPushButton{\n"
+"	background-color: rgb(80, 170, 255);\n"
+"	border: 1px solid black;\n"
+"	border-radius: 5px;\n"
+"}\n"
+"QPushButton:hover{\n"
+"	background-color: #00aaff;\n"
+"}")
 
         self.horizontalLayout_10.addWidget(self.add_hall_button)
 
-        self.search_label = QLabel(self.frame)
-        self.search_label.setObjectName(u"search_label")
-        self.search_label.setMaximumSize(QSize(21, 16))
-        self.search_label.setPixmap(QPixmap(u":/prefix/search.png"))
-        self.search_label.setScaledContents(True)
-
-        self.horizontalLayout_10.addWidget(self.search_label)
-
         self.search_bar_2 = QLineEdit(self.frame)
         self.search_bar_2.setObjectName(u"search_bar_2")
+        self.search_bar_2.setMaximumSize(QSize(200, 16777215))
         self.search_bar_2.setStyleSheet(u"border-color: rgb(0, 0, 0);")
 
         self.horizontalLayout_10.addWidget(self.search_bar_2)
@@ -420,6 +493,7 @@ class Ui_MainWindow(object):
         self.halls_table.setVerticalHeaderItem(1, __qtablewidgetitem4)
         self.halls_table.setObjectName(u"halls_table")
         self.halls_table.setGeometry(QRect(15, 11, 681, 371))
+        self.halls_table.setFont(font2)
 
         self.verticalLayout_6.addWidget(self.frame_4)
 
@@ -450,7 +524,14 @@ class Ui_MainWindow(object):
         font7.setBold(True)
         font7.setWeight(75)
         self.add_hall_back_button.setFont(font7)
-        self.add_hall_back_button.setStyleSheet(u"background-color: rgb(85, 170, 255);")
+        self.add_hall_back_button.setStyleSheet(u"QPushButton{\n"
+"	background-color: rgb(80, 170, 255);\n"
+"	border: 1px solid black;\n"
+"	border-radius: 5px;\n"
+"}\n"
+"QPushButton:hover{\n"
+"	background-color: #00aaff;\n"
+"}")
 
         self.horizontalLayout_11.addWidget(self.add_hall_back_button)
 
@@ -463,17 +544,36 @@ class Ui_MainWindow(object):
         self.form_frame_add_hall.setFrameShadow(QFrame.Raised)
         self.gridLayout_2 = QGridLayout(self.form_frame_add_hall)
         self.gridLayout_2.setObjectName(u"gridLayout_2")
+        self.label_9 = QLabel(self.form_frame_add_hall)
+        self.label_9.setObjectName(u"label_9")
+        self.label_9.setFont(font2)
+
+        self.gridLayout_2.addWidget(self.label_9, 0, 0, 1, 1, Qt.AlignTop)
+
+        self.label_12 = QLabel(self.form_frame_add_hall)
+        self.label_12.setObjectName(u"label_12")
+        self.label_12.setFont(font2)
+
+        self.gridLayout_2.addWidget(self.label_12, 4, 0, 1, 1)
+
         self.label_10 = QLabel(self.form_frame_add_hall)
         self.label_10.setObjectName(u"label_10")
         self.label_10.setFont(font2)
 
         self.gridLayout_2.addWidget(self.label_10, 1, 0, 1, 1)
 
-        self.label_9 = QLabel(self.form_frame_add_hall)
-        self.label_9.setObjectName(u"label_9")
-        self.label_9.setFont(font2)
+        self.lineEdit_2 = QLineEdit(self.form_frame_add_hall)
+        self.lineEdit_2.setObjectName(u"lineEdit_2")
+        self.lineEdit_2.setStyleSheet(u"QLineEdit{\n"
+"	background-color: rgb(247, 247, 247);\n"
+"	border: 2px solid #55aaff;\n"
+"	border-radius: 5px;\n"
+"}\n"
+"QLineEdit:focus{\n"
+"	border: 2px solid #00ffff;\n"
+"}")
 
-        self.gridLayout_2.addWidget(self.label_9, 0, 0, 1, 1, Qt.AlignTop)
+        self.gridLayout_2.addWidget(self.lineEdit_2, 1, 1, 1, 1)
 
         self.label_11 = QLabel(self.form_frame_add_hall)
         self.label_11.setObjectName(u"label_11")
@@ -481,29 +581,42 @@ class Ui_MainWindow(object):
 
         self.gridLayout_2.addWidget(self.label_11, 2, 0, 1, 1)
 
-        self.label_12 = QLabel(self.form_frame_add_hall)
-        self.label_12.setObjectName(u"label_12")
-        self.label_12.setFont(font2)
-
-        self.gridLayout_2.addWidget(self.label_12, 3, 0, 1, 1)
-
         self.lineEdit = QLineEdit(self.form_frame_add_hall)
         self.lineEdit.setObjectName(u"lineEdit")
+        self.lineEdit.setStyleSheet(u"QLineEdit{\n"
+"	background-color: rgb(247, 247, 247);\n"
+"	border: 2px solid #55aaff;\n"
+"	border-radius: 5px;\n"
+"}\n"
+"QLineEdit:focus{\n"
+"	border: 2px solid #00ffff;\n"
+"}")
 
         self.gridLayout_2.addWidget(self.lineEdit, 0, 1, 1, 1)
 
-        self.lineEdit_2 = QLineEdit(self.form_frame_add_hall)
-        self.lineEdit_2.setObjectName(u"lineEdit_2")
-
-        self.gridLayout_2.addWidget(self.lineEdit_2, 1, 1, 1, 1)
-
         self.lineEdit_4 = QLineEdit(self.form_frame_add_hall)
         self.lineEdit_4.setObjectName(u"lineEdit_4")
+        self.lineEdit_4.setStyleSheet(u"QLineEdit{\n"
+"	background-color: rgb(247, 247, 247);\n"
+"	border: 2px solid #55aaff;\n"
+"	border-radius: 5px;\n"
+"}\n"
+"QLineEdit:focus{\n"
+"	border: 2px solid #00ffff;\n"
+"}")
 
-        self.gridLayout_2.addWidget(self.lineEdit_4, 3, 1, 1, 1)
+        self.gridLayout_2.addWidget(self.lineEdit_4, 4, 1, 1, 1)
 
         self.lineEdit_3 = QLineEdit(self.form_frame_add_hall)
         self.lineEdit_3.setObjectName(u"lineEdit_3")
+        self.lineEdit_3.setStyleSheet(u"QLineEdit{\n"
+"	background-color: rgb(247, 247, 247);\n"
+"	border: 2px solid #55aaff;\n"
+"	border-radius: 5px;\n"
+"}\n"
+"QLineEdit:focus{\n"
+"	border: 2px solid #00ffff;\n"
+"}")
 
         self.gridLayout_2.addWidget(self.lineEdit_3, 2, 1, 1, 1)
 
@@ -519,7 +632,14 @@ class Ui_MainWindow(object):
         self.confirm_add_button.setObjectName(u"confirm_add_button")
         self.confirm_add_button.setGeometry(QRect(610, 10, 93, 28))
         self.confirm_add_button.setFont(font5)
-        self.confirm_add_button.setStyleSheet(u"background-color: rgb(85, 170, 255);")
+        self.confirm_add_button.setStyleSheet(u"QPushButton{\n"
+"	background-color: rgb(80, 170, 255);\n"
+"	border: 1px solid black;\n"
+"	border-radius: 5px;\n"
+"}\n"
+"QPushButton:hover{\n"
+"	background-color: #00aaff;\n"
+"}")
 
         self.verticalLayout_3.addWidget(self.confirm_button_add_hall)
 
@@ -543,22 +663,24 @@ class Ui_MainWindow(object):
 
         self.add_machine_button = QPushButton(self.top_bar_machines)
         self.add_machine_button.setObjectName(u"add_machine_button")
+        self.add_machine_button.setMinimumSize(QSize(0, 25))
+        self.add_machine_button.setMaximumSize(QSize(120, 16777215))
         self.add_machine_button.setFont(font5)
         self.add_machine_button.setAutoFillBackground(False)
-        self.add_machine_button.setStyleSheet(u"background-color: rgb(85, 170, 255);")
+        self.add_machine_button.setStyleSheet(u"QPushButton{\n"
+"	background-color: rgb(80, 170, 255);\n"
+"	border: 1px solid black;\n"
+"	border-radius: 5px;\n"
+"}\n"
+"QPushButton:hover{\n"
+"	background-color: #00aaff;\n"
+"}")
 
         self.horizontalLayout_12.addWidget(self.add_machine_button)
 
-        self.search_label_2 = QLabel(self.top_bar_machines)
-        self.search_label_2.setObjectName(u"search_label_2")
-        self.search_label_2.setMaximumSize(QSize(21, 16))
-        self.search_label_2.setPixmap(QPixmap(u":/prefix/search.png"))
-        self.search_label_2.setScaledContents(True)
-
-        self.horizontalLayout_12.addWidget(self.search_label_2)
-
         self.search_bar_3 = QLineEdit(self.top_bar_machines)
         self.search_bar_3.setObjectName(u"search_bar_3")
+        self.search_bar_3.setMaximumSize(QSize(200, 16777215))
         self.search_bar_3.setStyleSheet(u"border-color: rgb(0, 0, 0);")
 
         self.horizontalLayout_12.addWidget(self.search_bar_3)
@@ -613,7 +735,14 @@ class Ui_MainWindow(object):
         self.add_machine_back_button.setObjectName(u"add_machine_back_button")
         self.add_machine_back_button.setMaximumSize(QSize(80, 30))
         self.add_machine_back_button.setFont(font7)
-        self.add_machine_back_button.setStyleSheet(u"background-color: rgb(85, 170, 255);")
+        self.add_machine_back_button.setStyleSheet(u"QPushButton{\n"
+"	background-color: rgb(80, 170, 255);\n"
+"	border: 1px solid black;\n"
+"	border-radius: 5px;\n"
+"}\n"
+"QPushButton:hover{\n"
+"	background-color: #00aaff;\n"
+"}")
 
         self.horizontalLayout_13.addWidget(self.add_machine_back_button)
 
@@ -628,6 +757,14 @@ class Ui_MainWindow(object):
         self.gridLayout_3.setObjectName(u"gridLayout_3")
         self.lineEdit_5 = QLineEdit(self.form_frame_add_hall_2)
         self.lineEdit_5.setObjectName(u"lineEdit_5")
+        self.lineEdit_5.setStyleSheet(u"QLineEdit{\n"
+"	background-color: rgb(247, 247, 247);\n"
+"	border: 2px solid #55aaff;\n"
+"	border-radius: 5px;\n"
+"}\n"
+"QLineEdit:focus{\n"
+"	border: 2px solid #00ffff;\n"
+"}")
 
         self.gridLayout_3.addWidget(self.lineEdit_5, 0, 1, 1, 1)
 
@@ -639,11 +776,27 @@ class Ui_MainWindow(object):
 
         self.lineEdit_6 = QLineEdit(self.form_frame_add_hall_2)
         self.lineEdit_6.setObjectName(u"lineEdit_6")
+        self.lineEdit_6.setStyleSheet(u"QLineEdit{\n"
+"	background-color: rgb(247, 247, 247);\n"
+"	border: 2px solid #55aaff;\n"
+"	border-radius: 5px;\n"
+"}\n"
+"QLineEdit:focus{\n"
+"	border: 2px solid #00ffff;\n"
+"}")
 
         self.gridLayout_3.addWidget(self.lineEdit_6, 1, 1, 1, 1)
 
         self.lineEdit_7 = QLineEdit(self.form_frame_add_hall_2)
         self.lineEdit_7.setObjectName(u"lineEdit_7")
+        self.lineEdit_7.setStyleSheet(u"QLineEdit{\n"
+"	background-color: rgb(247, 247, 247);\n"
+"	border: 2px solid #55aaff;\n"
+"	border-radius: 5px;\n"
+"}\n"
+"QLineEdit:focus{\n"
+"	border: 2px solid #00ffff;\n"
+"}")
 
         self.gridLayout_3.addWidget(self.lineEdit_7, 3, 1, 1, 1)
 
@@ -661,6 +814,14 @@ class Ui_MainWindow(object):
 
         self.lineEdit_8 = QLineEdit(self.form_frame_add_hall_2)
         self.lineEdit_8.setObjectName(u"lineEdit_8")
+        self.lineEdit_8.setStyleSheet(u"QLineEdit{\n"
+"	background-color: rgb(247, 247, 247);\n"
+"	border: 2px solid #55aaff;\n"
+"	border-radius: 5px;\n"
+"}\n"
+"QLineEdit:focus{\n"
+"	border: 2px solid #00ffff;\n"
+"}")
 
         self.gridLayout_3.addWidget(self.lineEdit_8, 2, 1, 1, 1)
 
@@ -682,7 +843,15 @@ class Ui_MainWindow(object):
         self.confirm_add_button_2.setObjectName(u"confirm_add_button_2")
         self.confirm_add_button_2.setGeometry(QRect(610, 10, 93, 28))
         self.confirm_add_button_2.setFont(font5)
-        self.confirm_add_button_2.setStyleSheet(u"background-color: rgb(85, 170, 255);")
+        self.confirm_add_button_2.setStyleSheet(u"QPushButton{\n"
+"	background-color: rgb(80, 170, 255);\n"
+"	border: 1px solid black;\n"
+"	border-radius: 5px;\n"
+"	width: 80px;\n"
+"}\n"
+"QPushButton:hover{\n"
+"	background-color: #00aaff;\n"
+"}")
 
         self.verticalLayout_4.addWidget(self.confirm_button_add_hall_2)
 
@@ -708,7 +877,15 @@ class Ui_MainWindow(object):
         self.machine_info_back_button.setObjectName(u"machine_info_back_button")
         self.machine_info_back_button.setMaximumSize(QSize(80, 30))
         self.machine_info_back_button.setFont(font7)
-        self.machine_info_back_button.setStyleSheet(u"background-color: rgb(85, 170, 255);")
+        self.machine_info_back_button.setStyleSheet(u"QPushButton{\n"
+"	background-color: rgb(80, 170, 255);\n"
+"	border: 1px solid black;\n"
+"	border-radius: 5px;\n"
+"	width: 80px;\n"
+"}\n"
+"QPushButton:hover{\n"
+"	background-color: #00aaff;\n"
+"}")
 
         self.horizontalLayout_14.addWidget(self.machine_info_back_button)
 
@@ -806,7 +983,16 @@ class Ui_MainWindow(object):
         self.statistics_back_button.setObjectName(u"statistics_back_button")
         self.statistics_back_button.setMaximumSize(QSize(80, 30))
         self.statistics_back_button.setFont(font7)
-        self.statistics_back_button.setStyleSheet(u"background-color: rgb(85, 170, 255);")
+        self.statistics_back_button.setMouseTracking(False)
+        self.statistics_back_button.setStyleSheet(u"QPushButton{\n"
+"	background-color: rgb(80, 170, 255);\n"
+"	border: 1px solid black;\n"
+"	border-radius: 5px;\n"
+"	width: 80px;\n"
+"}\n"
+"QPushButton:hover{\n"
+"	background-color: #00aaff;\n"
+"}")
 
         self.horizontalLayout_15.addWidget(self.statistics_back_button)
 
@@ -852,7 +1038,15 @@ class Ui_MainWindow(object):
         self.settings_back_button.setObjectName(u"settings_back_button")
         self.settings_back_button.setMaximumSize(QSize(80, 30))
         self.settings_back_button.setFont(font7)
-        self.settings_back_button.setStyleSheet(u"background-color: rgb(85, 170, 255);")
+        self.settings_back_button.setStyleSheet(u"QPushButton{\n"
+"	background-color: rgb(80, 170, 255);\n"
+"	border: 1px solid black;\n"
+"	border-radius: 5px;\n"
+"	width: 80px;\n"
+"}\n"
+"QPushButton:hover{\n"
+"	background-color: #00aaff;\n"
+"}")
 
         self.horizontalLayout_17.addWidget(self.settings_back_button)
 
@@ -938,7 +1132,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.stackedWidget.setCurrentIndex(4)
+        self.stackedWidget.setCurrentIndex(1)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -953,21 +1147,22 @@ class Ui_MainWindow(object):
         self.resize_window_button.setText("")
         self.close_window_button.setText("")
         self.label_4.setText(QCoreApplication.translate("MainWindow", u"Production halls", None))
-        self.machines_button.setText("")
+        self.label_7.setText(QCoreApplication.translate("MainWindow", u"Settings", None))
         self.label_5.setText(QCoreApplication.translate("MainWindow", u"Machines", None))
         self.label_6.setText(QCoreApplication.translate("MainWindow", u"Statistics", None))
         self.settings_button.setText("")
-        self.label_7.setText(QCoreApplication.translate("MainWindow", u"Settings", None))
-        self.halls_button.setText("")
         self.stats_button.setText("")
+        self.machines_button.setText("")
+        self.halls_button.setText("")
+        self.label_28.setText(QCoreApplication.translate("MainWindow", u" Main Menu", None))
+        self.home_button.setText("")
         self.label_27.setText(QCoreApplication.translate("MainWindow", u"MAIN MENU", None))
         self.main_menu_machines_button.setText(QCoreApplication.translate("MainWindow", u"  Machines", None))
-        self.main_menu_stat_button.setText(QCoreApplication.translate("MainWindow", u"  Statistics", None))
+        self.main_menu_stats_button.setText(QCoreApplication.translate("MainWindow", u"  Statistics", None))
         self.main_menu_settings_button.setText(QCoreApplication.translate("MainWindow", u"  Settings", None))
         self.main_menu_halls_button.setText(QCoreApplication.translate("MainWindow", u"  Industry halls ", None))
-        self.halls_label.setText(QCoreApplication.translate("MainWindow", u"INDUSTRY HALLS                                       ", None))
+        self.halls_label.setText(QCoreApplication.translate("MainWindow", u"INDUSTRY HALLS              ", None))
         self.add_hall_button.setText(QCoreApplication.translate("MainWindow", u" ADD HALL ", None))
-        self.search_label.setText("")
         self.search_bar_2.setText(QCoreApplication.translate("MainWindow", u"Search...", None))
         ___qtablewidgetitem = self.halls_table.horizontalHeaderItem(0)
         ___qtablewidgetitem.setText(QCoreApplication.translate("MainWindow", u"Machines", None));
@@ -981,14 +1176,13 @@ class Ui_MainWindow(object):
         ___qtablewidgetitem4.setText(QCoreApplication.translate("MainWindow", u"Hall 2", None));
         self.label_8.setText(QCoreApplication.translate("MainWindow", u"ADD NEW HALL                                                                           ", None))
         self.add_hall_back_button.setText(QCoreApplication.translate("MainWindow", u"BACK", None))
-        self.label_10.setText(QCoreApplication.translate("MainWindow", u"City:", None))
         self.label_9.setText(QCoreApplication.translate("MainWindow", u"Hall name:", None))
-        self.label_11.setText(QCoreApplication.translate("MainWindow", u"Street and number:", None))
         self.label_12.setText(QCoreApplication.translate("MainWindow", u"ID:", None))
+        self.label_10.setText(QCoreApplication.translate("MainWindow", u"City:", None))
+        self.label_11.setText(QCoreApplication.translate("MainWindow", u"Street and number:", None))
         self.confirm_add_button.setText(QCoreApplication.translate("MainWindow", u"CONFIRM", None))
-        self.machines_label.setText(QCoreApplication.translate("MainWindow", u"MACHINES                                               ", None))
+        self.machines_label.setText(QCoreApplication.translate("MainWindow", u"MACHINES", None))
         self.add_machine_button.setText(QCoreApplication.translate("MainWindow", u" ADD MACHINE", None))
-        self.search_label_2.setText("")
         self.search_bar_3.setText(QCoreApplication.translate("MainWindow", u"Search...", None))
         ___qtablewidgetitem5 = self.machines_table.horizontalHeaderItem(0)
         ___qtablewidgetitem5.setText(QCoreApplication.translate("MainWindow", u"ID", None));
@@ -1006,7 +1200,7 @@ class Ui_MainWindow(object):
         ___qtablewidgetitem11.setText(QCoreApplication.translate("MainWindow", u"Hall 2", None));
         ___qtablewidgetitem12 = self.machines_table.verticalHeaderItem(2)
         ___qtablewidgetitem12.setText(QCoreApplication.translate("MainWindow", u"Machine 3", None));
-        self.label_13.setText(QCoreApplication.translate("MainWindow", u"ADD NEW MACHINE                                                                        ", None))
+        self.label_13.setText(QCoreApplication.translate("MainWindow", u"ADD NEW MACHINE", None))
         self.add_machine_back_button.setText(QCoreApplication.translate("MainWindow", u"BACK", None))
         self.label_16.setText(QCoreApplication.translate("MainWindow", u"Hall:", None))
         self.label_14.setText(QCoreApplication.translate("MainWindow", u"ID:", None))
@@ -1027,7 +1221,7 @@ class Ui_MainWindow(object):
         self.statistics_back_button.setText(QCoreApplication.translate("MainWindow", u"BACK", None))
         self.label_26.setText(QCoreApplication.translate("MainWindow", u"Settings", None))
         self.settings_back_button.setText(QCoreApplication.translate("MainWindow", u"BACK", None))
-        self.label_3.setText(QCoreApplication.translate("MainWindow", u"Version 1.0 | ITU | Copyright RHVJTH", None))
+        self.label_3.setText(QCoreApplication.translate("MainWindow", u"Version 1.2 | ITU | Copyright RHVJTH", None))
         self.pushButton_2.setText(QCoreApplication.translate("MainWindow", u"?", None))
     # retranslateUi
 

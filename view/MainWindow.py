@@ -23,6 +23,7 @@ class MainWindow(QMainWindow):
         self.ui.resize_window_button.clicked.connect(lambda: self.restore_or_maximize_window())
 
         # navigation
+        self.ui.home_button.clicked.connect(lambda: self.reroute(self.ui.main_menu_page))
         self.ui.halls_button.clicked.connect(lambda: self.reroute(self.ui.halls_list_page))
         self.ui.machines_button.clicked.connect(lambda: self.reroute(self.ui.machines_list_page))
         self.ui.stats_button.clicked.connect(lambda: self.reroute(self.ui.tests_page))
@@ -30,15 +31,42 @@ class MainWindow(QMainWindow):
 
         self.ui.main_menu_halls_button.clicked.connect(lambda: self.reroute(self.ui.halls_list_page))
         self.ui.main_menu_machines_button.clicked.connect(lambda: self.reroute(self.ui.machines_list_page))
-        self.ui.main_menu_stat_button.clicked.connect(lambda: self.reroute(self.ui.tests_page))
+        self.ui.main_menu_stats_button.clicked.connect(lambda: self.reroute(self.ui.tests_page))
         self.ui.main_menu_settings_button.clicked.connect(lambda: self.reroute(self.ui.settings_page))
         self.ui.add_hall_button.clicked.connect(lambda: self.reroute(self.ui.add_hall_form))
         self.ui.add_machine_button.clicked.connect(lambda: self.reroute(self.ui.add_machine_form))
         self.ui.add_machine_back_button.clicked.connect(lambda: self.reroute(self.back_route))
         self.ui.add_hall_back_button.clicked.connect(lambda: self.reroute(self.back_route))
-        self.ui.settings_back_button.clicked.connect(lambda: self.reroute(self.back_route))
-        self.ui.statistics_back_button.clicked.connect(lambda: self.reroute(self.back_route))
-        self.ui.machine_info_back_button.clicked.connect(lambda: self.reroute(self.back_route))
+        self.ui.settings_back_button.clicked.connect(lambda: self.reroute(self.ui.main_menu_page))
+        self.ui.statistics_back_button.clicked.connect(lambda: self.reroute(self.ui.main_menu_page))
+        self.ui.machine_info_back_button.clicked.connect(lambda: self.reroute(self.ui.main_menu_page))
+
+        def move_window(e):
+            if self.isMaximized() == False:
+                if e.buttons() == Qt.LeftButton:
+                    self.move(self.pos() + e.globalPos() - self.clickPosition)
+                    self.clickPosition = e.globalPos()
+                    e.accept()
+
+        self.ui.header_frame.mouseMoveEvent = move_window
+
+        self.ui.menu_button.clicked.connect(lambda: self.slideLeftMenu())
+
+
+    def slideLeftMenu(self):
+        width = self.ui.left_menu_frame.width()
+
+        if width == 50:
+            newWidth = 200
+        else:
+            newWidth = 50
+
+        self.animation = QPropertyAnimation(self.ui.left_menu_frame, b"minimumWidth")
+        self.animation.setDuration(250)
+        self.animation.setStartValue(width)
+        self.animation.setEndValue(newWidth)
+        self.animation.setEasingCurve(QtCore.QEasingCurve.InOutQuart)
+        self.animation.start()
 
     def restore_or_maximize_window(self):
         if self.isMaximized():
@@ -54,6 +82,6 @@ class MainWindow(QMainWindow):
         if previous_page is not self.ui.stackedWidget.currentWidget():
             self.back_route = previous_page
 
-
-
+    def mousePressEvent(self, event):
+        self.clickPosition = event.globalPos()
 

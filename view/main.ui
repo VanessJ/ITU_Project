@@ -580,7 +580,7 @@ border:none;</string>
              </size>
             </property>
             <property name="currentIndex">
-             <number>1</number>
+             <number>2</number>
             </property>
             <widget class="QWidget" name="main_menu_page">
              <layout class="QVBoxLayout" name="verticalLayout_10">
@@ -913,7 +913,7 @@ QPushButton:hover{
                     <string notr="true">border-color: rgb(0, 0, 0);</string>
                    </property>
                    <property name="text">
-                    <string>Search...</string>
+                    <string/>
                    </property>
                   </widget>
                  </item>
@@ -948,16 +948,11 @@ QPushButton:hover{
                    <pointsize>10</pointsize>
                   </font>
                  </property>
-                 <row>
+                 <column>
                   <property name="text">
-                   <string>Hall 1</string>
+                   <string>Hall </string>
                   </property>
-                 </row>
-                 <row>
-                  <property name="text">
-                   <string>Hall 2</string>
-                  </property>
-                 </row>
+                 </column>
                  <column>
                   <property name="text">
                    <string>Machines</string>
@@ -970,7 +965,7 @@ QPushButton:hover{
                  </column>
                  <column>
                   <property name="text">
-                   <string>Active</string>
+                   <string>Monitor</string>
                   </property>
                  </column>
                 </widget>
@@ -1053,6 +1048,33 @@ QPushButton:hover{
                  <enum>QFrame::Raised</enum>
                 </property>
                 <layout class="QGridLayout" name="gridLayout_2">
+                 <item row="1" column="0">
+                  <widget class="QLabel" name="label_10">
+                   <property name="font">
+                    <font>
+                     <family>Nirmala UI</family>
+                     <pointsize>10</pointsize>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>ID</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="1">
+                  <widget class="QLineEdit" name="add_hall_name">
+                   <property name="styleSheet">
+                    <string notr="true">QLineEdit{
+	background-color: rgb(247, 247, 247);
+	border: 2px solid #55aaff;
+	border-radius: 5px;
+}
+QLineEdit:focus{
+	border: 2px solid #00ffff;
+}</string>
+                   </property>
+                  </widget>
+                 </item>
                  <item row="0" column="0" alignment="Qt::AlignTop">
                   <widget class="QLabel" name="label_9">
                    <property name="font">
@@ -1066,46 +1088,6 @@ QPushButton:hover{
                    </property>
                   </widget>
                  </item>
-                 <item row="4" column="0">
-                  <widget class="QLabel" name="label_12">
-                   <property name="font">
-                    <font>
-                     <family>Nirmala UI</family>
-                     <pointsize>10</pointsize>
-                    </font>
-                   </property>
-                   <property name="text">
-                    <string>ID:</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="1" column="0">
-                  <widget class="QLabel" name="label_10">
-                   <property name="font">
-                    <font>
-                     <family>Nirmala UI</family>
-                     <pointsize>10</pointsize>
-                    </font>
-                   </property>
-                   <property name="text">
-                    <string>City:</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="1" column="1">
-                  <widget class="QLineEdit" name="lineEdit_2">
-                   <property name="styleSheet">
-                    <string notr="true">QLineEdit{
-	background-color: rgb(247, 247, 247);
-	border: 2px solid #55aaff;
-	border-radius: 5px;
-}
-QLineEdit:focus{
-	border: 2px solid #00ffff;
-}</string>
-                   </property>
-                  </widget>
-                 </item>
                  <item row="2" column="0">
                   <widget class="QLabel" name="label_11">
                    <property name="font">
@@ -1115,12 +1097,25 @@ QLineEdit:focus{
                     </font>
                    </property>
                    <property name="text">
-                    <string>Street and number:</string>
+                    <string>City</string>
                    </property>
                   </widget>
                  </item>
-                 <item row="0" column="1">
-                  <widget class="QLineEdit" name="lineEdit">
+                 <item row="4" column="0">
+                  <widget class="QLabel" name="label_12">
+                   <property name="font">
+                    <font>
+                     <family>Nirmala UI</family>
+                     <pointsize>10</pointsize>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>Street and number</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="4" column="1">
+                  <widget class="QLineEdit" name="add_hall_street">
                    <property name="styleSheet">
                     <string notr="true">QLineEdit{
 	background-color: rgb(247, 247, 247);
@@ -1133,8 +1128,8 @@ QLineEdit:focus{
                    </property>
                   </widget>
                  </item>
-                 <item row="4" column="1">
-                  <widget class="QLineEdit" name="lineEdit_4">
+                 <item row="1" column="1">
+                  <widget class="QLineEdit" name="add_hall_id">
                    <property name="styleSheet">
                     <string notr="true">QLineEdit{
 	background-color: rgb(247, 247, 247);
@@ -1148,7 +1143,7 @@ QLineEdit:focus{
                   </widget>
                  </item>
                  <item row="2" column="1">
-                  <widget class="QLineEdit" name="lineEdit_3">
+                  <widget class="QLineEdit" name="add_hall_city">
                    <property name="styleSheet">
                     <string notr="true">QLineEdit{
 	background-color: rgb(247, 247, 247);
@@ -1295,7 +1290,7 @@ QPushButton:hover{
                     <string notr="true">border-color: rgb(0, 0, 0);</string>
                    </property>
                    <property name="text">
-                    <string>Search...</string>
+                    <string/>
                    </property>
                   </widget>
                  </item>
@@ -1304,21 +1299,6 @@ QPushButton:hover{
               </item>
               <item>
                <widget class="QTableWidget" name="machines_table">
-                <row>
-                 <property name="text">
-                  <string>Machine 1</string>
-                 </property>
-                </row>
-                <row>
-                 <property name="text">
-                  <string>Hall 2</string>
-                 </property>
-                </row>
-                <row>
-                 <property name="text">
-                  <string>Machine 3</string>
-                 </property>
-                </row>
                 <column>
                  <property name="text">
                   <string>ID</string>
@@ -1424,7 +1404,7 @@ QPushButton:hover{
                 </property>
                 <layout class="QGridLayout" name="gridLayout_3">
                  <item row="0" column="1">
-                  <widget class="QLineEdit" name="lineEdit_5">
+                  <widget class="QLineEdit" name="add_machine_name">
                    <property name="styleSheet">
                     <string notr="true">QLineEdit{
 	background-color: rgb(247, 247, 247);
@@ -1451,7 +1431,7 @@ QLineEdit:focus{
                   </widget>
                  </item>
                  <item row="1" column="1">
-                  <widget class="QLineEdit" name="lineEdit_6">
+                  <widget class="QLineEdit" name="add_machine_id">
                    <property name="styleSheet">
                     <string notr="true">QLineEdit{
 	background-color: rgb(247, 247, 247);
@@ -1465,7 +1445,7 @@ QLineEdit:focus{
                   </widget>
                  </item>
                  <item row="3" column="1">
-                  <widget class="QLineEdit" name="lineEdit_7">
+                  <widget class="QLineEdit" name="add_machine_sensor">
                    <property name="styleSheet">
                     <string notr="true">QLineEdit{
 	background-color: rgb(247, 247, 247);
@@ -1505,7 +1485,7 @@ QLineEdit:focus{
                   </widget>
                  </item>
                  <item row="2" column="1">
-                  <widget class="QLineEdit" name="lineEdit_8">
+                  <widget class="QLineEdit" name="add_machine_hall">
                    <property name="styleSheet">
                     <string notr="true">QLineEdit{
 	background-color: rgb(247, 247, 247);
@@ -1548,7 +1528,7 @@ QLineEdit:focus{
                 <property name="frameShadow">
                  <enum>QFrame::Raised</enum>
                 </property>
-                <widget class="QPushButton" name="confirm_add_button_2">
+                <widget class="QPushButton" name="confirm_add_button_machine">
                  <property name="geometry">
                   <rect>
                    <x>610</x>
@@ -1666,7 +1646,7 @@ QPushButton:hover{
                 </property>
                 <layout class="QGridLayout" name="gridLayout_4">
                  <item row="0" column="3">
-                  <widget class="QLabel" name="label_22">
+                  <widget class="QLabel" name="m_info_hall">
                    <property name="text">
                     <string>N/A</string>
                    </property>
@@ -1680,7 +1660,7 @@ QPushButton:hover{
                   </widget>
                  </item>
                  <item row="0" column="1">
-                  <widget class="QLabel" name="label_20">
+                  <widget class="QLabel" name="m_info_id">
                    <property name="text">
                     <string>N/A</string>
                    </property>
@@ -1694,7 +1674,7 @@ QPushButton:hover{
                   </widget>
                  </item>
                  <item row="0" column="5">
-                  <widget class="QLabel" name="label_24">
+                  <widget class="QLabel" name="m_info_sensor">
                    <property name="text">
                     <string>N/A</string>
                    </property>

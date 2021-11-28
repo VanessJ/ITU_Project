@@ -8,12 +8,17 @@ class Machine:
 
         # string name or number id
         self._identification = identification
-        self._operating = False
+        self._operating = True
         self._filtering = False
         self._monitored = False
         self._start_time = 0
         self._temperature = random.randint(40, 50)
         self._nas = random.randint(5, 12)
+        self._sensor = "Default S"
+
+    @property
+    def sensor(self):
+        return self._sensor
 
     # identification getter
     @property
@@ -38,6 +43,10 @@ class Machine:
     @identification.setter
     def identification(self, identification):
         self._identification = identification
+
+    @sensor.setter
+    def sensor(self, sensor):
+        self._sensor = sensor
 
     @start_time.setter
     def runtime(self, number):

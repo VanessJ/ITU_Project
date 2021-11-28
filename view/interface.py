@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'mainCmlliT.ui'
+## Form generated from reading UI file 'mainknJNeI.ui'
 ##
-## Created by: Qt User Interface Compiler version 5.15.2
+## Created by: Qt User Interface Compiler version 5.15.1
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
@@ -477,20 +477,16 @@ class Ui_MainWindow(object):
         self.frame_4.setFrameShape(QFrame.StyledPanel)
         self.frame_4.setFrameShadow(QFrame.Raised)
         self.halls_table = QTableWidget(self.frame_4)
-        if (self.halls_table.columnCount() < 3):
-            self.halls_table.setColumnCount(3)
+        if (self.halls_table.columnCount() < 4):
+            self.halls_table.setColumnCount(4)
         __qtablewidgetitem = QTableWidgetItem()
         self.halls_table.setHorizontalHeaderItem(0, __qtablewidgetitem)
         __qtablewidgetitem1 = QTableWidgetItem()
         self.halls_table.setHorizontalHeaderItem(1, __qtablewidgetitem1)
         __qtablewidgetitem2 = QTableWidgetItem()
         self.halls_table.setHorizontalHeaderItem(2, __qtablewidgetitem2)
-        if (self.halls_table.rowCount() < 2):
-            self.halls_table.setRowCount(2)
         __qtablewidgetitem3 = QTableWidgetItem()
-        self.halls_table.setVerticalHeaderItem(0, __qtablewidgetitem3)
-        __qtablewidgetitem4 = QTableWidgetItem()
-        self.halls_table.setVerticalHeaderItem(1, __qtablewidgetitem4)
+        self.halls_table.setHorizontalHeaderItem(3, __qtablewidgetitem3)
         self.halls_table.setObjectName(u"halls_table")
         self.halls_table.setGeometry(QRect(15, 11, 681, 371))
         self.halls_table.setFont(font2)
@@ -544,27 +540,15 @@ class Ui_MainWindow(object):
         self.form_frame_add_hall.setFrameShadow(QFrame.Raised)
         self.gridLayout_2 = QGridLayout(self.form_frame_add_hall)
         self.gridLayout_2.setObjectName(u"gridLayout_2")
-        self.label_9 = QLabel(self.form_frame_add_hall)
-        self.label_9.setObjectName(u"label_9")
-        self.label_9.setFont(font2)
-
-        self.gridLayout_2.addWidget(self.label_9, 0, 0, 1, 1, Qt.AlignTop)
-
-        self.label_12 = QLabel(self.form_frame_add_hall)
-        self.label_12.setObjectName(u"label_12")
-        self.label_12.setFont(font2)
-
-        self.gridLayout_2.addWidget(self.label_12, 4, 0, 1, 1)
-
         self.label_10 = QLabel(self.form_frame_add_hall)
         self.label_10.setObjectName(u"label_10")
         self.label_10.setFont(font2)
 
         self.gridLayout_2.addWidget(self.label_10, 1, 0, 1, 1)
 
-        self.lineEdit_2 = QLineEdit(self.form_frame_add_hall)
-        self.lineEdit_2.setObjectName(u"lineEdit_2")
-        self.lineEdit_2.setStyleSheet(u"QLineEdit{\n"
+        self.add_hall_name = QLineEdit(self.form_frame_add_hall)
+        self.add_hall_name.setObjectName(u"add_hall_name")
+        self.add_hall_name.setStyleSheet(u"QLineEdit{\n"
 "	background-color: rgb(247, 247, 247);\n"
 "	border: 2px solid #55aaff;\n"
 "	border-radius: 5px;\n"
@@ -573,7 +557,13 @@ class Ui_MainWindow(object):
 "	border: 2px solid #00ffff;\n"
 "}")
 
-        self.gridLayout_2.addWidget(self.lineEdit_2, 1, 1, 1, 1)
+        self.gridLayout_2.addWidget(self.add_hall_name, 0, 1, 1, 1)
+
+        self.label_9 = QLabel(self.form_frame_add_hall)
+        self.label_9.setObjectName(u"label_9")
+        self.label_9.setFont(font2)
+
+        self.gridLayout_2.addWidget(self.label_9, 0, 0, 1, 1, Qt.AlignTop)
 
         self.label_11 = QLabel(self.form_frame_add_hall)
         self.label_11.setObjectName(u"label_11")
@@ -581,9 +571,15 @@ class Ui_MainWindow(object):
 
         self.gridLayout_2.addWidget(self.label_11, 2, 0, 1, 1)
 
-        self.lineEdit = QLineEdit(self.form_frame_add_hall)
-        self.lineEdit.setObjectName(u"lineEdit")
-        self.lineEdit.setStyleSheet(u"QLineEdit{\n"
+        self.label_12 = QLabel(self.form_frame_add_hall)
+        self.label_12.setObjectName(u"label_12")
+        self.label_12.setFont(font2)
+
+        self.gridLayout_2.addWidget(self.label_12, 4, 0, 1, 1)
+
+        self.add_hall_street = QLineEdit(self.form_frame_add_hall)
+        self.add_hall_street.setObjectName(u"add_hall_street")
+        self.add_hall_street.setStyleSheet(u"QLineEdit{\n"
 "	background-color: rgb(247, 247, 247);\n"
 "	border: 2px solid #55aaff;\n"
 "	border-radius: 5px;\n"
@@ -592,11 +588,11 @@ class Ui_MainWindow(object):
 "	border: 2px solid #00ffff;\n"
 "}")
 
-        self.gridLayout_2.addWidget(self.lineEdit, 0, 1, 1, 1)
+        self.gridLayout_2.addWidget(self.add_hall_street, 4, 1, 1, 1)
 
-        self.lineEdit_4 = QLineEdit(self.form_frame_add_hall)
-        self.lineEdit_4.setObjectName(u"lineEdit_4")
-        self.lineEdit_4.setStyleSheet(u"QLineEdit{\n"
+        self.add_hall_id = QLineEdit(self.form_frame_add_hall)
+        self.add_hall_id.setObjectName(u"add_hall_id")
+        self.add_hall_id.setStyleSheet(u"QLineEdit{\n"
 "	background-color: rgb(247, 247, 247);\n"
 "	border: 2px solid #55aaff;\n"
 "	border-radius: 5px;\n"
@@ -605,11 +601,11 @@ class Ui_MainWindow(object):
 "	border: 2px solid #00ffff;\n"
 "}")
 
-        self.gridLayout_2.addWidget(self.lineEdit_4, 4, 1, 1, 1)
+        self.gridLayout_2.addWidget(self.add_hall_id, 1, 1, 1, 1)
 
-        self.lineEdit_3 = QLineEdit(self.form_frame_add_hall)
-        self.lineEdit_3.setObjectName(u"lineEdit_3")
-        self.lineEdit_3.setStyleSheet(u"QLineEdit{\n"
+        self.add_hall_city = QLineEdit(self.form_frame_add_hall)
+        self.add_hall_city.setObjectName(u"add_hall_city")
+        self.add_hall_city.setStyleSheet(u"QLineEdit{\n"
 "	background-color: rgb(247, 247, 247);\n"
 "	border: 2px solid #55aaff;\n"
 "	border-radius: 5px;\n"
@@ -618,7 +614,7 @@ class Ui_MainWindow(object):
 "	border: 2px solid #00ffff;\n"
 "}")
 
-        self.gridLayout_2.addWidget(self.lineEdit_3, 2, 1, 1, 1)
+        self.gridLayout_2.addWidget(self.add_hall_city, 2, 1, 1, 1)
 
 
         self.verticalLayout_3.addWidget(self.form_frame_add_hall)
@@ -691,24 +687,16 @@ class Ui_MainWindow(object):
         self.machines_table = QTableWidget(self.machines_list_page)
         if (self.machines_table.columnCount() < 5):
             self.machines_table.setColumnCount(5)
+        __qtablewidgetitem4 = QTableWidgetItem()
+        self.machines_table.setHorizontalHeaderItem(0, __qtablewidgetitem4)
         __qtablewidgetitem5 = QTableWidgetItem()
-        self.machines_table.setHorizontalHeaderItem(0, __qtablewidgetitem5)
+        self.machines_table.setHorizontalHeaderItem(1, __qtablewidgetitem5)
         __qtablewidgetitem6 = QTableWidgetItem()
-        self.machines_table.setHorizontalHeaderItem(1, __qtablewidgetitem6)
+        self.machines_table.setHorizontalHeaderItem(2, __qtablewidgetitem6)
         __qtablewidgetitem7 = QTableWidgetItem()
-        self.machines_table.setHorizontalHeaderItem(2, __qtablewidgetitem7)
+        self.machines_table.setHorizontalHeaderItem(3, __qtablewidgetitem7)
         __qtablewidgetitem8 = QTableWidgetItem()
-        self.machines_table.setHorizontalHeaderItem(3, __qtablewidgetitem8)
-        __qtablewidgetitem9 = QTableWidgetItem()
-        self.machines_table.setHorizontalHeaderItem(4, __qtablewidgetitem9)
-        if (self.machines_table.rowCount() < 3):
-            self.machines_table.setRowCount(3)
-        __qtablewidgetitem10 = QTableWidgetItem()
-        self.machines_table.setVerticalHeaderItem(0, __qtablewidgetitem10)
-        __qtablewidgetitem11 = QTableWidgetItem()
-        self.machines_table.setVerticalHeaderItem(1, __qtablewidgetitem11)
-        __qtablewidgetitem12 = QTableWidgetItem()
-        self.machines_table.setVerticalHeaderItem(2, __qtablewidgetitem12)
+        self.machines_table.setHorizontalHeaderItem(4, __qtablewidgetitem8)
         self.machines_table.setObjectName(u"machines_table")
 
         self.verticalLayout_5.addWidget(self.machines_table)
@@ -755,9 +743,9 @@ class Ui_MainWindow(object):
         self.form_frame_add_hall_2.setFrameShadow(QFrame.Raised)
         self.gridLayout_3 = QGridLayout(self.form_frame_add_hall_2)
         self.gridLayout_3.setObjectName(u"gridLayout_3")
-        self.lineEdit_5 = QLineEdit(self.form_frame_add_hall_2)
-        self.lineEdit_5.setObjectName(u"lineEdit_5")
-        self.lineEdit_5.setStyleSheet(u"QLineEdit{\n"
+        self.add_machine_name = QLineEdit(self.form_frame_add_hall_2)
+        self.add_machine_name.setObjectName(u"add_machine_name")
+        self.add_machine_name.setStyleSheet(u"QLineEdit{\n"
 "	background-color: rgb(247, 247, 247);\n"
 "	border: 2px solid #55aaff;\n"
 "	border-radius: 5px;\n"
@@ -766,7 +754,7 @@ class Ui_MainWindow(object):
 "	border: 2px solid #00ffff;\n"
 "}")
 
-        self.gridLayout_3.addWidget(self.lineEdit_5, 0, 1, 1, 1)
+        self.gridLayout_3.addWidget(self.add_machine_name, 0, 1, 1, 1)
 
         self.label_16 = QLabel(self.form_frame_add_hall_2)
         self.label_16.setObjectName(u"label_16")
@@ -774,9 +762,9 @@ class Ui_MainWindow(object):
 
         self.gridLayout_3.addWidget(self.label_16, 2, 0, 1, 1)
 
-        self.lineEdit_6 = QLineEdit(self.form_frame_add_hall_2)
-        self.lineEdit_6.setObjectName(u"lineEdit_6")
-        self.lineEdit_6.setStyleSheet(u"QLineEdit{\n"
+        self.add_machine_id = QLineEdit(self.form_frame_add_hall_2)
+        self.add_machine_id.setObjectName(u"add_machine_id")
+        self.add_machine_id.setStyleSheet(u"QLineEdit{\n"
 "	background-color: rgb(247, 247, 247);\n"
 "	border: 2px solid #55aaff;\n"
 "	border-radius: 5px;\n"
@@ -785,11 +773,11 @@ class Ui_MainWindow(object):
 "	border: 2px solid #00ffff;\n"
 "}")
 
-        self.gridLayout_3.addWidget(self.lineEdit_6, 1, 1, 1, 1)
+        self.gridLayout_3.addWidget(self.add_machine_id, 1, 1, 1, 1)
 
-        self.lineEdit_7 = QLineEdit(self.form_frame_add_hall_2)
-        self.lineEdit_7.setObjectName(u"lineEdit_7")
-        self.lineEdit_7.setStyleSheet(u"QLineEdit{\n"
+        self.add_machine_sensor = QLineEdit(self.form_frame_add_hall_2)
+        self.add_machine_sensor.setObjectName(u"add_machine_sensor")
+        self.add_machine_sensor.setStyleSheet(u"QLineEdit{\n"
 "	background-color: rgb(247, 247, 247);\n"
 "	border: 2px solid #55aaff;\n"
 "	border-radius: 5px;\n"
@@ -798,7 +786,7 @@ class Ui_MainWindow(object):
 "	border: 2px solid #00ffff;\n"
 "}")
 
-        self.gridLayout_3.addWidget(self.lineEdit_7, 3, 1, 1, 1)
+        self.gridLayout_3.addWidget(self.add_machine_sensor, 3, 1, 1, 1)
 
         self.label_14 = QLabel(self.form_frame_add_hall_2)
         self.label_14.setObjectName(u"label_14")
@@ -812,9 +800,9 @@ class Ui_MainWindow(object):
 
         self.gridLayout_3.addWidget(self.label_15, 0, 0, 1, 1, Qt.AlignTop)
 
-        self.lineEdit_8 = QLineEdit(self.form_frame_add_hall_2)
-        self.lineEdit_8.setObjectName(u"lineEdit_8")
-        self.lineEdit_8.setStyleSheet(u"QLineEdit{\n"
+        self.add_machine_hall = QLineEdit(self.form_frame_add_hall_2)
+        self.add_machine_hall.setObjectName(u"add_machine_hall")
+        self.add_machine_hall.setStyleSheet(u"QLineEdit{\n"
 "	background-color: rgb(247, 247, 247);\n"
 "	border: 2px solid #55aaff;\n"
 "	border-radius: 5px;\n"
@@ -823,7 +811,7 @@ class Ui_MainWindow(object):
 "	border: 2px solid #00ffff;\n"
 "}")
 
-        self.gridLayout_3.addWidget(self.lineEdit_8, 2, 1, 1, 1)
+        self.gridLayout_3.addWidget(self.add_machine_hall, 2, 1, 1, 1)
 
         self.label_17 = QLabel(self.form_frame_add_hall_2)
         self.label_17.setObjectName(u"label_17")
@@ -839,11 +827,11 @@ class Ui_MainWindow(object):
         self.confirm_button_add_hall_2.setMaximumSize(QSize(16777215, 40))
         self.confirm_button_add_hall_2.setFrameShape(QFrame.StyledPanel)
         self.confirm_button_add_hall_2.setFrameShadow(QFrame.Raised)
-        self.confirm_add_button_2 = QPushButton(self.confirm_button_add_hall_2)
-        self.confirm_add_button_2.setObjectName(u"confirm_add_button_2")
-        self.confirm_add_button_2.setGeometry(QRect(610, 10, 93, 28))
-        self.confirm_add_button_2.setFont(font5)
-        self.confirm_add_button_2.setStyleSheet(u"QPushButton{\n"
+        self.confirm_add_button_machine = QPushButton(self.confirm_button_add_hall_2)
+        self.confirm_add_button_machine.setObjectName(u"confirm_add_button_machine")
+        self.confirm_add_button_machine.setGeometry(QRect(610, 10, 93, 28))
+        self.confirm_add_button_machine.setFont(font5)
+        self.confirm_add_button_machine.setStyleSheet(u"QPushButton{\n"
 "	background-color: rgb(80, 170, 255);\n"
 "	border: 1px solid black;\n"
 "	border-radius: 5px;\n"
@@ -899,30 +887,30 @@ class Ui_MainWindow(object):
         self.machines_id_frame.setFrameShadow(QFrame.Raised)
         self.gridLayout_4 = QGridLayout(self.machines_id_frame)
         self.gridLayout_4.setObjectName(u"gridLayout_4")
-        self.label_22 = QLabel(self.machines_id_frame)
-        self.label_22.setObjectName(u"label_22")
+        self.m_info_hall = QLabel(self.machines_id_frame)
+        self.m_info_hall.setObjectName(u"m_info_hall")
 
-        self.gridLayout_4.addWidget(self.label_22, 0, 3, 1, 1)
+        self.gridLayout_4.addWidget(self.m_info_hall, 0, 3, 1, 1)
 
         self.label_19 = QLabel(self.machines_id_frame)
         self.label_19.setObjectName(u"label_19")
 
         self.gridLayout_4.addWidget(self.label_19, 0, 0, 1, 1)
 
-        self.label_20 = QLabel(self.machines_id_frame)
-        self.label_20.setObjectName(u"label_20")
+        self.m_info_id = QLabel(self.machines_id_frame)
+        self.m_info_id.setObjectName(u"m_info_id")
 
-        self.gridLayout_4.addWidget(self.label_20, 0, 1, 1, 1)
+        self.gridLayout_4.addWidget(self.m_info_id, 0, 1, 1, 1)
 
         self.label_21 = QLabel(self.machines_id_frame)
         self.label_21.setObjectName(u"label_21")
 
         self.gridLayout_4.addWidget(self.label_21, 0, 2, 1, 1)
 
-        self.label_24 = QLabel(self.machines_id_frame)
-        self.label_24.setObjectName(u"label_24")
+        self.m_info_sensor = QLabel(self.machines_id_frame)
+        self.m_info_sensor.setObjectName(u"m_info_sensor")
 
-        self.gridLayout_4.addWidget(self.label_24, 0, 5, 1, 1)
+        self.gridLayout_4.addWidget(self.m_info_sensor, 0, 5, 1, 1)
 
         self.label_23 = QLabel(self.machines_id_frame)
         self.label_23.setObjectName(u"label_23")
@@ -1132,7 +1120,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.stackedWidget.setCurrentIndex(1)
+        self.stackedWidget.setCurrentIndex(2)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -1163,57 +1151,49 @@ class Ui_MainWindow(object):
         self.main_menu_halls_button.setText(QCoreApplication.translate("MainWindow", u"  Industry halls ", None))
         self.halls_label.setText(QCoreApplication.translate("MainWindow", u"INDUSTRY HALLS              ", None))
         self.add_hall_button.setText(QCoreApplication.translate("MainWindow", u" ADD HALL ", None))
-        self.search_bar_2.setText(QCoreApplication.translate("MainWindow", u"Search...", None))
+        self.search_bar_2.setText("")
         ___qtablewidgetitem = self.halls_table.horizontalHeaderItem(0)
-        ___qtablewidgetitem.setText(QCoreApplication.translate("MainWindow", u"Machines", None));
+        ___qtablewidgetitem.setText(QCoreApplication.translate("MainWindow", u"Hall ", None));
         ___qtablewidgetitem1 = self.halls_table.horizontalHeaderItem(1)
-        ___qtablewidgetitem1.setText(QCoreApplication.translate("MainWindow", u"Adress", None));
+        ___qtablewidgetitem1.setText(QCoreApplication.translate("MainWindow", u"Machines", None));
         ___qtablewidgetitem2 = self.halls_table.horizontalHeaderItem(2)
-        ___qtablewidgetitem2.setText(QCoreApplication.translate("MainWindow", u"Active", None));
-        ___qtablewidgetitem3 = self.halls_table.verticalHeaderItem(0)
-        ___qtablewidgetitem3.setText(QCoreApplication.translate("MainWindow", u"Hall 1", None));
-        ___qtablewidgetitem4 = self.halls_table.verticalHeaderItem(1)
-        ___qtablewidgetitem4.setText(QCoreApplication.translate("MainWindow", u"Hall 2", None));
+        ___qtablewidgetitem2.setText(QCoreApplication.translate("MainWindow", u"Adress", None));
+        ___qtablewidgetitem3 = self.halls_table.horizontalHeaderItem(3)
+        ___qtablewidgetitem3.setText(QCoreApplication.translate("MainWindow", u"Monitor", None));
         self.label_8.setText(QCoreApplication.translate("MainWindow", u"ADD NEW HALL                                                                           ", None))
         self.add_hall_back_button.setText(QCoreApplication.translate("MainWindow", u"BACK", None))
+        self.label_10.setText(QCoreApplication.translate("MainWindow", u"ID", None))
         self.label_9.setText(QCoreApplication.translate("MainWindow", u"Hall name:", None))
-        self.label_12.setText(QCoreApplication.translate("MainWindow", u"ID:", None))
-        self.label_10.setText(QCoreApplication.translate("MainWindow", u"City:", None))
-        self.label_11.setText(QCoreApplication.translate("MainWindow", u"Street and number:", None))
+        self.label_11.setText(QCoreApplication.translate("MainWindow", u"City", None))
+        self.label_12.setText(QCoreApplication.translate("MainWindow", u"Street and number", None))
         self.confirm_add_button.setText(QCoreApplication.translate("MainWindow", u"CONFIRM", None))
         self.machines_label.setText(QCoreApplication.translate("MainWindow", u"MACHINES", None))
         self.add_machine_button.setText(QCoreApplication.translate("MainWindow", u" ADD MACHINE", None))
-        self.search_bar_3.setText(QCoreApplication.translate("MainWindow", u"Search...", None))
-        ___qtablewidgetitem5 = self.machines_table.horizontalHeaderItem(0)
-        ___qtablewidgetitem5.setText(QCoreApplication.translate("MainWindow", u"ID", None));
-        ___qtablewidgetitem6 = self.machines_table.horizontalHeaderItem(1)
-        ___qtablewidgetitem6.setText(QCoreApplication.translate("MainWindow", u"Active", None));
-        ___qtablewidgetitem7 = self.machines_table.horizontalHeaderItem(2)
-        ___qtablewidgetitem7.setText(QCoreApplication.translate("MainWindow", u"Temperature (\u00b0C)", None));
-        ___qtablewidgetitem8 = self.machines_table.horizontalHeaderItem(3)
-        ___qtablewidgetitem8.setText(QCoreApplication.translate("MainWindow", u"NAS", None));
-        ___qtablewidgetitem9 = self.machines_table.horizontalHeaderItem(4)
-        ___qtablewidgetitem9.setText(QCoreApplication.translate("MainWindow", u"More info", None));
-        ___qtablewidgetitem10 = self.machines_table.verticalHeaderItem(0)
-        ___qtablewidgetitem10.setText(QCoreApplication.translate("MainWindow", u"Machine 1", None));
-        ___qtablewidgetitem11 = self.machines_table.verticalHeaderItem(1)
-        ___qtablewidgetitem11.setText(QCoreApplication.translate("MainWindow", u"Hall 2", None));
-        ___qtablewidgetitem12 = self.machines_table.verticalHeaderItem(2)
-        ___qtablewidgetitem12.setText(QCoreApplication.translate("MainWindow", u"Machine 3", None));
+        self.search_bar_3.setText("")
+        ___qtablewidgetitem4 = self.machines_table.horizontalHeaderItem(0)
+        ___qtablewidgetitem4.setText(QCoreApplication.translate("MainWindow", u"ID", None));
+        ___qtablewidgetitem5 = self.machines_table.horizontalHeaderItem(1)
+        ___qtablewidgetitem5.setText(QCoreApplication.translate("MainWindow", u"Active", None));
+        ___qtablewidgetitem6 = self.machines_table.horizontalHeaderItem(2)
+        ___qtablewidgetitem6.setText(QCoreApplication.translate("MainWindow", u"Temperature (\u00b0C)", None));
+        ___qtablewidgetitem7 = self.machines_table.horizontalHeaderItem(3)
+        ___qtablewidgetitem7.setText(QCoreApplication.translate("MainWindow", u"NAS", None));
+        ___qtablewidgetitem8 = self.machines_table.horizontalHeaderItem(4)
+        ___qtablewidgetitem8.setText(QCoreApplication.translate("MainWindow", u"More info", None));
         self.label_13.setText(QCoreApplication.translate("MainWindow", u"ADD NEW MACHINE", None))
         self.add_machine_back_button.setText(QCoreApplication.translate("MainWindow", u"BACK", None))
         self.label_16.setText(QCoreApplication.translate("MainWindow", u"Hall:", None))
         self.label_14.setText(QCoreApplication.translate("MainWindow", u"ID:", None))
         self.label_15.setText(QCoreApplication.translate("MainWindow", u"Machine name:", None))
         self.label_17.setText(QCoreApplication.translate("MainWindow", u"Sensors ID:", None))
-        self.confirm_add_button_2.setText(QCoreApplication.translate("MainWindow", u"CONFIRM", None))
+        self.confirm_add_button_machine.setText(QCoreApplication.translate("MainWindow", u"CONFIRM", None))
         self.label_18.setText(QCoreApplication.translate("MainWindow", u"MACHINE INFO AND STATISTICS                                                  ", None))
         self.machine_info_back_button.setText(QCoreApplication.translate("MainWindow", u"BACK", None))
-        self.label_22.setText(QCoreApplication.translate("MainWindow", u"N/A", None))
+        self.m_info_hall.setText(QCoreApplication.translate("MainWindow", u"N/A", None))
         self.label_19.setText(QCoreApplication.translate("MainWindow", u"ID:", None))
-        self.label_20.setText(QCoreApplication.translate("MainWindow", u"N/A", None))
+        self.m_info_id.setText(QCoreApplication.translate("MainWindow", u"N/A", None))
         self.label_21.setText(QCoreApplication.translate("MainWindow", u"Hall:", None))
-        self.label_24.setText(QCoreApplication.translate("MainWindow", u"N/A", None))
+        self.m_info_sensor.setText(QCoreApplication.translate("MainWindow", u"N/A", None))
         self.label_23.setText(QCoreApplication.translate("MainWindow", u"Sensor ID:", None))
         self.temperature_label.setText(QCoreApplication.translate("MainWindow", u"Temperature:", None))
         self.NA_label.setText(QCoreApplication.translate("MainWindow", u"NAS:", None))

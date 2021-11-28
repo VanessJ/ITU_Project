@@ -1,9 +1,11 @@
 
-class MachineGroup:
+class Hall:
 
-    def __init__(self, name):
+    def __init__(self, name, address):
         self._name = name
+        self._address = address
         self._machines = []
+        self._monitored = False
 
     # name getter
     @property
@@ -15,9 +17,21 @@ class MachineGroup:
     def machines(self):
         return self._machines
 
+    @property
+    def address(self):
+        return self._address
+
+    @property
+    def monitored(self):
+        return self._monitored
+
     @name.setter
     def name(self, name):
         self._name = name
+
+    @address.setter
+    def address(self, address):
+        self._address = address
 
     # selects machine from group by id
     def get_by_id(self, identification):
@@ -28,6 +42,12 @@ class MachineGroup:
 
     def add_machine(self, machine):
         self._machines.append(machine)
+
+    def monitor(self):
+        self._monitored = True
+
+    def stop_monitoring(self):
+        self._monitored = False
 
     def print_values(self):
         for machine in self._machines:

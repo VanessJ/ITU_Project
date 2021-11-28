@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'mainknJNeI.ui'
+## Form generated from reading UI file 'mainiGlRvQ.ui'
 ##
-## Created by: Qt User Interface Compiler version 5.15.1
+## Created by: Qt User Interface Compiler version 5.15.2
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
@@ -18,7 +18,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(793, 627)
+        MainWindow.resize(793, 602)
         MainWindow.setStyleSheet(u"")
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
@@ -94,7 +94,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_3.addWidget(self.label_2)
 
 
-        self.horizontalLayout.addWidget(self.header_center, 0, Qt.AlignRight)
+        self.horizontalLayout.addWidget(self.header_center, 0, Qt.AlignHCenter)
 
         self.header_right = QFrame(self.header_frame)
         self.header_right.setObjectName(u"header_right")
@@ -152,8 +152,8 @@ class Ui_MainWindow(object):
         self.horizontalLayout_8.setContentsMargins(0, 0, 0, 0)
         self.left_menu_frame = QFrame(self.main_body_frame)
         self.left_menu_frame.setObjectName(u"left_menu_frame")
-        self.left_menu_frame.setMinimumSize(QSize(50, 0))
-        self.left_menu_frame.setMaximumSize(QSize(50, 16777215))
+        self.left_menu_frame.setMinimumSize(QSize(40, 0))
+        self.left_menu_frame.setMaximumSize(QSize(40, 16777215))
         self.left_menu_frame.setStyleSheet(u"background-color: rgb(85, 170, 255);\n"
 "border:none;")
         self.left_menu_frame.setFrameShape(QFrame.StyledPanel)
@@ -165,117 +165,89 @@ class Ui_MainWindow(object):
         self.menu_frame = QFrame(self.left_menu_frame)
         self.menu_frame.setObjectName(u"menu_frame")
         self.menu_frame.setMinimumSize(QSize(200, 0))
+        self.menu_frame.setStyleSheet(u"margin-left: 2px;")
         self.menu_frame.setFrameShape(QFrame.StyledPanel)
         self.menu_frame.setFrameShadow(QFrame.Raised)
         self.gridLayout = QGridLayout(self.menu_frame)
         self.gridLayout.setObjectName(u"gridLayout")
         self.gridLayout.setContentsMargins(0, -1, -1, -1)
-        self.label_4 = QLabel(self.menu_frame)
-        self.label_4.setObjectName(u"label_4")
+        self.stats_button = QPushButton(self.menu_frame)
+        self.stats_button.setObjectName(u"stats_button")
         font2 = QFont()
         font2.setFamily(u"Nirmala UI")
         font2.setPointSize(10)
-        self.label_4.setFont(font2)
-        self.label_4.setMargin(5)
-
-        self.gridLayout.addWidget(self.label_4, 1, 1, 1, 1)
-
-        self.label_7 = QLabel(self.menu_frame)
-        self.label_7.setObjectName(u"label_7")
-        self.label_7.setFont(font2)
-        self.label_7.setMargin(5)
-
-        self.gridLayout.addWidget(self.label_7, 4, 1, 1, 1)
-
-        self.label_5 = QLabel(self.menu_frame)
-        self.label_5.setObjectName(u"label_5")
-        self.label_5.setFont(font2)
-        self.label_5.setMargin(5)
-
-        self.gridLayout.addWidget(self.label_5, 2, 1, 1, 1)
-
-        self.label_6 = QLabel(self.menu_frame)
-        self.label_6.setObjectName(u"label_6")
-        self.label_6.setFont(font2)
-        self.label_6.setMargin(5)
-
-        self.gridLayout.addWidget(self.label_6, 3, 1, 1, 1)
-
-        self.settings_button = QPushButton(self.menu_frame)
-        self.settings_button.setObjectName(u"settings_button")
-        self.settings_button.setStyleSheet(u"QPushButton:hover{\n"
-"	border-radius: 5px;\n"
-"	border: 1px solid White;\n"
-"	background-color: #00aaff;\n"
-"}")
-        icon4 = QIcon()
-        icon4.addFile(u":/prefix/icons/construct.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.settings_button.setIcon(icon4)
-        self.settings_button.setIconSize(QSize(32, 32))
-
-        self.gridLayout.addWidget(self.settings_button, 4, 0, 1, 1)
-
-        self.stats_button = QPushButton(self.menu_frame)
-        self.stats_button.setObjectName(u"stats_button")
+        self.stats_button.setFont(font2)
         self.stats_button.setStyleSheet(u"QPushButton:hover{\n"
 "	border-radius: 5px;\n"
 "	border: 1px solid White;\n"
 "	background-color: #00aaff;\n"
 "}")
-        icon5 = QIcon()
-        icon5.addFile(u":/prefix/icons/analytics.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.stats_button.setIcon(icon5)
+        icon4 = QIcon()
+        icon4.addFile(u":/prefix/icons/analytics.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.stats_button.setIcon(icon4)
         self.stats_button.setIconSize(QSize(32, 32))
 
-        self.gridLayout.addWidget(self.stats_button, 3, 0, 1, 1)
+        self.gridLayout.addWidget(self.stats_button, 3, 0, 1, 1, Qt.AlignLeft)
 
         self.machines_button = QPushButton(self.menu_frame)
         self.machines_button.setObjectName(u"machines_button")
+        self.machines_button.setFont(font2)
         self.machines_button.setStyleSheet(u"QPushButton:hover{\n"
 "	border-radius: 5px;\n"
 "	border: 1px solid White;\n"
 "	background-color: #00aaff;\n"
 "}")
-        icon6 = QIcon()
-        icon6.addFile(u":/prefix/icons/hardware-chip.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.machines_button.setIcon(icon6)
+        icon5 = QIcon()
+        icon5.addFile(u":/prefix/icons/hardware-chip.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.machines_button.setIcon(icon5)
         self.machines_button.setIconSize(QSize(32, 32))
 
-        self.gridLayout.addWidget(self.machines_button, 2, 0, 1, 1)
+        self.gridLayout.addWidget(self.machines_button, 2, 0, 1, 1, Qt.AlignLeft)
 
-        self.halls_button = QPushButton(self.menu_frame)
-        self.halls_button.setObjectName(u"halls_button")
-        self.halls_button.setStyleSheet(u"QPushButton:hover{\n"
+        self.settings_button = QPushButton(self.menu_frame)
+        self.settings_button.setObjectName(u"settings_button")
+        self.settings_button.setFont(font2)
+        self.settings_button.setStyleSheet(u"QPushButton:hover{\n"
 "	border-radius: 5px;\n"
 "	border: 1px solid White;\n"
 "	background-color: #00aaff;\n"
 "}")
-        icon7 = QIcon()
-        icon7.addFile(u":/prefix/icons/factory.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.halls_button.setIcon(icon7)
-        self.halls_button.setIconSize(QSize(32, 32))
+        icon6 = QIcon()
+        icon6.addFile(u":/prefix/icons/construct.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.settings_button.setIcon(icon6)
+        self.settings_button.setIconSize(QSize(32, 32))
 
-        self.gridLayout.addWidget(self.halls_button, 1, 0, 1, 1)
-
-        self.label_28 = QLabel(self.menu_frame)
-        self.label_28.setObjectName(u"label_28")
-        self.label_28.setFont(font2)
-
-        self.gridLayout.addWidget(self.label_28, 0, 1, 1, 1)
+        self.gridLayout.addWidget(self.settings_button, 4, 0, 1, 1, Qt.AlignLeft)
 
         self.home_button = QPushButton(self.menu_frame)
         self.home_button.setObjectName(u"home_button")
+        self.home_button.setFont(font)
         self.home_button.setStyleSheet(u"QPushButton:hover{\n"
 "	border-radius: 5px;\n"
 "	border: 1px solid White;\n"
 "	background-color: #00aaff;\n"
 "}")
-        icon8 = QIcon()
-        icon8.addFile(u":/prefix/icons/cube.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.home_button.setIcon(icon8)
+        icon7 = QIcon()
+        icon7.addFile(u":/prefix/icons/cube.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.home_button.setIcon(icon7)
         self.home_button.setIconSize(QSize(32, 32))
 
-        self.gridLayout.addWidget(self.home_button, 0, 0, 1, 1)
+        self.gridLayout.addWidget(self.home_button, 0, 0, 1, 1, Qt.AlignLeft)
+
+        self.halls_button = QPushButton(self.menu_frame)
+        self.halls_button.setObjectName(u"halls_button")
+        self.halls_button.setFont(font2)
+        self.halls_button.setStyleSheet(u"QPushButton:hover{\n"
+"	border-radius: 5px;\n"
+"	border: 1px solid White;\n"
+"	background-color: #00aaff;\n"
+"}")
+        icon8 = QIcon()
+        icon8.addFile(u":/prefix/icons/factory.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.halls_button.setIcon(icon8)
+        self.halls_button.setIconSize(QSize(32, 32))
+
+        self.gridLayout.addWidget(self.halls_button, 1, 0, 1, 1, Qt.AlignLeft)
 
 
         self.horizontalLayout_9.addWidget(self.menu_frame, 0, Qt.AlignLeft|Qt.AlignTop)
@@ -341,7 +313,7 @@ class Ui_MainWindow(object):
 "QPushButton:hover{\n"
 "	background-color: #00aaff;\n"
 "}")
-        self.main_menu_machines_button.setIcon(icon6)
+        self.main_menu_machines_button.setIcon(icon5)
         self.main_menu_machines_button.setIconSize(QSize(32, 32))
 
         self.gridLayout_6.addWidget(self.main_menu_machines_button, 1, 1, 1, 1)
@@ -358,7 +330,7 @@ class Ui_MainWindow(object):
 "QPushButton:hover{\n"
 "	background-color: #00aaff;\n"
 "}")
-        self.main_menu_stats_button.setIcon(icon5)
+        self.main_menu_stats_button.setIcon(icon4)
         self.main_menu_stats_button.setIconSize(QSize(32, 32))
 
         self.gridLayout_6.addWidget(self.main_menu_stats_button, 3, 0, 1, 1)
@@ -375,7 +347,7 @@ class Ui_MainWindow(object):
 "QPushButton:hover{\n"
 "	background-color: #00aaff;\n"
 "}")
-        self.main_menu_settings_button.setIcon(icon4)
+        self.main_menu_settings_button.setIcon(icon6)
         self.main_menu_settings_button.setIconSize(QSize(32, 32))
 
         self.gridLayout_6.addWidget(self.main_menu_settings_button, 3, 1, 1, 1)
@@ -392,7 +364,7 @@ class Ui_MainWindow(object):
 "QPushButton:hover{\n"
 "	background-color: #00aaff;\n"
 "}")
-        self.main_menu_halls_button.setIcon(icon7)
+        self.main_menu_halls_button.setIcon(icon8)
         self.main_menu_halls_button.setIconSize(QSize(32, 32))
 
         self.gridLayout_6.addWidget(self.main_menu_halls_button, 1, 0, 1, 1)
@@ -1041,12 +1013,127 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_9.addWidget(self.test_top_frame_2)
 
-        self.frame_3 = QFrame(self.settings_page)
-        self.frame_3.setObjectName(u"frame_3")
-        self.frame_3.setFrameShape(QFrame.StyledPanel)
-        self.frame_3.setFrameShadow(QFrame.Raised)
+        self.settingsframe = QFrame(self.settings_page)
+        self.settingsframe.setObjectName(u"settingsframe")
+        self.settingsframe.setFrameShape(QFrame.StyledPanel)
+        self.settingsframe.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_19 = QHBoxLayout(self.settingsframe)
+        self.horizontalLayout_19.setObjectName(u"horizontalLayout_19")
+        self.frame_2 = QFrame(self.settingsframe)
+        self.frame_2.setObjectName(u"frame_2")
+        self.frame_2.setFrameShape(QFrame.StyledPanel)
+        self.frame_2.setFrameShadow(QFrame.Raised)
+        self.gridLayout_7 = QGridLayout(self.frame_2)
+        self.gridLayout_7.setObjectName(u"gridLayout_7")
+        self.label_22 = QLabel(self.frame_2)
+        self.label_22.setObjectName(u"label_22")
+        font8 = QFont()
+        font8.setFamily(u"Nirmala UI")
+        font8.setPointSize(9)
+        self.label_22.setFont(font8)
 
-        self.verticalLayout_9.addWidget(self.frame_3)
+        self.gridLayout_7.addWidget(self.label_22, 3, 0, 1, 1)
+
+        self.label_5 = QLabel(self.frame_2)
+        self.label_5.setObjectName(u"label_5")
+        self.label_5.setFont(font8)
+
+        self.gridLayout_7.addWidget(self.label_5, 1, 0, 1, 1)
+
+        self.label_6 = QLabel(self.frame_2)
+        self.label_6.setObjectName(u"label_6")
+        self.label_6.setFont(font8)
+
+        self.gridLayout_7.addWidget(self.label_6, 2, 0, 1, 1)
+
+        self.label_20 = QLabel(self.frame_2)
+        self.label_20.setObjectName(u"label_20")
+        self.label_20.setMinimumSize(QSize(0, 0))
+        font9 = QFont()
+        font9.setFamily(u"Nirmala UI")
+        self.label_20.setFont(font9)
+
+        self.gridLayout_7.addWidget(self.label_20, 0, 2, 1, 1)
+
+        self.label_4 = QLabel(self.frame_2)
+        self.label_4.setObjectName(u"label_4")
+        self.label_4.setMinimumSize(QSize(300, 0))
+        self.label_4.setFont(font8)
+
+        self.gridLayout_7.addWidget(self.label_4, 0, 0, 1, 1)
+
+        self.main_menu_shortcut = QKeySequenceEdit(self.frame_2)
+        self.main_menu_shortcut.setObjectName(u"main_menu_shortcut")
+        self.main_menu_shortcut.setMaximumSize(QSize(100, 16777))
+
+        self.gridLayout_7.addWidget(self.main_menu_shortcut, 2, 1, 1, 1)
+
+        self.graph_time_conversion_rate = QSpinBox(self.frame_2)
+        self.graph_time_conversion_rate.setObjectName(u"graph_time_conversion_rate")
+        self.graph_time_conversion_rate.setMaximumSize(QSize(100, 16777215))
+
+        self.gridLayout_7.addWidget(self.graph_time_conversion_rate, 1, 1, 1, 1)
+
+        self.label_24 = QLabel(self.frame_2)
+        self.label_24.setObjectName(u"label_24")
+        self.label_24.setFont(font8)
+
+        self.gridLayout_7.addWidget(self.label_24, 4, 0, 1, 1)
+
+        self.label_28 = QLabel(self.frame_2)
+        self.label_28.setObjectName(u"label_28")
+        self.label_28.setFont(font8)
+
+        self.gridLayout_7.addWidget(self.label_28, 5, 0, 1, 1)
+
+        self.automatic_tests_setting_time = QTimeEdit(self.frame_2)
+        self.automatic_tests_setting_time.setObjectName(u"automatic_tests_setting_time")
+        self.automatic_tests_setting_time.setMaximumSize(QSize(100, 16777215))
+
+        self.gridLayout_7.addWidget(self.automatic_tests_setting_time, 0, 1, 1, 1)
+
+        self.label_7 = QLabel(self.frame_2)
+        self.label_7.setObjectName(u"label_7")
+        self.label_7.setMinimumSize(QSize(0, 0))
+        self.label_7.setFont(font9)
+
+        self.gridLayout_7.addWidget(self.label_7, 1, 2, 1, 1)
+
+        self.label_29 = QLabel(self.frame_2)
+        self.label_29.setObjectName(u"label_29")
+        self.label_29.setFont(font8)
+
+        self.gridLayout_7.addWidget(self.label_29, 6, 0, 1, 1)
+
+        self.industry_halls_shortcut = QKeySequenceEdit(self.frame_2)
+        self.industry_halls_shortcut.setObjectName(u"industry_halls_shortcut")
+        self.industry_halls_shortcut.setMaximumSize(QSize(100, 16777215))
+
+        self.gridLayout_7.addWidget(self.industry_halls_shortcut, 3, 1, 1, 1)
+
+        self.machines_shortcut = QKeySequenceEdit(self.frame_2)
+        self.machines_shortcut.setObjectName(u"machines_shortcut")
+        self.machines_shortcut.setMaximumSize(QSize(100, 16777215))
+
+        self.gridLayout_7.addWidget(self.machines_shortcut, 4, 1, 1, 1)
+
+        self.stats_shortcut = QKeySequenceEdit(self.frame_2)
+        self.stats_shortcut.setObjectName(u"stats_shortcut")
+        self.stats_shortcut.setMaximumSize(QSize(100, 16777215))
+
+        self.gridLayout_7.addWidget(self.stats_shortcut, 5, 1, 1, 1)
+
+        self.settings_shortcut = QKeySequenceEdit(self.frame_2)
+        self.settings_shortcut.setObjectName(u"settings_shortcut")
+        self.settings_shortcut.setMaximumSize(QSize(100, 16777215))
+
+        self.gridLayout_7.addWidget(self.settings_shortcut, 6, 1, 1, 1)
+
+
+        self.horizontalLayout_19.addWidget(self.frame_2, 0, Qt.AlignTop)
+
+
+        self.verticalLayout_9.addWidget(self.settingsframe)
 
         self.stackedWidget.addWidget(self.settings_page)
 
@@ -1075,43 +1162,46 @@ class Ui_MainWindow(object):
         self.horizontalLayout_6.setObjectName(u"horizontalLayout_6")
         self.label_3 = QLabel(self.footer_left)
         self.label_3.setObjectName(u"label_3")
-        font8 = QFont()
-        font8.setFamily(u"Nirmala UI")
-        font8.setBold(False)
-        font8.setWeight(50)
-        self.label_3.setFont(font8)
+        font10 = QFont()
+        font10.setFamily(u"Nirmala UI")
+        font10.setBold(False)
+        font10.setWeight(50)
+        self.label_3.setFont(font10)
 
-        self.horizontalLayout_6.addWidget(self.label_3, 0, Qt.AlignLeft)
+        self.horizontalLayout_6.addWidget(self.label_3)
 
 
         self.horizontalLayout_5.addWidget(self.footer_left)
 
-        self.frame_2 = QFrame(self.footer_frame)
-        self.frame_2.setObjectName(u"frame_2")
-        self.frame_2.setFrameShape(QFrame.StyledPanel)
-        self.frame_2.setFrameShadow(QFrame.Raised)
-        self.horizontalLayout_7 = QHBoxLayout(self.frame_2)
-        self.horizontalLayout_7.setObjectName(u"horizontalLayout_7")
-        self.pushButton_2 = QPushButton(self.frame_2)
-        self.pushButton_2.setObjectName(u"pushButton_2")
-        font9 = QFont()
-        font9.setFamily(u"Nirmala UI")
-        font9.setPointSize(8)
-        self.pushButton_2.setFont(font9)
-
-        self.horizontalLayout_7.addWidget(self.pushButton_2, 0, Qt.AlignRight)
-
-        self.size_grip = QFrame(self.frame_2)
+        self.size_grip = QFrame(self.footer_frame)
         self.size_grip.setObjectName(u"size_grip")
         self.size_grip.setMinimumSize(QSize(10, 10))
         self.size_grip.setMaximumSize(QSize(10, 10))
+        self.size_grip.setStyleSheet(u"border:none\n"
+"")
         self.size_grip.setFrameShape(QFrame.StyledPanel)
         self.size_grip.setFrameShadow(QFrame.Raised)
 
-        self.horizontalLayout_7.addWidget(self.size_grip, 0, Qt.AlignBottom)
+        self.horizontalLayout_5.addWidget(self.size_grip)
+
+        self.status_frame = QFrame(self.footer_frame)
+        self.status_frame.setObjectName(u"status_frame")
+        self.status_frame.setStyleSheet(u"border-radius: 10px;\n"
+"border: 2px solid black;\n"
+"background-color: rgb(255, 255, 255);")
+        self.status_frame.setFrameShape(QFrame.StyledPanel)
+        self.status_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_7 = QHBoxLayout(self.status_frame)
+        self.horizontalLayout_7.setObjectName(u"horizontalLayout_7")
+        self.status_bar = QLabel(self.status_frame)
+        self.status_bar.setObjectName(u"status_bar")
+        self.status_bar.setFont(font7)
+        self.status_bar.setStyleSheet(u"border:none")
+
+        self.horizontalLayout_7.addWidget(self.status_bar, 0, Qt.AlignHCenter)
 
 
-        self.horizontalLayout_5.addWidget(self.frame_2)
+        self.horizontalLayout_5.addWidget(self.status_frame)
 
 
         self.verticalLayout.addWidget(self.footer_frame, 0, Qt.AlignBottom)
@@ -1120,7 +1210,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.stackedWidget.setCurrentIndex(2)
+        self.stackedWidget.setCurrentIndex(7)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -1134,16 +1224,26 @@ class Ui_MainWindow(object):
         self.minimze_window_button.setText("")
         self.resize_window_button.setText("")
         self.close_window_button.setText("")
-        self.label_4.setText(QCoreApplication.translate("MainWindow", u"Production halls", None))
-        self.label_7.setText(QCoreApplication.translate("MainWindow", u"Settings", None))
-        self.label_5.setText(QCoreApplication.translate("MainWindow", u"Machines", None))
-        self.label_6.setText(QCoreApplication.translate("MainWindow", u"Statistics", None))
-        self.settings_button.setText("")
-        self.stats_button.setText("")
-        self.machines_button.setText("")
-        self.halls_button.setText("")
-        self.label_28.setText(QCoreApplication.translate("MainWindow", u" Main Menu", None))
-        self.home_button.setText("")
+        self.stats_button.setText(QCoreApplication.translate("MainWindow", u" Statistics", None))
+#if QT_CONFIG(shortcut)
+        self.stats_button.setShortcut(QCoreApplication.translate("MainWindow", u"Ctrl+T", None))
+#endif // QT_CONFIG(shortcut)
+        self.machines_button.setText(QCoreApplication.translate("MainWindow", u" Machines", None))
+#if QT_CONFIG(shortcut)
+        self.machines_button.setShortcut(QCoreApplication.translate("MainWindow", u"Ctrl+N", None))
+#endif // QT_CONFIG(shortcut)
+        self.settings_button.setText(QCoreApplication.translate("MainWindow", u" Settings", None))
+#if QT_CONFIG(shortcut)
+        self.settings_button.setShortcut(QCoreApplication.translate("MainWindow", u"Ctrl+S", None))
+#endif // QT_CONFIG(shortcut)
+        self.home_button.setText(QCoreApplication.translate("MainWindow", u" Main Menu", None))
+#if QT_CONFIG(shortcut)
+        self.home_button.setShortcut(QCoreApplication.translate("MainWindow", u"Ctrl+M", None))
+#endif // QT_CONFIG(shortcut)
+        self.halls_button.setText(QCoreApplication.translate("MainWindow", u" Industry Halls", None))
+#if QT_CONFIG(shortcut)
+        self.halls_button.setShortcut(QCoreApplication.translate("MainWindow", u"Ctrl+I", None))
+#endif // QT_CONFIG(shortcut)
         self.label_27.setText(QCoreApplication.translate("MainWindow", u"MAIN MENU", None))
         self.main_menu_machines_button.setText(QCoreApplication.translate("MainWindow", u"  Machines", None))
         self.main_menu_stats_button.setText(QCoreApplication.translate("MainWindow", u"  Statistics", None))
@@ -1201,7 +1301,16 @@ class Ui_MainWindow(object):
         self.statistics_back_button.setText(QCoreApplication.translate("MainWindow", u"BACK", None))
         self.label_26.setText(QCoreApplication.translate("MainWindow", u"Settings", None))
         self.settings_back_button.setText(QCoreApplication.translate("MainWindow", u"BACK", None))
-        self.label_3.setText(QCoreApplication.translate("MainWindow", u"Version 1.2 | ITU | Copyright RHVJTH", None))
-        self.pushButton_2.setText(QCoreApplication.translate("MainWindow", u"?", None))
+        self.label_22.setText(QCoreApplication.translate("MainWindow", u"Industry Halls shortcut:", None))
+        self.label_5.setText(QCoreApplication.translate("MainWindow", u"Set up graph time conversion:", None))
+        self.label_6.setText(QCoreApplication.translate("MainWindow", u"Main Menu shortcut:", None))
+        self.label_20.setText(QCoreApplication.translate("MainWindow", u"(everyday at ?:??)", None))
+        self.label_4.setText(QCoreApplication.translate("MainWindow", u"Set up automatic test:", None))
+        self.label_24.setText(QCoreApplication.translate("MainWindow", u"Machines shortcut:", None))
+        self.label_28.setText(QCoreApplication.translate("MainWindow", u"Statistics shortcut:", None))
+        self.label_7.setText(QCoreApplication.translate("MainWindow", u"(1sec = ? minutes)", None))
+        self.label_29.setText(QCoreApplication.translate("MainWindow", u"Settings shortcut:", None))
+        self.label_3.setText(QCoreApplication.translate("MainWindow", u"Version 1.4 | ITU | Copyright RHVJTH", None))
+        self.status_bar.setText(QCoreApplication.translate("MainWindow", u"Welcome to Main Menu...", None))
     # retranslateUi
 

@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>793</width>
-    <height>627</height>
+    <height>602</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -120,7 +120,7 @@ border:none;</string>
          </layout>
         </widget>
        </item>
-       <item alignment="Qt::AlignRight">
+       <item alignment="Qt::AlignHCenter">
         <widget class="QFrame" name="header_center">
          <property name="maximumSize">
           <size>
@@ -287,13 +287,13 @@ border:none;</string>
         <widget class="QFrame" name="left_menu_frame">
          <property name="minimumSize">
           <size>
-           <width>50</width>
+           <width>40</width>
            <height>0</height>
           </size>
          </property>
          <property name="maximumSize">
           <size>
-           <width>50</width>
+           <width>40</width>
            <height>16777215</height>
           </size>
          </property>
@@ -331,6 +331,9 @@ border:none;</string>
               <height>0</height>
              </size>
             </property>
+            <property name="styleSheet">
+             <string notr="true">margin-left: 2px;</string>
+            </property>
             <property name="frameShape">
              <enum>QFrame::StyledPanel</enum>
             </property>
@@ -341,96 +344,14 @@ border:none;</string>
              <property name="leftMargin">
               <number>0</number>
              </property>
-             <item row="1" column="1">
-              <widget class="QLabel" name="label_4">
-               <property name="font">
-                <font>
-                 <family>Nirmala UI</family>
-                 <pointsize>10</pointsize>
-                </font>
-               </property>
-               <property name="text">
-                <string>Production halls</string>
-               </property>
-               <property name="margin">
-                <number>5</number>
-               </property>
-              </widget>
-             </item>
-             <item row="4" column="1">
-              <widget class="QLabel" name="label_7">
-               <property name="font">
-                <font>
-                 <family>Nirmala UI</family>
-                 <pointsize>10</pointsize>
-                </font>
-               </property>
-               <property name="text">
-                <string>Settings</string>
-               </property>
-               <property name="margin">
-                <number>5</number>
-               </property>
-              </widget>
-             </item>
-             <item row="2" column="1">
-              <widget class="QLabel" name="label_5">
-               <property name="font">
-                <font>
-                 <family>Nirmala UI</family>
-                 <pointsize>10</pointsize>
-                </font>
-               </property>
-               <property name="text">
-                <string>Machines</string>
-               </property>
-               <property name="margin">
-                <number>5</number>
-               </property>
-              </widget>
-             </item>
-             <item row="3" column="1">
-              <widget class="QLabel" name="label_6">
-               <property name="font">
-                <font>
-                 <family>Nirmala UI</family>
-                 <pointsize>10</pointsize>
-                </font>
-               </property>
-               <property name="text">
-                <string>Statistics</string>
-               </property>
-               <property name="margin">
-                <number>5</number>
-               </property>
-              </widget>
-             </item>
-             <item row="4" column="0">
-              <widget class="QPushButton" name="settings_button">
-               <property name="styleSheet">
-                <string notr="true">QPushButton:hover{
-	border-radius: 5px;
-	border: 1px solid White;
-	background-color: #00aaff;
-}</string>
-               </property>
-               <property name="text">
-                <string/>
-               </property>
-               <property name="icon">
-                <iconset resource="../icons.qrc">
-                 <normaloff>:/prefix/icons/construct.png</normaloff>:/prefix/icons/construct.png</iconset>
-               </property>
-               <property name="iconSize">
-                <size>
-                 <width>32</width>
-                 <height>32</height>
-                </size>
-               </property>
-              </widget>
-             </item>
-             <item row="3" column="0">
+             <item row="3" column="0" alignment="Qt::AlignLeft">
               <widget class="QPushButton" name="stats_button">
+               <property name="font">
+                <font>
+                 <family>Nirmala UI</family>
+                 <pointsize>10</pointsize>
+                </font>
+               </property>
                <property name="styleSheet">
                 <string notr="true">QPushButton:hover{
 	border-radius: 5px;
@@ -439,7 +360,7 @@ border:none;</string>
 }</string>
                </property>
                <property name="text">
-                <string/>
+                <string> Statistics</string>
                </property>
                <property name="icon">
                 <iconset resource="../icons.qrc">
@@ -451,10 +372,19 @@ border:none;</string>
                  <height>32</height>
                 </size>
                </property>
+               <property name="shortcut">
+                <string>Ctrl+T</string>
+               </property>
               </widget>
              </item>
-             <item row="2" column="0">
+             <item row="2" column="0" alignment="Qt::AlignLeft">
               <widget class="QPushButton" name="machines_button">
+               <property name="font">
+                <font>
+                 <family>Nirmala UI</family>
+                 <pointsize>10</pointsize>
+                </font>
+               </property>
                <property name="styleSheet">
                 <string notr="true">QPushButton:hover{
 	border-radius: 5px;
@@ -463,7 +393,7 @@ border:none;</string>
 }</string>
                </property>
                <property name="text">
-                <string/>
+                <string> Machines</string>
                </property>
                <property name="icon">
                 <iconset resource="../icons.qrc">
@@ -475,10 +405,19 @@ border:none;</string>
                  <height>32</height>
                 </size>
                </property>
+               <property name="shortcut">
+                <string>Ctrl+N</string>
+               </property>
               </widget>
              </item>
-             <item row="1" column="0">
-              <widget class="QPushButton" name="halls_button">
+             <item row="4" column="0" alignment="Qt::AlignLeft">
+              <widget class="QPushButton" name="settings_button">
+               <property name="font">
+                <font>
+                 <family>Nirmala UI</family>
+                 <pointsize>10</pointsize>
+                </font>
+               </property>
                <property name="styleSheet">
                 <string notr="true">QPushButton:hover{
 	border-radius: 5px;
@@ -487,7 +426,75 @@ border:none;</string>
 }</string>
                </property>
                <property name="text">
-                <string/>
+                <string> Settings</string>
+               </property>
+               <property name="icon">
+                <iconset resource="../icons.qrc">
+                 <normaloff>:/prefix/icons/construct.png</normaloff>:/prefix/icons/construct.png</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>32</width>
+                 <height>32</height>
+                </size>
+               </property>
+               <property name="shortcut">
+                <string>Ctrl+S</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="0" alignment="Qt::AlignLeft">
+              <widget class="QPushButton" name="home_button">
+               <property name="font">
+                <font>
+                 <family>Nirmala UI</family>
+                 <pointsize>10</pointsize>
+                 <weight>50</weight>
+                 <bold>false</bold>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton:hover{
+	border-radius: 5px;
+	border: 1px solid White;
+	background-color: #00aaff;
+}</string>
+               </property>
+               <property name="text">
+                <string> Main Menu</string>
+               </property>
+               <property name="icon">
+                <iconset resource="../icons.qrc">
+                 <normaloff>:/prefix/icons/cube.png</normaloff>:/prefix/icons/cube.png</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>32</width>
+                 <height>32</height>
+                </size>
+               </property>
+               <property name="shortcut">
+                <string>Ctrl+M</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="0" alignment="Qt::AlignLeft">
+              <widget class="QPushButton" name="halls_button">
+               <property name="font">
+                <font>
+                 <family>Nirmala UI</family>
+                 <pointsize>10</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton:hover{
+	border-radius: 5px;
+	border: 1px solid White;
+	background-color: #00aaff;
+}</string>
+               </property>
+               <property name="text">
+                <string> Industry Halls</string>
                </property>
                <property name="icon">
                 <iconset resource="../icons.qrc">
@@ -499,42 +506,8 @@ border:none;</string>
                  <height>32</height>
                 </size>
                </property>
-              </widget>
-             </item>
-             <item row="0" column="1">
-              <widget class="QLabel" name="label_28">
-               <property name="font">
-                <font>
-                 <family>Nirmala UI</family>
-                 <pointsize>10</pointsize>
-                </font>
-               </property>
-               <property name="text">
-                <string> Main Menu</string>
-               </property>
-              </widget>
-             </item>
-             <item row="0" column="0">
-              <widget class="QPushButton" name="home_button">
-               <property name="styleSheet">
-                <string notr="true">QPushButton:hover{
-	border-radius: 5px;
-	border: 1px solid White;
-	background-color: #00aaff;
-}</string>
-               </property>
-               <property name="text">
-                <string/>
-               </property>
-               <property name="icon">
-                <iconset resource="../icons.qrc">
-                 <normaloff>:/prefix/icons/cube.png</normaloff>:/prefix/icons/cube.png</iconset>
-               </property>
-               <property name="iconSize">
-                <size>
-                 <width>32</width>
-                 <height>32</height>
-                </size>
+               <property name="shortcut">
+                <string>Ctrl+I</string>
                </property>
               </widget>
              </item>
@@ -580,7 +553,7 @@ border:none;</string>
              </size>
             </property>
             <property name="currentIndex">
-             <number>2</number>
+             <number>0</number>
             </property>
             <widget class="QWidget" name="main_menu_page">
              <layout class="QVBoxLayout" name="verticalLayout_10">
@@ -1876,13 +1849,230 @@ QPushButton:hover{
                </widget>
               </item>
               <item>
-               <widget class="QFrame" name="frame_3">
+               <widget class="QFrame" name="settingsframe">
                 <property name="frameShape">
                  <enum>QFrame::StyledPanel</enum>
                 </property>
                 <property name="frameShadow">
                  <enum>QFrame::Raised</enum>
                 </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_19">
+                 <item alignment="Qt::AlignTop">
+                  <widget class="QFrame" name="frame_2">
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <layout class="QGridLayout" name="gridLayout_7">
+                    <item row="3" column="0">
+                     <widget class="QLabel" name="label_22">
+                      <property name="font">
+                       <font>
+                        <family>Nirmala UI</family>
+                        <pointsize>9</pointsize>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string>Industry Halls shortcut:</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="1" column="0">
+                     <widget class="QLabel" name="label_5">
+                      <property name="font">
+                       <font>
+                        <family>Nirmala UI</family>
+                        <pointsize>9</pointsize>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string>Set up graph time conversion:</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="2" column="0">
+                     <widget class="QLabel" name="label_6">
+                      <property name="font">
+                       <font>
+                        <family>Nirmala UI</family>
+                        <pointsize>9</pointsize>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string>Main Menu shortcut:</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="0" column="2">
+                     <widget class="QLabel" name="label_20">
+                      <property name="minimumSize">
+                       <size>
+                        <width>0</width>
+                        <height>0</height>
+                       </size>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <family>Nirmala UI</family>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string>(everyday at ?:??)</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="0" column="0">
+                     <widget class="QLabel" name="label_4">
+                      <property name="minimumSize">
+                       <size>
+                        <width>300</width>
+                        <height>0</height>
+                       </size>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <family>Nirmala UI</family>
+                        <pointsize>9</pointsize>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string>Set up automatic test:</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="2" column="1">
+                     <widget class="QKeySequenceEdit" name="main_menu_shortcut">
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>16777</height>
+                       </size>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="1" column="1">
+                     <widget class="QSpinBox" name="graph_time_conversion_rate">
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>16777215</height>
+                       </size>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="4" column="0">
+                     <widget class="QLabel" name="label_24">
+                      <property name="font">
+                       <font>
+                        <family>Nirmala UI</family>
+                        <pointsize>9</pointsize>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string>Machines shortcut:</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="5" column="0">
+                     <widget class="QLabel" name="label_28">
+                      <property name="font">
+                       <font>
+                        <family>Nirmala UI</family>
+                        <pointsize>9</pointsize>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string>Statistics shortcut:</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="0" column="1">
+                     <widget class="QTimeEdit" name="automatic_tests_setting_time">
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>16777215</height>
+                       </size>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="1" column="2">
+                     <widget class="QLabel" name="label_7">
+                      <property name="minimumSize">
+                       <size>
+                        <width>0</width>
+                        <height>0</height>
+                       </size>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <family>Nirmala UI</family>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string>(1sec = ? minutes)</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="6" column="0">
+                     <widget class="QLabel" name="label_29">
+                      <property name="font">
+                       <font>
+                        <family>Nirmala UI</family>
+                        <pointsize>9</pointsize>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string>Settings shortcut:</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="3" column="1">
+                     <widget class="QKeySequenceEdit" name="industry_halls_shortcut">
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>16777215</height>
+                       </size>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="4" column="1">
+                     <widget class="QKeySequenceEdit" name="machines_shortcut">
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>16777215</height>
+                       </size>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="5" column="1">
+                     <widget class="QKeySequenceEdit" name="stats_shortcut">
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>16777215</height>
+                       </size>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="6" column="1">
+                     <widget class="QKeySequenceEdit" name="settings_shortcut">
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>16777215</height>
+                       </size>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                </layout>
                </widget>
               </item>
              </layout>
@@ -1918,7 +2108,7 @@ border:none;
           <enum>QFrame::Raised</enum>
          </property>
          <layout class="QHBoxLayout" name="horizontalLayout_6">
-          <item alignment="Qt::AlignLeft">
+          <item>
            <widget class="QLabel" name="label_3">
             <property name="font">
              <font>
@@ -1928,7 +2118,7 @@ border:none;
              </font>
             </property>
             <property name="text">
-             <string>Version 1.2 | ITU | Copyright RHVJTH</string>
+             <string>Version 1.4 | ITU | Copyright RHVJTH</string>
             </property>
            </widget>
           </item>
@@ -1936,7 +2126,38 @@ border:none;
         </widget>
        </item>
        <item>
-        <widget class="QFrame" name="frame_2">
+        <widget class="QFrame" name="size_grip">
+         <property name="minimumSize">
+          <size>
+           <width>10</width>
+           <height>10</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>10</width>
+           <height>10</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border:none
+</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="status_frame">
+         <property name="styleSheet">
+          <string notr="true">border-radius: 10px;
+border: 2px solid black;
+background-color: rgb(255, 255, 255);</string>
+         </property>
          <property name="frameShape">
           <enum>QFrame::StyledPanel</enum>
          </property>
@@ -1944,38 +2165,21 @@ border:none;
           <enum>QFrame::Raised</enum>
          </property>
          <layout class="QHBoxLayout" name="horizontalLayout_7">
-          <item alignment="Qt::AlignRight">
-           <widget class="QPushButton" name="pushButton_2">
+          <item alignment="Qt::AlignHCenter">
+           <widget class="QLabel" name="status_bar">
             <property name="font">
              <font>
               <family>Nirmala UI</family>
               <pointsize>8</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
              </font>
             </property>
+            <property name="styleSheet">
+             <string notr="true">border:none</string>
+            </property>
             <property name="text">
-             <string>?</string>
-            </property>
-           </widget>
-          </item>
-          <item alignment="Qt::AlignBottom">
-           <widget class="QFrame" name="size_grip">
-            <property name="minimumSize">
-             <size>
-              <width>10</width>
-              <height>10</height>
-             </size>
-            </property>
-            <property name="maximumSize">
-             <size>
-              <width>10</width>
-              <height>10</height>
-             </size>
-            </property>
-            <property name="frameShape">
-             <enum>QFrame::StyledPanel</enum>
-            </property>
-            <property name="frameShadow">
-             <enum>QFrame::Raised</enum>
+             <string>Welcome to Main Menu...</string>
             </property>
            </widget>
           </item>

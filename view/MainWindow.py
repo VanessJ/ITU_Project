@@ -54,7 +54,24 @@ class MainWindow(QMainWindow):
         self.ui.search_bar_3.setPlaceholderText("Search")
         self.ui.search_bar_3.textChanged.connect(lambda: self.find_machine())
 
-        #
+        # status bar text updating
+        self.ui.home_button.clicked.connect(lambda: self.clicked_button_bar("Welcome to Main Menu..."))
+        self.ui.halls_button.clicked.connect(lambda: self.clicked_button_bar("Here you can find all halls and info about them..."))
+        self.ui.machines_button.clicked.connect(lambda: self.clicked_button_bar("Table of all machines..."))
+        self.ui.stats_button.clicked.connect(lambda: self.clicked_button_bar("Statistics of all machines combined..."))
+        self.ui.settings_button.clicked.connect(lambda: self.clicked_button_bar("Welcome to Settings page..."))
+        self.ui.add_hall_button.clicked.connect(lambda: self.clicked_button_bar("Fill out the form and click CONFIRM to add a new hall..."))
+        self.ui.add_machine_button.clicked.connect(lambda: self.clicked_button_bar("Fill out the form and click CONFIRM to add a new machine..."))
+        self.ui.machine_info_back_button.clicked.connect(lambda: self.clicked_button_bar("Table of all machines..."))
+        self.ui.add_hall_back_button.clicked.connect(lambda: self.clicked_button_bar("Here you can find all halls and info about them..."))
+        self.ui.add_machine_back_button.clicked.connect(lambda: self.clicked_button_bar("Table of all machines..."))
+        self.ui.confirm_add_button_machine.clicked.connect(lambda: self.clicked_button_bar("Machine sucessfully added..."))
+        self.ui.confirm_add_button.clicked.connect(lambda: self.clicked_button_bar("Hall sucessfully added..."))
+        self.ui.main_menu_halls_button.clicked.connect(lambda: self.clicked_button_bar("Here you can find all halls and info about them..."))
+        self.ui.main_menu_machines_button.clicked.connect(lambda: self.clicked_button_bar("Table of all machines..."))
+        self.ui.main_menu_stats_button.clicked.connect(lambda: self.clicked_button_bar("Statistics of all machines combined..."))
+        self.ui.main_menu_settings_button.clicked.connect(lambda: self.clicked_button_bar("Welcome to Settings page..."))
+
 
         def move_window(e):
             if self.isMaximized() == False:
@@ -184,10 +201,10 @@ class MainWindow(QMainWindow):
     def slideLeftMenu(self):
         width = self.ui.left_menu_frame.width()
 
-        if width == 50:
-            newWidth = 200
+        if width == 40:
+            newWidth = 155
         else:
-            newWidth = 50
+            newWidth = 40
 
         self.animation = QPropertyAnimation(self.ui.left_menu_frame, b"minimumWidth")
         self.animation.setDuration(250)
@@ -216,3 +233,6 @@ class MainWindow(QMainWindow):
     def mousePressEvent(self, event):
         self.clickPosition = event.globalPos()
 
+
+    def clicked_button_bar(self, text):
+        self.ui.status_bar.setText(text)

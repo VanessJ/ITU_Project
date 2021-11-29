@@ -14,7 +14,7 @@ class Machine:
         self._start_time = 0
         self._temperature = random.randint(40, 50)
         self._nas = random.randint(5, 12)
-        self._sensor = "Default S"
+        self._sensor = "SD 100"
 
     @property
     def sensor(self):

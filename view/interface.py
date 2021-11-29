@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'mainiGlRvQ.ui'
+## Form generated from reading UI file 'mainupAxvE.ui'
 ##
-## Created by: Qt User Interface Compiler version 5.15.2
+## Created by: Qt User Interface Compiler version 5.15.1
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
@@ -11,6 +11,9 @@
 from PySide2.QtCore import *
 from PySide2.QtGui import *
 from PySide2.QtWidgets import *
+
+from PySide2extn.RoundProgressBar import roundProgressBar
+from PySide2extn.SpiralProgressBar import spiralProgressBar
 
 import icons_rc
 
@@ -402,7 +405,6 @@ class Ui_MainWindow(object):
         self.halls_label = QLabel(self.frame)
         self.halls_label.setObjectName(u"halls_label")
         font4 = QFont()
-        font4.setFamily(u"Nirmala UI")
         font4.setPointSize(12)
         font4.setBold(True)
         font4.setWeight(75)
@@ -451,17 +453,27 @@ class Ui_MainWindow(object):
         self.halls_table = QTableWidget(self.frame_4)
         if (self.halls_table.columnCount() < 4):
             self.halls_table.setColumnCount(4)
+        font7 = QFont()
+        font7.setBold(True)
+        font7.setWeight(75)
         __qtablewidgetitem = QTableWidgetItem()
+        __qtablewidgetitem.setFont(font7);
         self.halls_table.setHorizontalHeaderItem(0, __qtablewidgetitem)
         __qtablewidgetitem1 = QTableWidgetItem()
+        __qtablewidgetitem1.setFont(font7);
         self.halls_table.setHorizontalHeaderItem(1, __qtablewidgetitem1)
         __qtablewidgetitem2 = QTableWidgetItem()
+        __qtablewidgetitem2.setFont(font7);
         self.halls_table.setHorizontalHeaderItem(2, __qtablewidgetitem2)
         __qtablewidgetitem3 = QTableWidgetItem()
+        __qtablewidgetitem3.setFont(font7);
         self.halls_table.setHorizontalHeaderItem(3, __qtablewidgetitem3)
         self.halls_table.setObjectName(u"halls_table")
         self.halls_table.setGeometry(QRect(15, 11, 681, 371))
-        self.halls_table.setFont(font2)
+        font8 = QFont()
+        font8.setFamily(u"Segoe UI")
+        font8.setPointSize(9)
+        self.halls_table.setFont(font8)
 
         self.verticalLayout_6.addWidget(self.frame_4)
 
@@ -486,12 +498,12 @@ class Ui_MainWindow(object):
         self.add_hall_back_button = QPushButton(self.top_add_hall_form)
         self.add_hall_back_button.setObjectName(u"add_hall_back_button")
         self.add_hall_back_button.setMaximumSize(QSize(80, 30))
-        font7 = QFont()
-        font7.setFamily(u"Nirmala UI")
-        font7.setPointSize(8)
-        font7.setBold(True)
-        font7.setWeight(75)
-        self.add_hall_back_button.setFont(font7)
+        font9 = QFont()
+        font9.setFamily(u"Nirmala UI")
+        font9.setPointSize(8)
+        font9.setBold(True)
+        font9.setWeight(75)
+        self.add_hall_back_button.setFont(font9)
         self.add_hall_back_button.setStyleSheet(u"QPushButton{\n"
 "	background-color: rgb(80, 170, 255);\n"
 "	border: 1px solid black;\n"
@@ -660,14 +672,19 @@ class Ui_MainWindow(object):
         if (self.machines_table.columnCount() < 5):
             self.machines_table.setColumnCount(5)
         __qtablewidgetitem4 = QTableWidgetItem()
+        __qtablewidgetitem4.setFont(font7);
         self.machines_table.setHorizontalHeaderItem(0, __qtablewidgetitem4)
         __qtablewidgetitem5 = QTableWidgetItem()
+        __qtablewidgetitem5.setFont(font7);
         self.machines_table.setHorizontalHeaderItem(1, __qtablewidgetitem5)
         __qtablewidgetitem6 = QTableWidgetItem()
+        __qtablewidgetitem6.setFont(font7);
         self.machines_table.setHorizontalHeaderItem(2, __qtablewidgetitem6)
         __qtablewidgetitem7 = QTableWidgetItem()
+        __qtablewidgetitem7.setFont(font7);
         self.machines_table.setHorizontalHeaderItem(3, __qtablewidgetitem7)
         __qtablewidgetitem8 = QTableWidgetItem()
+        __qtablewidgetitem8.setFont(font7);
         self.machines_table.setHorizontalHeaderItem(4, __qtablewidgetitem8)
         self.machines_table.setObjectName(u"machines_table")
 
@@ -694,7 +711,7 @@ class Ui_MainWindow(object):
         self.add_machine_back_button = QPushButton(self.top_add_hall_form_2)
         self.add_machine_back_button.setObjectName(u"add_machine_back_button")
         self.add_machine_back_button.setMaximumSize(QSize(80, 30))
-        self.add_machine_back_button.setFont(font7)
+        self.add_machine_back_button.setFont(font9)
         self.add_machine_back_button.setStyleSheet(u"QPushButton{\n"
 "	background-color: rgb(80, 170, 255);\n"
 "	border: 1px solid black;\n"
@@ -836,7 +853,7 @@ class Ui_MainWindow(object):
         self.machine_info_back_button = QPushButton(self.top_add_hall_form_3)
         self.machine_info_back_button.setObjectName(u"machine_info_back_button")
         self.machine_info_back_button.setMaximumSize(QSize(80, 30))
-        self.machine_info_back_button.setFont(font7)
+        self.machine_info_back_button.setFont(font9)
         self.machine_info_back_button.setStyleSheet(u"QPushButton{\n"
 "	background-color: rgb(80, 170, 255);\n"
 "	border: 1px solid black;\n"
@@ -866,6 +883,7 @@ class Ui_MainWindow(object):
 
         self.label_19 = QLabel(self.machines_id_frame)
         self.label_19.setObjectName(u"label_19")
+        self.label_19.setFont(font7)
 
         self.gridLayout_4.addWidget(self.label_19, 0, 0, 1, 1)
 
@@ -876,6 +894,7 @@ class Ui_MainWindow(object):
 
         self.label_21 = QLabel(self.machines_id_frame)
         self.label_21.setObjectName(u"label_21")
+        self.label_21.setFont(font7)
 
         self.gridLayout_4.addWidget(self.label_21, 0, 2, 1, 1)
 
@@ -886,6 +905,7 @@ class Ui_MainWindow(object):
 
         self.label_23 = QLabel(self.machines_id_frame)
         self.label_23.setObjectName(u"label_23")
+        self.label_23.setFont(font7)
 
         self.gridLayout_4.addWidget(self.label_23, 0, 4, 1, 1)
 
@@ -900,23 +920,25 @@ class Ui_MainWindow(object):
         self.gridLayout_5.setObjectName(u"gridLayout_5")
         self.temperature_label = QLabel(self.tmp_nas_frame)
         self.temperature_label.setObjectName(u"temperature_label")
+        self.temperature_label.setFont(font7)
 
         self.gridLayout_5.addWidget(self.temperature_label, 0, 0, 1, 1)
 
         self.NA_label = QLabel(self.tmp_nas_frame)
         self.NA_label.setObjectName(u"NA_label")
+        self.NA_label.setFont(font7)
 
         self.gridLayout_5.addWidget(self.NA_label, 0, 1, 1, 1)
 
-        self.temperature_bar = QWidget(self.tmp_nas_frame)
-        self.temperature_bar.setObjectName(u"temperature_bar")
-
-        self.gridLayout_5.addWidget(self.temperature_bar, 1, 0, 1, 1)
-
-        self.NAS_bar = QWidget(self.tmp_nas_frame)
+        self.NAS_bar = roundProgressBar(self.tmp_nas_frame)
         self.NAS_bar.setObjectName(u"NAS_bar")
 
         self.gridLayout_5.addWidget(self.NAS_bar, 1, 1, 1, 1)
+
+        self.temperature_bar = roundProgressBar(self.tmp_nas_frame)
+        self.temperature_bar.setObjectName(u"temperature_bar")
+
+        self.gridLayout_5.addWidget(self.temperature_bar, 1, 0, 1, 1)
 
 
         self.verticalLayout_7.addWidget(self.tmp_nas_frame)
@@ -942,7 +964,7 @@ class Ui_MainWindow(object):
         self.statistics_back_button = QPushButton(self.test_top_frame)
         self.statistics_back_button.setObjectName(u"statistics_back_button")
         self.statistics_back_button.setMaximumSize(QSize(80, 30))
-        self.statistics_back_button.setFont(font7)
+        self.statistics_back_button.setFont(font9)
         self.statistics_back_button.setMouseTracking(False)
         self.statistics_back_button.setStyleSheet(u"QPushButton{\n"
 "	background-color: rgb(80, 170, 255);\n"
@@ -963,15 +985,27 @@ class Ui_MainWindow(object):
         self.graph_frame.setObjectName(u"graph_frame")
         self.horizontalLayout_16 = QHBoxLayout(self.graph_frame)
         self.horizontalLayout_16.setObjectName(u"horizontalLayout_16")
-        self.tmp_all_graph = QWidget(self.graph_frame)
-        self.tmp_all_graph.setObjectName(u"tmp_all_graph")
+        self.stat_graph = spiralProgressBar(self.graph_frame)
+        self.stat_graph.setObjectName(u"stat_graph")
 
-        self.horizontalLayout_16.addWidget(self.tmp_all_graph)
+        self.horizontalLayout_16.addWidget(self.stat_graph)
 
-        self.NAS_all_graph = QWidget(self.graph_frame)
-        self.NAS_all_graph.setObjectName(u"NAS_all_graph")
+        self.stat_frame = QFrame(self.graph_frame)
+        self.stat_frame.setObjectName(u"stat_frame")
+        self.radio_temp = QRadioButton(self.stat_frame)
+        self.radio_temp.setObjectName(u"radio_temp")
+        self.radio_temp.setGeometry(QRect(10, 10, 111, 20))
+        self.radio_nas = QRadioButton(self.stat_frame)
+        self.radio_nas.setObjectName(u"radio_nas")
+        self.radio_nas.setGeometry(QRect(150, 10, 111, 20))
+        self.verticalLayoutWidget = QWidget(self.stat_frame)
+        self.verticalLayoutWidget.setObjectName(u"verticalLayoutWidget")
+        self.verticalLayoutWidget.setGeometry(QRect(10, 40, 191, 321))
+        self.test_layout = QVBoxLayout(self.verticalLayoutWidget)
+        self.test_layout.setObjectName(u"test_layout")
+        self.test_layout.setContentsMargins(0, 0, 0, 0)
 
-        self.horizontalLayout_16.addWidget(self.NAS_all_graph)
+        self.horizontalLayout_16.addWidget(self.stat_frame)
 
 
         self.verticalLayout_8.addWidget(self.graph_frame)
@@ -997,7 +1031,7 @@ class Ui_MainWindow(object):
         self.settings_back_button = QPushButton(self.test_top_frame_2)
         self.settings_back_button.setObjectName(u"settings_back_button")
         self.settings_back_button.setMaximumSize(QSize(80, 30))
-        self.settings_back_button.setFont(font7)
+        self.settings_back_button.setFont(font9)
         self.settings_back_button.setStyleSheet(u"QPushButton{\n"
 "	background-color: rgb(80, 170, 255);\n"
 "	border: 1px solid black;\n"
@@ -1027,38 +1061,38 @@ class Ui_MainWindow(object):
         self.gridLayout_7.setObjectName(u"gridLayout_7")
         self.label_22 = QLabel(self.frame_2)
         self.label_22.setObjectName(u"label_22")
-        font8 = QFont()
-        font8.setFamily(u"Nirmala UI")
-        font8.setPointSize(9)
-        self.label_22.setFont(font8)
+        font10 = QFont()
+        font10.setFamily(u"Nirmala UI")
+        font10.setPointSize(9)
+        self.label_22.setFont(font10)
 
         self.gridLayout_7.addWidget(self.label_22, 3, 0, 1, 1)
 
         self.label_5 = QLabel(self.frame_2)
         self.label_5.setObjectName(u"label_5")
-        self.label_5.setFont(font8)
+        self.label_5.setFont(font10)
 
         self.gridLayout_7.addWidget(self.label_5, 1, 0, 1, 1)
 
         self.label_6 = QLabel(self.frame_2)
         self.label_6.setObjectName(u"label_6")
-        self.label_6.setFont(font8)
+        self.label_6.setFont(font10)
 
         self.gridLayout_7.addWidget(self.label_6, 2, 0, 1, 1)
 
         self.label_20 = QLabel(self.frame_2)
         self.label_20.setObjectName(u"label_20")
         self.label_20.setMinimumSize(QSize(0, 0))
-        font9 = QFont()
-        font9.setFamily(u"Nirmala UI")
-        self.label_20.setFont(font9)
+        font11 = QFont()
+        font11.setFamily(u"Nirmala UI")
+        self.label_20.setFont(font11)
 
         self.gridLayout_7.addWidget(self.label_20, 0, 2, 1, 1)
 
         self.label_4 = QLabel(self.frame_2)
         self.label_4.setObjectName(u"label_4")
         self.label_4.setMinimumSize(QSize(300, 0))
-        self.label_4.setFont(font8)
+        self.label_4.setFont(font10)
 
         self.gridLayout_7.addWidget(self.label_4, 0, 0, 1, 1)
 
@@ -1076,13 +1110,13 @@ class Ui_MainWindow(object):
 
         self.label_24 = QLabel(self.frame_2)
         self.label_24.setObjectName(u"label_24")
-        self.label_24.setFont(font8)
+        self.label_24.setFont(font10)
 
         self.gridLayout_7.addWidget(self.label_24, 4, 0, 1, 1)
 
         self.label_28 = QLabel(self.frame_2)
         self.label_28.setObjectName(u"label_28")
-        self.label_28.setFont(font8)
+        self.label_28.setFont(font10)
 
         self.gridLayout_7.addWidget(self.label_28, 5, 0, 1, 1)
 
@@ -1095,13 +1129,13 @@ class Ui_MainWindow(object):
         self.label_7 = QLabel(self.frame_2)
         self.label_7.setObjectName(u"label_7")
         self.label_7.setMinimumSize(QSize(0, 0))
-        self.label_7.setFont(font9)
+        self.label_7.setFont(font11)
 
         self.gridLayout_7.addWidget(self.label_7, 1, 2, 1, 1)
 
         self.label_29 = QLabel(self.frame_2)
         self.label_29.setObjectName(u"label_29")
-        self.label_29.setFont(font8)
+        self.label_29.setFont(font10)
 
         self.gridLayout_7.addWidget(self.label_29, 6, 0, 1, 1)
 
@@ -1162,11 +1196,11 @@ class Ui_MainWindow(object):
         self.horizontalLayout_6.setObjectName(u"horizontalLayout_6")
         self.label_3 = QLabel(self.footer_left)
         self.label_3.setObjectName(u"label_3")
-        font10 = QFont()
-        font10.setFamily(u"Nirmala UI")
-        font10.setBold(False)
-        font10.setWeight(50)
-        self.label_3.setFont(font10)
+        font12 = QFont()
+        font12.setFamily(u"Nirmala UI")
+        font12.setBold(False)
+        font12.setWeight(50)
+        self.label_3.setFont(font12)
 
         self.horizontalLayout_6.addWidget(self.label_3)
 
@@ -1195,7 +1229,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_7.setObjectName(u"horizontalLayout_7")
         self.status_bar = QLabel(self.status_frame)
         self.status_bar.setObjectName(u"status_bar")
-        self.status_bar.setFont(font7)
+        self.status_bar.setFont(font9)
         self.status_bar.setStyleSheet(u"border:none")
 
         self.horizontalLayout_7.addWidget(self.status_bar, 0, Qt.AlignHCenter)
@@ -1210,7 +1244,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.stackedWidget.setCurrentIndex(7)
+        self.stackedWidget.setCurrentIndex(1)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -1275,7 +1309,7 @@ class Ui_MainWindow(object):
         ___qtablewidgetitem5 = self.machines_table.horizontalHeaderItem(1)
         ___qtablewidgetitem5.setText(QCoreApplication.translate("MainWindow", u"Active", None));
         ___qtablewidgetitem6 = self.machines_table.horizontalHeaderItem(2)
-        ___qtablewidgetitem6.setText(QCoreApplication.translate("MainWindow", u"Temperature (\u00b0C)", None));
+        ___qtablewidgetitem6.setText(QCoreApplication.translate("MainWindow", u"Temperature ", None));
         ___qtablewidgetitem7 = self.machines_table.horizontalHeaderItem(3)
         ___qtablewidgetitem7.setText(QCoreApplication.translate("MainWindow", u"NAS", None));
         ___qtablewidgetitem8 = self.machines_table.horizontalHeaderItem(4)
@@ -1299,6 +1333,8 @@ class Ui_MainWindow(object):
         self.NA_label.setText(QCoreApplication.translate("MainWindow", u"NAS:", None))
         self.label_25.setText(QCoreApplication.translate("MainWindow", u"Statistics", None))
         self.statistics_back_button.setText(QCoreApplication.translate("MainWindow", u"BACK", None))
+        self.radio_temp.setText(QCoreApplication.translate("MainWindow", u"Temperature", None))
+        self.radio_nas.setText(QCoreApplication.translate("MainWindow", u"NAS", None))
         self.label_26.setText(QCoreApplication.translate("MainWindow", u"Settings", None))
         self.settings_back_button.setText(QCoreApplication.translate("MainWindow", u"BACK", None))
         self.label_22.setText(QCoreApplication.translate("MainWindow", u"Industry Halls shortcut:", None))

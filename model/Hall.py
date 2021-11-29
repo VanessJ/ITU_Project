@@ -49,6 +49,17 @@ class Hall:
     def stop_monitoring(self):
         self._monitored = False
 
+    def manage_machines(self):
+        for machine in self._machines:
+            if machine.is_operating() and machine.temperature >= 120:
+                machine.turn_off()
+            if machine.is_operating() is False and machine.temperature <= 50:
+                machine.turn_on()
+            if machine.is_filtering() and machine.nas <= 3:
+                machine.stop_filtering()
+            if machine.is_filtering() is False and machine.nas >= 10:
+                machine.filter()
+
     def print_values(self):
         for machine in self._machines:
             print(machine.identification)

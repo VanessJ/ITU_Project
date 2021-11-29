@@ -1,4 +1,4 @@
-
+import sys, random
 from PyQt5 import QtCore
 from PyQt5 import QtGui
 from pyqt5_plugins.examplebuttonplugin import QtGui
@@ -12,6 +12,9 @@ from PySide2 import *
 from qt_material import *
 
 
+import pyqtgraph as pg
+
+
 class MainWindow(QMainWindow):
     def __init__(self, factory):
         QMainWindow.__init__(self)
@@ -22,7 +25,12 @@ class MainWindow(QMainWindow):
         self.setWindowIcon(QtGui.QIcon(":/prefix/icons/hammer.png"))
         self.setWindowTitle("MM")
         self.back_route = self.ui.main_menu_page
+        self.current_route = self.ui.main_menu_page
+        self.machine = None
         QSizeGrip(self.ui.size_grip)
+
+
+        self.ui.radio_temp.setChecked(True)
         self.ui.minimze_window_button.clicked.connect(lambda: self.showMinimized())
         self.ui.close_window_button.clicked.connect(lambda: self.close())
         self.ui.resize_window_button.clicked.connect(lambda: self.restore_or_maximize_window())
@@ -30,12 +38,12 @@ class MainWindow(QMainWindow):
         # navigation
         self.ui.home_button.clicked.connect(lambda: self.reroute(self.ui.main_menu_page))
         self.ui.halls_button.clicked.connect(lambda: self.halls_page())
-        self.ui.machines_button.clicked.connect(lambda: self.reroute(self.machines_page()))
-        self.ui.stats_button.clicked.connect(lambda: self.reroute(self.ui.tests_page))
+        self.ui.machines_button.clicked.connect(lambda: self.machines_page())
+        self.ui.stats_button.clicked.connect(lambda: self.stat_page())
         self.ui.settings_button.clicked.connect(lambda: self.reroute(self.ui.settings_page))
 
         self.ui.main_menu_halls_button.clicked.connect(lambda: self.halls_page())
-        self.ui.main_menu_machines_button.clicked.connect(lambda: self.reroute(self.machines_page()))
+        self.ui.main_menu_machines_button.clicked.connect(lambda: self.machines_page())
         self.ui.main_menu_stats_button.clicked.connect(lambda: self.reroute(self.ui.tests_page))
         self.ui.main_menu_settings_button.clicked.connect(lambda: self.reroute(self.ui.settings_page))
         self.ui.add_hall_button.clicked.connect(lambda: self.add_hall_page())
@@ -45,6 +53,9 @@ class MainWindow(QMainWindow):
         self.ui.settings_back_button.clicked.connect(lambda: self.reroute(self.back_route))
         self.ui.statistics_back_button.clicked.connect(lambda: self.reroute(self.back_route))
         self.ui.machine_info_back_button.clicked.connect(lambda: self.machines_page())
+
+        #shortcuts
+        self.ui.main_menu_shortcut.editingFinished.connect(lambda: print(self.ui.main_menu_shortcut.keySequence))
 
         # halls search bar
         self.ui.search_bar_2.setPlaceholderText("Search")
@@ -72,7 +83,6 @@ class MainWindow(QMainWindow):
         self.ui.main_menu_stats_button.clicked.connect(lambda: self.clicked_button_bar("Statistics of all machines combined..."))
         self.ui.main_menu_settings_button.clicked.connect(lambda: self.clicked_button_bar("Welcome to Settings page..."))
 
-
         def move_window(e):
             if self.isMaximized() == False:
                 if e.buttons() == Qt.LeftButton:
@@ -83,6 +93,102 @@ class MainWindow(QMainWindow):
         self.ui.header_frame.mouseMoveEvent = move_window
 
         self.ui.menu_button.clicked.connect(lambda: self.slideLeftMenu())
+
+
+    def update_values(self):
+        self._factory.manage_halls()
+        if self.current_route is self.ui.machine_info_page:
+            self.machine_info_page(self.machine)
+        if self.current_route is self.ui.tests_page:
+            self.stat_page()
+        if self.current_route is self.ui.machines_list_page:
+            self.machines_page()
+
+    def temp_radio(self):
+        if self.ui.radio_temp.isChecked():
+            self.ui.radio_nas.setChecked(False)
+            self.stat_page()
+
+    def nas_radio(self):
+        if self.ui.radio_nas.isChecked():
+            self.ui.radio_temp.setChecked(False)
+            self.stat_page()
+
+
+    def stat_page(self):
+        self.reroute(self.ui.tests_page)
+        colors = ((0, 51, 104), (0, 153, 153), (102, 0, 102), (153, 0, 51), (102, 204, 255), (255, 255, 255))
+        self.ui.radio_temp.toggled.connect(lambda: self.temp_radio())
+        self.ui.radio_nas.toggled.connect(lambda: self.nas_radio())
+
+        if self.ui.radio_temp.isChecked():
+
+            # temperature
+            temp_values = []
+            m_colors = []
+            max = []
+
+            hall = self._factory.monitored_hall()
+            self.ui.stat_graph.spb_setNoProgressBar(len(hall.machines))
+            self.ui.stat_graph.spb_lineWidth(15)
+            i = 0
+
+            while self.ui.test_layout.count():
+                child = self.ui.test_layout.takeAt(0)
+                if child.widget():
+                    child.widget().deleteLater()
+
+            for machine in hall.machines:
+                temp_values.append(machine.temperature)
+                max.append(150)
+                m_colors.append(colors[i % 5])
+                label_text = machine.identification + " " + str(machine.temperature) + " °C "
+                label = QLabel(label_text)
+                style = "color: rgb" + str(colors[i % 5]) + "; "
+
+                label.setStyleSheet(style)
+                self.ui.test_layout.addWidget(label)
+                i += 1
+
+            self.ui.stat_graph.spb_setMaximum(tuple(max))
+            self.ui.stat_graph.spb_setValue(tuple(temp_values))
+            self.ui.stat_graph.spb_lineColor(tuple(m_colors))
+
+        if self.ui.radio_nas.isChecked():
+
+            # temperature
+            nas_values = []
+            m_colors = []
+            max = []
+
+            hall = self._factory.monitored_hall()
+            self.ui.stat_graph.spb_setNoProgressBar(len(hall.machines))
+            self.ui.stat_graph.spb_lineWidth(15)
+            i = 0
+
+            while self.ui.test_layout.count():
+                child = self.ui.test_layout.takeAt(0)
+                if child.widget():
+                    child.widget().deleteLater()
+
+            for machine in hall.machines:
+                nas_values.append(machine.nas)
+                max.append(12)
+                m_colors.append(colors[i % 5])
+                label_text = machine.identification + " " + str(machine.nas)
+                label = QLabel(label_text)
+                style = "color: rgb" + str(colors[i % 5]) + "; "
+
+                label.setStyleSheet(style)
+                self.ui.test_layout.addWidget(label)
+                i += 1
+
+            self.ui.stat_graph.spb_setMaximum(tuple(max))
+            self.ui.stat_graph.spb_setValue(tuple(nas_values))
+            self.ui.stat_graph.spb_lineColor(tuple(m_colors))
+
+
+
 
     def add_hall_page(self):
         self.reroute(self.ui.add_hall_form)
@@ -112,7 +218,6 @@ class MainWindow(QMainWindow):
         machine.sensor = machine_sensor
         self._factory.monitored_hall().add_machine(machine)
         self.machines_page()
-
 
     def find_machine(self):
         name = self.ui.search_bar_3.text().lower()
@@ -147,13 +252,18 @@ class MainWindow(QMainWindow):
             self.ui.machines_table.insertRow(row_pos)
             self.ui.machines_table.setItem(row_pos, 0, QTableWidgetItem(machine.identification))
             if machine.is_operating():
-                self.ui.machines_table.setItem(row_pos, 1, QTableWidgetItem("Operating"))
+                item = QTableWidgetItem('Operating')
+                item.setForeground(QBrush(QColor(0, 128, 0)))
+                self.ui.machines_table.setItem(row_pos, 1, item)
             else:
-                self.ui.machines_table.setItem(row_pos, 1, QTableWidgetItem("Not operating"))
+                item = QTableWidgetItem('Not operating')
+                item.setForeground(QBrush(QColor(255, 0, 0)))
+                self.ui.machines_table.setItem(row_pos, 1, item)
             self.ui.machines_table.setItem(row_pos, 2, QTableWidgetItem(str(machine.temperature)))
             self.ui.machines_table.setItem(row_pos, 3, QTableWidgetItem(str(machine.nas)))
             self.ui.machines_table.setCellWidget(row_pos, 4, button)
             button.clicked.connect(lambda: self.machine_button_pressed())
+            self.find_machine()
 
     def machine_button_pressed(self):
         button = self.focusWidget()
@@ -163,10 +273,38 @@ class MainWindow(QMainWindow):
 
 
     def machine_info_page(self, machine):
+        self.machine = machine
         self.reroute(self.ui.machine_info_page)
         self.ui.m_info_id.setText(machine.identification)
         self.ui.m_info_hall.setText(self._factory.monitored_hall().name)
         self.ui.m_info_sensor.setText(machine.sensor)
+
+        # Temperature
+        self.ui.temperature_bar.rpb_setRange(0, 150)
+        self.ui.temperature_bar.rpb_setTextFormat('Value')
+        self.ui.temperature_bar.rpb_setValue(machine.temperature)
+
+        if machine.temperature > 40:
+            self.ui.temperature_bar.rpb_setLineColor((255, 216, 0))
+            self.ui.temperature_bar.rpb_setTextColor((255, 216, 0))
+
+        if machine.temperature > 100:
+            self.ui.temperature_bar.rpb_setLineColor((255, 0, 0))
+            self.ui.temperature_bar.rpb_setTextColor((255, 0, 0))
+
+        # Nas
+        self.ui.NAS_bar.rpb_setRange(0, 12)
+        self.ui.NAS_bar.rpb_setTextFormat('Value')
+        self.ui.NAS_bar.rpb_setValue(machine.nas)
+        self.ui.NAS_bar.rpb_setLineStyle('DotLine')
+
+        if machine.nas >= 10:
+            self.ui.NAS_bar.rpb_setLineColor((32, 42, 68))
+            self.ui.NAS_bar.rpb_setTextColor((32, 42, 68))
+
+        if machine.nas < 10:
+            self.ui.NAS_bar.rpb_setTextColor((75, 104, 184))
+            self.ui.NAS_bar.rpb_setLineColor((75, 104, 184))
 
 
 
@@ -222,6 +360,7 @@ class MainWindow(QMainWindow):
             self.ui.resize_window_button.setIcon(QtGui.QIcon(u":/prefix/icons/copy.png"))
 
     def reroute(self, route):
+        self.current_route = route
         previous_page = self.ui.stackedWidget.currentWidget()
         self.ui.stackedWidget.setCurrentWidget(route)
         if previous_page is not self.ui.stackedWidget.currentWidget():

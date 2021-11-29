@@ -553,7 +553,7 @@ border:none;</string>
              </size>
             </property>
             <property name="currentIndex">
-             <number>0</number>
+             <number>3</number>
             </property>
             <widget class="QWidget" name="main_menu_page">
              <layout class="QVBoxLayout" name="verticalLayout_10">
@@ -917,28 +917,52 @@ QPushButton:hover{
                  </property>
                  <property name="font">
                   <font>
-                   <family>Nirmala UI</family>
-                   <pointsize>10</pointsize>
+                   <family>Segoe UI</family>
+                   <pointsize>9</pointsize>
                   </font>
                  </property>
                  <column>
                   <property name="text">
                    <string>Hall </string>
                   </property>
+                  <property name="font">
+                   <font>
+                    <weight>75</weight>
+                    <bold>true</bold>
+                   </font>
+                  </property>
                  </column>
                  <column>
                   <property name="text">
                    <string>Machines</string>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <weight>75</weight>
+                    <bold>true</bold>
+                   </font>
                   </property>
                  </column>
                  <column>
                   <property name="text">
                    <string>Adress</string>
                   </property>
+                  <property name="font">
+                   <font>
+                    <weight>75</weight>
+                    <bold>true</bold>
+                   </font>
+                  </property>
                  </column>
                  <column>
                   <property name="text">
                    <string>Monitor</string>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <weight>75</weight>
+                    <bold>true</bold>
+                   </font>
                   </property>
                  </column>
                 </widget>
@@ -1276,25 +1300,55 @@ QPushButton:hover{
                  <property name="text">
                   <string>ID</string>
                  </property>
+                 <property name="font">
+                  <font>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
                 </column>
                 <column>
                  <property name="text">
                   <string>Active</string>
                  </property>
+                 <property name="font">
+                  <font>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
                 </column>
                 <column>
                  <property name="text">
-                  <string>Temperature (°C)</string>
+                  <string>Temperature </string>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
                  </property>
                 </column>
                 <column>
                  <property name="text">
                   <string>NAS</string>
                  </property>
+                 <property name="font">
+                  <font>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
                 </column>
                 <column>
                  <property name="text">
                   <string>More info</string>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
                  </property>
                 </column>
                </widget>
@@ -1627,6 +1681,12 @@ QPushButton:hover{
                  </item>
                  <item row="0" column="0">
                   <widget class="QLabel" name="label_19">
+                   <property name="font">
+                    <font>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
                    <property name="text">
                     <string>ID:</string>
                    </property>
@@ -1641,6 +1701,12 @@ QPushButton:hover{
                  </item>
                  <item row="0" column="2">
                   <widget class="QLabel" name="label_21">
+                   <property name="font">
+                    <font>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
                    <property name="text">
                     <string>Hall:</string>
                    </property>
@@ -1655,6 +1721,12 @@ QPushButton:hover{
                  </item>
                  <item row="0" column="4">
                   <widget class="QLabel" name="label_23">
+                   <property name="font">
+                    <font>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
                    <property name="text">
                     <string>Sensor ID:</string>
                    </property>
@@ -1674,6 +1746,12 @@ QPushButton:hover{
                 <layout class="QGridLayout" name="gridLayout_5">
                  <item row="0" column="0">
                   <widget class="QLabel" name="temperature_label">
+                   <property name="font">
+                    <font>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
                    <property name="text">
                     <string>Temperature:</string>
                    </property>
@@ -1681,16 +1759,22 @@ QPushButton:hover{
                  </item>
                  <item row="0" column="1">
                   <widget class="QLabel" name="NA_label">
+                   <property name="font">
+                    <font>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
                    <property name="text">
                     <string>NAS:</string>
                    </property>
                   </widget>
                  </item>
-                 <item row="1" column="0">
-                  <widget class="QWidget" name="temperature_bar" native="true"/>
-                 </item>
                  <item row="1" column="1">
-                  <widget class="QWidget" name="NAS_bar" native="true"/>
+                  <widget class="roundProgressBar" name="NAS_bar" native="true"/>
+                 </item>
+                 <item row="1" column="0">
+                  <widget class="roundProgressBar" name="temperature_bar" native="true"/>
                  </item>
                 </layout>
                </widget>
@@ -1771,10 +1855,48 @@ QPushButton:hover{
                <widget class="QFrame" name="graph_frame">
                 <layout class="QHBoxLayout" name="horizontalLayout_16">
                  <item>
-                  <widget class="QWidget" name="tmp_all_graph" native="true"/>
+                  <widget class="spiralProgressBar" name="stat_graph" native="true"/>
                  </item>
                  <item>
-                  <widget class="QWidget" name="NAS_all_graph" native="true"/>
+                  <widget class="QFrame" name="stat_frame">
+                   <widget class="QRadioButton" name="radio_temp">
+                    <property name="geometry">
+                     <rect>
+                      <x>10</x>
+                      <y>10</y>
+                      <width>111</width>
+                      <height>20</height>
+                     </rect>
+                    </property>
+                    <property name="text">
+                     <string>Temperature</string>
+                    </property>
+                   </widget>
+                   <widget class="QRadioButton" name="radio_nas">
+                    <property name="geometry">
+                     <rect>
+                      <x>150</x>
+                      <y>10</y>
+                      <width>111</width>
+                      <height>20</height>
+                     </rect>
+                    </property>
+                    <property name="text">
+                     <string>NAS</string>
+                    </property>
+                   </widget>
+                   <widget class="QWidget" name="verticalLayoutWidget">
+                    <property name="geometry">
+                     <rect>
+                      <x>10</x>
+                      <y>40</y>
+                      <width>191</width>
+                      <height>321</height>
+                     </rect>
+                    </property>
+                    <layout class="QVBoxLayout" name="test_layout"/>
+                   </widget>
+                  </widget>
                  </item>
                 </layout>
                </widget>
@@ -2192,6 +2314,20 @@ background-color: rgb(255, 255, 255);</string>
    </layout>
   </widget>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>roundProgressBar</class>
+   <extends>QWidget</extends>
+   <header>PySide2extn.RoundProgressBar.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>spiralProgressBar</class>
+   <extends>QWidget</extends>
+   <header>PySide2extn.SpiralProgressBar.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <resources>
   <include location="../icons.qrc"/>
  </resources>

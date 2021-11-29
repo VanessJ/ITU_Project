@@ -5,6 +5,10 @@ class Factory:
     def add_hall(self, hall):
         self._halls.append(hall)
 
+    def manage_halls(self):
+        for h in self._halls:
+            h.manage_machines()
+
     def get_machine(self, machine):
         hall = self.monitored_hall()
         machine = hall.get_by_id(machine.identification)

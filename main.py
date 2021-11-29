@@ -12,20 +12,8 @@ from view.interface import *
 from PySide2 import *
 from qt_material import *
 
-def set_labels(gui_window, machine):
-    gui_window.ui.label_name.setText(machine.identification)
-    gui_window.ui.label_temperature.setText(str(machine.temperature))
-    gui_window.ui.label_nas.setText(str(machine.nas))
-    gui_window.ui.label_time.setText(str(machine.runtime))
-
 
 if __name__ == "__main__":
-    schedule.every(5).seconds.do(lambda: sim.operating_update())
-    schedule.every(1).seconds.do(lambda: sim.stopped_update())
-    schedule.every(10).seconds.do(lambda: sim.not_filtering_update())
-    schedule.every(1).seconds.do(lambda: sim.filtering_update())
-    schedule.every(1).seconds.do(lambda: sim.runtime_update())
-
 
     hallA = Hall("Hall A", "Placeholder adresa")
     machine1 = Machine("M1")
@@ -57,9 +45,16 @@ if __name__ == "__main__":
     window = MainWindow(f)
     window.ui.stackedWidget.setCurrentWidget(window.ui.main_menu_page)
     window.show()
+
+    schedule.every(1).seconds.do(lambda: sim.operating_update())
+    schedule.every(1).seconds.do(lambda: sim.stopped_update())
+    schedule.every(5).seconds.do(lambda: sim.not_filtering_update())
+    schedule.every(2).seconds.do(lambda: sim.filtering_update())
+    schedule.every(1).seconds.do(lambda: window.update_values())
+
     while True:
         QApplication.processEvents()
-        # schedule.run_pending()
+        schedule.run_pending()
         time.sleep(0.01)
 
     app.exec_()

@@ -11,10 +11,6 @@ from view.interface import *
 from PySide2 import *
 from qt_material import *
 
-
-import pyqtgraph as pg
-
-
 class MainWindow(QMainWindow):
     def __init__(self, factory):
         QMainWindow.__init__(self)
@@ -27,10 +23,28 @@ class MainWindow(QMainWindow):
         self.back_route = self.ui.main_menu_page
         self.current_route = self.ui.main_menu_page
         self.machine = None
+
+        #shortcuts
+        self._menu_shortcut = None
+        self._halls_shortcut = None
+        self._machines_shortcut = None
+        self._stats_shortcut = None
+        self._settings_shortcut = None
+
         QSizeGrip(self.ui.size_grip)
 
 
+        self.ui.main_menu_shortcut.editingFinished.connect(lambda: self.get_menu_sequence())
+        self.ui.industry_halls_shortcut.editingFinished.connect(lambda: self.get_halls_sequence())
+        self.ui.machines_shortcut.editingFinished.connect(lambda: self.get_machines_sequence())
+        self.ui.stats_shortcut.editingFinished.connect(lambda: self.get_stat_sequence())
+        self.ui.settings_shortcut.editingFinished.connect(lambda: self.get_settings_sequence())
+
+
+
+
         self.ui.radio_temp.setChecked(True)
+
         self.ui.minimze_window_button.clicked.connect(lambda: self.showMinimized())
         self.ui.close_window_button.clicked.connect(lambda: self.close())
         self.ui.resize_window_button.clicked.connect(lambda: self.restore_or_maximize_window())
@@ -54,8 +68,6 @@ class MainWindow(QMainWindow):
         self.ui.statistics_back_button.clicked.connect(lambda: self.reroute(self.back_route))
         self.ui.machine_info_back_button.clicked.connect(lambda: self.machines_page())
 
-        #shortcuts
-        self.ui.main_menu_shortcut.editingFinished.connect(lambda: print(self.ui.main_menu_shortcut.keySequence))
 
         # halls search bar
         self.ui.search_bar_2.setPlaceholderText("Search")
@@ -93,6 +105,27 @@ class MainWindow(QMainWindow):
         self.ui.header_frame.mouseMoveEvent = move_window
 
         self.ui.menu_button.clicked.connect(lambda: self.slideLeftMenu())
+
+    def get_menu_sequence(self):
+        self._menu_shortcut = QKeySequence(self.ui.main_menu_shortcut.keySequence().toString()).toString()
+        QShortcut(QKeySequence(self._menu_shortcut), self).activated.connect(lambda: self.reroute(self.ui.main_menu_page))
+
+    def get_halls_sequence(self):
+        self._halls_shortcut = QKeySequence(self.ui.industry_halls_shortcut.keySequence().toString()).toString()
+        QShortcut(QKeySequence(self._halls_shortcut), self).activated.connect(lambda: self.halls_page())
+
+    def get_machines_sequence(self):
+        self._machines_shortcut = QKeySequence(self.ui.machines_shortcut.keySequence().toString()).toString()
+        QShortcut(QKeySequence(self._machines_shortcut), self).activated.connect(lambda: self.machines_page())
+
+    def get_stat_sequence(self):
+        self._stats_shortcut = QKeySequence(self.ui.stats_shortcut.keySequence().toString()).toString()
+        QShortcut(QKeySequence(self._stats_shortcut), self).activated.connect(lambda: self.stat_page())
+
+    def get_settings_sequence(self):
+        self._settings_shortcut = QKeySequence(self.ui.settings_shortcut.keySequence().toString()).toString()
+        QShortcut(QKeySequence(self._settings_shortcut), self).activated.connect(lambda: self.reroute(self.ui.settings_page))
+
 
 
     def update_values(self):
@@ -366,12 +399,8 @@ class MainWindow(QMainWindow):
         if previous_page is not self.ui.stackedWidget.currentWidget():
             self.back_route = previous_page
 
-
-
-
     def mousePressEvent(self, event):
         self.clickPosition = event.globalPos()
-
 
     def clicked_button_bar(self, text):
         self.ui.status_bar.setText(text)

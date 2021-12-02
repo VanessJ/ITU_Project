@@ -1,9 +1,13 @@
+from win10toast import ToastNotifier
+
 class Factory:
     def __init__(self):
         self._halls = []
+        self._notifier = ToastNotifier()
 
     def add_hall(self, hall):
         self._halls.append(hall)
+        hall.notifier = self._notifier
 
     def manage_halls(self):
         for h in self._halls:

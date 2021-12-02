@@ -1,3 +1,6 @@
+from win10toast import ToastNotifier
+import time
+
 
 class Hall:
 
@@ -6,6 +9,13 @@ class Hall:
         self._address = address
         self._machines = []
         self._monitored = False
+
+        #notification settings
+        self._notifier = None
+        self._turn_on_notification = True
+        self._turn_off_notification = True
+        self._filtration_off_notification = True
+        self._filtration_on_notification = True
 
     # name getter
     @property
@@ -24,6 +34,13 @@ class Hall:
     @property
     def monitored(self):
         return self._monitored
+    @property
+    def notifier(self):
+        return self._notifier
+
+    @notifier.setter
+    def notifier(self, notifier):
+        self._notifier = notifier
 
     @name.setter
     def name(self, name):
@@ -53,12 +70,24 @@ class Hall:
         for machine in self._machines:
             if machine.is_operating() and machine.temperature >= 120:
                 machine.turn_off()
+                if self._turn_off_notification:
+                    n_text = machine.identification + ": temperature exceeded 120°C - turning off"
+                    self._notifier.show_toast("Machine Manager", n_text, duration=10, threaded=True)
             if machine.is_operating() is False and machine.temperature <= 50:
                 machine.turn_on()
+                if self._turn_on_notification:
+                    n_text = machine.identification + ": temperature bellow 50° C - resuming operation"
+                    self._notifier.show_toast("Machine Manager", n_text, duration=10, threaded=True)
             if machine.is_filtering() and machine.nas <= 3:
                 machine.stop_filtering()
+                if self._filtration_off_notification:
+                    n_text = machine.identification + ": NAS bellow 3 - Stopped filtration"
+                    self._notifier.show_toast("Machine Manager", n_text, duration=10, threaded=True)
             if machine.is_filtering() is False and machine.nas >= 10:
                 machine.filter()
+                if self._filtration_on_notification:
+                    n_text = machine.identification + ": NAS exceeded value 12 - starting filtration"
+                    self._notifier.show_toast("Machine Manager", n_text, duration=10, threaded=True)
 
     def print_values(self):
         for machine in self._machines:

@@ -12,10 +12,10 @@ class Hall:
 
         #notification settings
         self._notifier = None
-        self._turn_on_notification = False
-        self._turn_off_notification = False
-        self._filtration_off_notification = False
-        self._filtration_on_notification = False
+        self._turn_on_notification = True
+        self._turn_off_notification = True
+        self._filtration_off_notification = True
+        self._filtration_on_notification = True
 
     # name getter
     @property

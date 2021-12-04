@@ -1,21 +1,17 @@
-from threading import Thread
 from model.Machine import Machine
 from model.Hall import Hall
 from model.Factory import Factory
 from model.Simulation import Simulation
-from view.MainWindow import MainWindow
+from MainWindow import MainWindow
 import time
 import schedule
-import sys
-import os
 from view.interface import *
-from PySide2 import *
 from qt_material import *
 
 
 if __name__ == "__main__":
 
-    hallA = Hall("Hall A", "Placeholder adresa")
+    hallA = Hall("Hall A", "Bratislava 4")
     machine1 = Machine("M1")
     machine2 = Machine("M2")
     machine3 = Machine("M3")
@@ -28,7 +24,7 @@ if __name__ == "__main__":
     hallA.add_machine(machine2)
     hallA.add_machine(machine3)
 
-    hallB = Hall("Hall B", "Placeholder adresa")
+    hallB = Hall("Hall B", "Košice 5")
     hallB.add_machine(machine4)
     hallB.add_machine(machine5)
     hallB.add_machine(machine6)
@@ -38,7 +34,7 @@ if __name__ == "__main__":
     f.add_hall(hallB)
     f.monitor(hallA)
 
-    sim = Simulation(hallA.machines)
+    sim = Simulation(f)
     sim.start_all()
 
     app = QApplication(sys.argv)

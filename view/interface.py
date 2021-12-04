@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'mainupAxvE.ui'
+## Form generated from reading UI file 'mainokcVQN.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.1
 ##
@@ -405,6 +405,7 @@ class Ui_MainWindow(object):
         self.halls_label = QLabel(self.frame)
         self.halls_label.setObjectName(u"halls_label")
         font4 = QFont()
+        font4.setFamily(u"Nirmala UI")
         font4.setPointSize(12)
         font4.setBold(True)
         font4.setWeight(75)
@@ -1244,7 +1245,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.stackedWidget.setCurrentIndex(1)
+        self.stackedWidget.setCurrentIndex(7)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -1347,6 +1348,6 @@ class Ui_MainWindow(object):
         self.label_7.setText(QCoreApplication.translate("MainWindow", u"(1sec = ? minutes)", None))
         self.label_29.setText(QCoreApplication.translate("MainWindow", u"Settings shortcut:", None))
         self.label_3.setText(QCoreApplication.translate("MainWindow", u"Version 1.4 | ITU | Copyright RHVJTH", None))
-        self.status_bar.setText(QCoreApplication.translate("MainWindow", u"Welcome to Main Menu...", None))
+        self.status_bar.setText(QCoreApplication.translate("MainWindow", u"Welcome to Main Menu", None))
     # retranslateUi
 

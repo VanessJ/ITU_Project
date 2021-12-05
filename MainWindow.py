@@ -34,6 +34,10 @@ class MainWindow(QMainWindow):
         QSizeGrip(self.ui.size_grip)
 
 
+        #notification settings
+        self.notifications()
+
+
         self.ui.main_menu_shortcut.editingFinished.connect(lambda: self.get_menu_sequence())
         self.ui.industry_halls_shortcut.editingFinished.connect(lambda: self.get_halls_sequence())
         self.ui.machines_shortcut.editingFinished.connect(lambda: self.get_machines_sequence())
@@ -110,6 +114,29 @@ class MainWindow(QMainWindow):
         self.ui.header_frame.mouseMoveEvent = move_window
 
         self.ui.menu_button.clicked.connect(lambda: self.slideLeftMenu())
+
+
+    def notifications(self):
+        self.ui.box_temperature_high.setChecked(False)
+        self.ui.box_temperature_high.stateChanged.connect(lambda: self.turn_off_notifications())
+        self.ui.box_temperature_low.setChecked(False)
+        self.ui.box_temperature_low.stateChanged.connect(lambda: self.turn_on_notifications())
+        self.ui.box_filtration_stop.setChecked(False)
+        self.ui.box_filtration_stop.stateChanged.connect(lambda: self.filtration_off_notifications())
+        self.ui.box_filtration_start.setChecked(False)
+        self.ui.box_filtration_start.stateChanged.connect(lambda: self.filtration_on_notifications())
+
+    def turn_off_notifications(self):
+        self._factory.turn_off_notifications()
+
+    def turn_on_notifications(self):
+        self._factory.turn_on_notifications()
+
+    def filtration_off_notifications(self):
+        self._factory.filtration_off_notifications()
+
+    def filtration_on_notifications(self):
+        self._factory.filtration_on_notifications()
 
     def get_menu_sequence(self):
         self._menu_shortcut = QKeySequence(self.ui.main_menu_shortcut.keySequence().toString()).toString()

@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>793</width>
+    <width>783</width>
     <height>602</height>
    </rect>
   </property>
@@ -553,7 +553,7 @@ border:none;</string>
              </size>
             </property>
             <property name="currentIndex">
-             <number>7</number>
+             <number>0</number>
             </property>
             <widget class="QWidget" name="main_menu_page">
              <layout class="QVBoxLayout" name="verticalLayout_10">
@@ -1988,79 +1988,13 @@ QPushButton:hover{
                     <enum>QFrame::Raised</enum>
                    </property>
                    <layout class="QGridLayout" name="gridLayout_7">
-                    <item row="3" column="0">
-                     <widget class="QLabel" name="label_22">
-                      <property name="font">
-                       <font>
-                        <family>Nirmala UI</family>
-                        <pointsize>9</pointsize>
-                       </font>
-                      </property>
-                      <property name="text">
-                       <string>Industry Halls shortcut:</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="1" column="0">
-                     <widget class="QLabel" name="label_5">
-                      <property name="font">
-                       <font>
-                        <family>Nirmala UI</family>
-                        <pointsize>9</pointsize>
-                       </font>
-                      </property>
-                      <property name="text">
-                       <string>Set up graph time conversion:</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="2" column="0">
-                     <widget class="QLabel" name="label_6">
-                      <property name="font">
-                       <font>
-                        <family>Nirmala UI</family>
-                        <pointsize>9</pointsize>
-                       </font>
-                      </property>
-                      <property name="text">
-                       <string>Main Menu shortcut:</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="0" column="2">
-                     <widget class="QLabel" name="label_20">
-                      <property name="minimumSize">
+                    <item row="4" column="1">
+                     <widget class="QKeySequenceEdit" name="machines_shortcut">
+                      <property name="maximumSize">
                        <size>
-                        <width>0</width>
-                        <height>0</height>
+                        <width>100</width>
+                        <height>16777215</height>
                        </size>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <family>Nirmala UI</family>
-                       </font>
-                      </property>
-                      <property name="text">
-                       <string>(everyday at ?:??)</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="0" column="0">
-                     <widget class="QLabel" name="label_4">
-                      <property name="minimumSize">
-                       <size>
-                        <width>300</width>
-                        <height>0</height>
-                       </size>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <family>Nirmala UI</family>
-                        <pointsize>9</pointsize>
-                       </font>
-                      </property>
-                      <property name="text">
-                       <string>Set up automatic test:</string>
                       </property>
                      </widget>
                     </item>
@@ -2074,13 +2008,41 @@ QPushButton:hover{
                       </property>
                      </widget>
                     </item>
-                    <item row="1" column="1">
-                     <widget class="QSpinBox" name="graph_time_conversion_rate">
-                      <property name="maximumSize">
+                    <item row="1" column="2">
+                     <widget class="QLabel" name="label_7">
+                      <property name="minimumSize">
                        <size>
-                        <width>100</width>
-                        <height>16777215</height>
+                        <width>0</width>
+                        <height>0</height>
                        </size>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <family>Nirmala UI</family>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string>(1sec = ? minutes)</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="8" column="0">
+                     <widget class="QLabel" name="label_31">
+                      <property name="text">
+                       <string>Notification when temperature is low:</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="2" column="0">
+                     <widget class="QLabel" name="label_6">
+                      <property name="font">
+                       <font>
+                        <family>Nirmala UI</family>
+                        <pointsize>9</pointsize>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string>Main Menu shortcut:</string>
                       </property>
                      </widget>
                     </item>
@@ -2110,8 +2072,21 @@ QPushButton:hover{
                       </property>
                      </widget>
                     </item>
-                    <item row="0" column="1">
-                     <widget class="QTimeEdit" name="automatic_tests_setting_time">
+                    <item row="3" column="0">
+                     <widget class="QLabel" name="label_22">
+                      <property name="font">
+                       <font>
+                        <family>Nirmala UI</family>
+                        <pointsize>9</pointsize>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string>Industry Halls shortcut:</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="6" column="1">
+                     <widget class="QKeySequenceEdit" name="settings_shortcut">
                       <property name="maximumSize">
                        <size>
                         <width>100</width>
@@ -2120,8 +2095,8 @@ QPushButton:hover{
                       </property>
                      </widget>
                     </item>
-                    <item row="1" column="2">
-                     <widget class="QLabel" name="label_7">
+                    <item row="0" column="2">
+                     <widget class="QLabel" name="label_20">
                       <property name="minimumSize">
                        <size>
                         <width>0</width>
@@ -2134,7 +2109,7 @@ QPushButton:hover{
                        </font>
                       </property>
                       <property name="text">
-                       <string>(1sec = ? minutes)</string>
+                       <string>(everyday at ?:??)</string>
                       </property>
                      </widget>
                     </item>
@@ -2151,6 +2126,13 @@ QPushButton:hover{
                       </property>
                      </widget>
                     </item>
+                    <item row="7" column="0">
+                     <widget class="QLabel" name="label_30">
+                      <property name="text">
+                       <string>Notification when temperature is high:</string>
+                      </property>
+                     </widget>
+                    </item>
                     <item row="3" column="1">
                      <widget class="QKeySequenceEdit" name="industry_halls_shortcut">
                       <property name="maximumSize">
@@ -2161,8 +2143,57 @@ QPushButton:hover{
                       </property>
                      </widget>
                     </item>
-                    <item row="4" column="1">
-                     <widget class="QKeySequenceEdit" name="machines_shortcut">
+                    <item row="0" column="1">
+                     <widget class="QTimeEdit" name="automatic_tests_setting_time">
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>16777215</height>
+                       </size>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="1" column="0">
+                     <widget class="QLabel" name="label_5">
+                      <property name="font">
+                       <font>
+                        <family>Nirmala UI</family>
+                        <pointsize>9</pointsize>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string>Set up graph time conversion:</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="0" column="0">
+                     <widget class="QLabel" name="label_4">
+                      <property name="minimumSize">
+                       <size>
+                        <width>300</width>
+                        <height>0</height>
+                       </size>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <family>Nirmala UI</family>
+                        <pointsize>9</pointsize>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string>Set up automatic test:</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="9" column="0">
+                     <widget class="QLabel" name="label_32">
+                      <property name="text">
+                       <string>Notification when filtration starts:</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="1" column="1">
+                     <widget class="QSpinBox" name="graph_time_conversion_rate">
                       <property name="maximumSize">
                        <size>
                         <width>100</width>
@@ -2181,13 +2212,38 @@ QPushButton:hover{
                       </property>
                      </widget>
                     </item>
-                    <item row="6" column="1">
-                     <widget class="QKeySequenceEdit" name="settings_shortcut">
-                      <property name="maximumSize">
-                       <size>
-                        <width>100</width>
-                        <height>16777215</height>
-                       </size>
+                    <item row="10" column="0">
+                     <widget class="QLabel" name="label_33">
+                      <property name="text">
+                       <string>Notification when filtration stops:</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="7" column="1" alignment="Qt::AlignHCenter">
+                     <widget class="QCheckBox" name="checkBox">
+                      <property name="text">
+                       <string/>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="8" column="1" alignment="Qt::AlignHCenter">
+                     <widget class="QCheckBox" name="box_temperature_low">
+                      <property name="text">
+                       <string/>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="9" column="1" alignment="Qt::AlignHCenter">
+                     <widget class="QCheckBox" name="box_filtration_start">
+                      <property name="text">
+                       <string/>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="10" column="1" alignment="Qt::AlignHCenter">
+                     <widget class="QCheckBox" name="box_filtration_stop">
+                      <property name="text">
+                       <string/>
                       </property>
                      </widget>
                     </item>
@@ -2240,7 +2296,7 @@ border:none;
              </font>
             </property>
             <property name="text">
-             <string>Version 1.4 | ITU | Copyright RHVJTH</string>
+             <string>Version 1.8 | ITU | Copyright RHVJTH</string>
             </property>
            </widget>
           </item>
@@ -2301,7 +2357,7 @@ background-color: rgb(255, 255, 255);</string>
              <string notr="true">border:none</string>
             </property>
             <property name="text">
-             <string>Welcome to Main Menu</string>
+             <string>Welcome to Main Menu...</string>
             </property>
            </widget>
           </item>

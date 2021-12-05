@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'mainokcVQN.ui'
+## Form generated from reading UI file 'mainArTvMA.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.1
 ##
@@ -21,7 +21,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(793, 602)
+        MainWindow.resize(783, 602)
         MainWindow.setStyleSheet(u"")
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
@@ -1060,42 +1060,11 @@ class Ui_MainWindow(object):
         self.frame_2.setFrameShadow(QFrame.Raised)
         self.gridLayout_7 = QGridLayout(self.frame_2)
         self.gridLayout_7.setObjectName(u"gridLayout_7")
-        self.label_22 = QLabel(self.frame_2)
-        self.label_22.setObjectName(u"label_22")
-        font10 = QFont()
-        font10.setFamily(u"Nirmala UI")
-        font10.setPointSize(9)
-        self.label_22.setFont(font10)
+        self.machines_shortcut = QKeySequenceEdit(self.frame_2)
+        self.machines_shortcut.setObjectName(u"machines_shortcut")
+        self.machines_shortcut.setMaximumSize(QSize(100, 16777215))
 
-        self.gridLayout_7.addWidget(self.label_22, 3, 0, 1, 1)
-
-        self.label_5 = QLabel(self.frame_2)
-        self.label_5.setObjectName(u"label_5")
-        self.label_5.setFont(font10)
-
-        self.gridLayout_7.addWidget(self.label_5, 1, 0, 1, 1)
-
-        self.label_6 = QLabel(self.frame_2)
-        self.label_6.setObjectName(u"label_6")
-        self.label_6.setFont(font10)
-
-        self.gridLayout_7.addWidget(self.label_6, 2, 0, 1, 1)
-
-        self.label_20 = QLabel(self.frame_2)
-        self.label_20.setObjectName(u"label_20")
-        self.label_20.setMinimumSize(QSize(0, 0))
-        font11 = QFont()
-        font11.setFamily(u"Nirmala UI")
-        self.label_20.setFont(font11)
-
-        self.gridLayout_7.addWidget(self.label_20, 0, 2, 1, 1)
-
-        self.label_4 = QLabel(self.frame_2)
-        self.label_4.setObjectName(u"label_4")
-        self.label_4.setMinimumSize(QSize(300, 0))
-        self.label_4.setFont(font10)
-
-        self.gridLayout_7.addWidget(self.label_4, 0, 0, 1, 1)
+        self.gridLayout_7.addWidget(self.machines_shortcut, 4, 1, 1, 1)
 
         self.main_menu_shortcut = QKeySequenceEdit(self.frame_2)
         self.main_menu_shortcut.setObjectName(u"main_menu_shortcut")
@@ -1103,42 +1072,70 @@ class Ui_MainWindow(object):
 
         self.gridLayout_7.addWidget(self.main_menu_shortcut, 2, 1, 1, 1)
 
-        self.graph_time_conversion_rate = QSpinBox(self.frame_2)
-        self.graph_time_conversion_rate.setObjectName(u"graph_time_conversion_rate")
-        self.graph_time_conversion_rate.setMaximumSize(QSize(100, 16777215))
+        self.label_7 = QLabel(self.frame_2)
+        self.label_7.setObjectName(u"label_7")
+        self.label_7.setMinimumSize(QSize(0, 0))
+        font10 = QFont()
+        font10.setFamily(u"Nirmala UI")
+        self.label_7.setFont(font10)
 
-        self.gridLayout_7.addWidget(self.graph_time_conversion_rate, 1, 1, 1, 1)
+        self.gridLayout_7.addWidget(self.label_7, 1, 2, 1, 1)
+
+        self.label_31 = QLabel(self.frame_2)
+        self.label_31.setObjectName(u"label_31")
+
+        self.gridLayout_7.addWidget(self.label_31, 8, 0, 1, 1)
+
+        self.label_6 = QLabel(self.frame_2)
+        self.label_6.setObjectName(u"label_6")
+        font11 = QFont()
+        font11.setFamily(u"Nirmala UI")
+        font11.setPointSize(9)
+        self.label_6.setFont(font11)
+
+        self.gridLayout_7.addWidget(self.label_6, 2, 0, 1, 1)
 
         self.label_24 = QLabel(self.frame_2)
         self.label_24.setObjectName(u"label_24")
-        self.label_24.setFont(font10)
+        self.label_24.setFont(font11)
 
         self.gridLayout_7.addWidget(self.label_24, 4, 0, 1, 1)
 
         self.label_28 = QLabel(self.frame_2)
         self.label_28.setObjectName(u"label_28")
-        self.label_28.setFont(font10)
+        self.label_28.setFont(font11)
 
         self.gridLayout_7.addWidget(self.label_28, 5, 0, 1, 1)
 
-        self.automatic_tests_setting_time = QTimeEdit(self.frame_2)
-        self.automatic_tests_setting_time.setObjectName(u"automatic_tests_setting_time")
-        self.automatic_tests_setting_time.setMaximumSize(QSize(100, 16777215))
+        self.label_22 = QLabel(self.frame_2)
+        self.label_22.setObjectName(u"label_22")
+        self.label_22.setFont(font11)
 
-        self.gridLayout_7.addWidget(self.automatic_tests_setting_time, 0, 1, 1, 1)
+        self.gridLayout_7.addWidget(self.label_22, 3, 0, 1, 1)
 
-        self.label_7 = QLabel(self.frame_2)
-        self.label_7.setObjectName(u"label_7")
-        self.label_7.setMinimumSize(QSize(0, 0))
-        self.label_7.setFont(font11)
+        self.settings_shortcut = QKeySequenceEdit(self.frame_2)
+        self.settings_shortcut.setObjectName(u"settings_shortcut")
+        self.settings_shortcut.setMaximumSize(QSize(100, 16777215))
 
-        self.gridLayout_7.addWidget(self.label_7, 1, 2, 1, 1)
+        self.gridLayout_7.addWidget(self.settings_shortcut, 6, 1, 1, 1)
+
+        self.label_20 = QLabel(self.frame_2)
+        self.label_20.setObjectName(u"label_20")
+        self.label_20.setMinimumSize(QSize(0, 0))
+        self.label_20.setFont(font10)
+
+        self.gridLayout_7.addWidget(self.label_20, 0, 2, 1, 1)
 
         self.label_29 = QLabel(self.frame_2)
         self.label_29.setObjectName(u"label_29")
-        self.label_29.setFont(font10)
+        self.label_29.setFont(font11)
 
         self.gridLayout_7.addWidget(self.label_29, 6, 0, 1, 1)
+
+        self.label_30 = QLabel(self.frame_2)
+        self.label_30.setObjectName(u"label_30")
+
+        self.gridLayout_7.addWidget(self.label_30, 7, 0, 1, 1)
 
         self.industry_halls_shortcut = QKeySequenceEdit(self.frame_2)
         self.industry_halls_shortcut.setObjectName(u"industry_halls_shortcut")
@@ -1146,11 +1143,35 @@ class Ui_MainWindow(object):
 
         self.gridLayout_7.addWidget(self.industry_halls_shortcut, 3, 1, 1, 1)
 
-        self.machines_shortcut = QKeySequenceEdit(self.frame_2)
-        self.machines_shortcut.setObjectName(u"machines_shortcut")
-        self.machines_shortcut.setMaximumSize(QSize(100, 16777215))
+        self.automatic_tests_setting_time = QTimeEdit(self.frame_2)
+        self.automatic_tests_setting_time.setObjectName(u"automatic_tests_setting_time")
+        self.automatic_tests_setting_time.setMaximumSize(QSize(100, 16777215))
 
-        self.gridLayout_7.addWidget(self.machines_shortcut, 4, 1, 1, 1)
+        self.gridLayout_7.addWidget(self.automatic_tests_setting_time, 0, 1, 1, 1)
+
+        self.label_5 = QLabel(self.frame_2)
+        self.label_5.setObjectName(u"label_5")
+        self.label_5.setFont(font11)
+
+        self.gridLayout_7.addWidget(self.label_5, 1, 0, 1, 1)
+
+        self.label_4 = QLabel(self.frame_2)
+        self.label_4.setObjectName(u"label_4")
+        self.label_4.setMinimumSize(QSize(300, 0))
+        self.label_4.setFont(font11)
+
+        self.gridLayout_7.addWidget(self.label_4, 0, 0, 1, 1)
+
+        self.label_32 = QLabel(self.frame_2)
+        self.label_32.setObjectName(u"label_32")
+
+        self.gridLayout_7.addWidget(self.label_32, 9, 0, 1, 1)
+
+        self.graph_time_conversion_rate = QSpinBox(self.frame_2)
+        self.graph_time_conversion_rate.setObjectName(u"graph_time_conversion_rate")
+        self.graph_time_conversion_rate.setMaximumSize(QSize(100, 16777215))
+
+        self.gridLayout_7.addWidget(self.graph_time_conversion_rate, 1, 1, 1, 1)
 
         self.stats_shortcut = QKeySequenceEdit(self.frame_2)
         self.stats_shortcut.setObjectName(u"stats_shortcut")
@@ -1158,11 +1179,30 @@ class Ui_MainWindow(object):
 
         self.gridLayout_7.addWidget(self.stats_shortcut, 5, 1, 1, 1)
 
-        self.settings_shortcut = QKeySequenceEdit(self.frame_2)
-        self.settings_shortcut.setObjectName(u"settings_shortcut")
-        self.settings_shortcut.setMaximumSize(QSize(100, 16777215))
+        self.label_33 = QLabel(self.frame_2)
+        self.label_33.setObjectName(u"label_33")
 
-        self.gridLayout_7.addWidget(self.settings_shortcut, 6, 1, 1, 1)
+        self.gridLayout_7.addWidget(self.label_33, 10, 0, 1, 1)
+
+        self.box_temperature_high = QCheckBox(self.frame_2)
+        self.box_temperature_high.setObjectName(u"box_temperature_high")
+
+        self.gridLayout_7.addWidget(self.box_temperature_high, 7, 1, 1, 1, Qt.AlignHCenter)
+
+        self.box_temperature_low = QCheckBox(self.frame_2)
+        self.box_temperature_low.setObjectName(u"box_temperature_low")
+
+        self.gridLayout_7.addWidget(self.box_temperature_low, 8, 1, 1, 1, Qt.AlignHCenter)
+
+        self.box_filtration_start = QCheckBox(self.frame_2)
+        self.box_filtration_start.setObjectName(u"box_filtration_start")
+
+        self.gridLayout_7.addWidget(self.box_filtration_start, 9, 1, 1, 1, Qt.AlignHCenter)
+
+        self.box_filtration_stop = QCheckBox(self.frame_2)
+        self.box_filtration_stop.setObjectName(u"box_filtration_stop")
+
+        self.gridLayout_7.addWidget(self.box_filtration_stop, 10, 1, 1, 1, Qt.AlignHCenter)
 
 
         self.horizontalLayout_19.addWidget(self.frame_2, 0, Qt.AlignTop)
@@ -1338,16 +1378,24 @@ class Ui_MainWindow(object):
         self.radio_nas.setText(QCoreApplication.translate("MainWindow", u"NAS", None))
         self.label_26.setText(QCoreApplication.translate("MainWindow", u"Settings", None))
         self.settings_back_button.setText(QCoreApplication.translate("MainWindow", u"BACK", None))
-        self.label_22.setText(QCoreApplication.translate("MainWindow", u"Industry Halls shortcut:", None))
-        self.label_5.setText(QCoreApplication.translate("MainWindow", u"Set up graph time conversion:", None))
+        self.label_7.setText(QCoreApplication.translate("MainWindow", u"(1sec = ? minutes)", None))
+        self.label_31.setText(QCoreApplication.translate("MainWindow", u"Notification when temperature is low:", None))
         self.label_6.setText(QCoreApplication.translate("MainWindow", u"Main Menu shortcut:", None))
-        self.label_20.setText(QCoreApplication.translate("MainWindow", u"(everyday at ?:??)", None))
-        self.label_4.setText(QCoreApplication.translate("MainWindow", u"Set up automatic test:", None))
         self.label_24.setText(QCoreApplication.translate("MainWindow", u"Machines shortcut:", None))
         self.label_28.setText(QCoreApplication.translate("MainWindow", u"Statistics shortcut:", None))
-        self.label_7.setText(QCoreApplication.translate("MainWindow", u"(1sec = ? minutes)", None))
+        self.label_22.setText(QCoreApplication.translate("MainWindow", u"Industry Halls shortcut:", None))
+        self.label_20.setText(QCoreApplication.translate("MainWindow", u"(everyday at ?:??)", None))
         self.label_29.setText(QCoreApplication.translate("MainWindow", u"Settings shortcut:", None))
-        self.label_3.setText(QCoreApplication.translate("MainWindow", u"Version 1.4 | ITU | Copyright RHVJTH", None))
+        self.label_30.setText(QCoreApplication.translate("MainWindow", u"Notification when temperature is high:", None))
+        self.label_5.setText(QCoreApplication.translate("MainWindow", u"Set up graph time conversion:", None))
+        self.label_4.setText(QCoreApplication.translate("MainWindow", u"Set up automatic test:", None))
+        self.label_32.setText(QCoreApplication.translate("MainWindow", u"Notification when filtration starts:", None))
+        self.label_33.setText(QCoreApplication.translate("MainWindow", u"Notification when filtration stops:", None))
+        self.box_temperature_high.setText("")
+        self.box_temperature_low.setText("")
+        self.box_filtration_start.setText("")
+        self.box_filtration_stop.setText("")
+        self.label_3.setText(QCoreApplication.translate("MainWindow", u"Version 1.8 | ITU | Copyright RHVJTH", None))
         self.status_bar.setText(QCoreApplication.translate("MainWindow", u"Welcome to Main Menu", None))
     # retranslateUi
 

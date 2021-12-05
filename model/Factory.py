@@ -28,6 +28,24 @@ class Factory:
         for h in self._halls:
             if h.monitored:
                 return h
+
+    def turn_on_notifications(self):
+        for h in self._halls:
+            h.turn_on_notifications()
+
+    def turn_off_notifications(self):
+        for h in self._halls:
+            h.turn_off_notifications()
+
+    def filtration_off_notifications(self):
+        for h in self._halls:
+            h.filtration_off_notifications()
+
+    def filtration_on_notifications(self):
+        for h in self._halls:
+            h.filtration_on_notifications()
+
+
     @property
     def halls(self):
         return self._halls

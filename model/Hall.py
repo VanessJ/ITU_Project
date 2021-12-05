@@ -12,10 +12,34 @@ class Hall:
 
         #notification settings
         self._notifier = None
-        self._turn_on_notification = True
-        self._turn_off_notification = True
-        self._filtration_off_notification = True
-        self._filtration_on_notification = True
+        self._turn_on_notification = False
+        self._turn_off_notification = False
+        self._filtration_off_notification = False
+        self._filtration_on_notification = False
+
+    def turn_on_notifications(self):
+        if self._turn_on_notification is False:
+            self._turn_on_notification = True
+        elif self._turn_on_notification is True:
+            self._turn_on_notification = False
+
+    def turn_off_notifications(self):
+        if self._turn_off_notification is False:
+            self._turn_off_notification = True
+        elif self._turn_off_notification is True:
+            self._turn_off_notification = False
+
+    def filtration_off_notifications(self):
+        if self._filtration_on_notification is False:
+            self._filtration_on_notification = True
+        elif self._filtration_on_notification is True:
+            self._filtration_on_notification = False
+
+    def filtration_on_notifications(self):
+        if self._filtration_off_notification is False:
+            self._filtration_off_notification = True
+        elif self._filtration_off_notification is True:
+            self._filtration_off_notification = False
 
     # name getter
     @property
@@ -70,22 +94,22 @@ class Hall:
         for machine in self._machines:
             if machine.is_operating() and machine.temperature >= 120:
                 machine.turn_off()
-                if self._turn_off_notification:
+                if self._turn_off_notification and self._monitored:
                     n_text = machine.identification + ": temperature exceeded 120°C - turning off"
                     self._notifier.show_toast("Machine Manager", n_text, duration=10, threaded=True)
             if machine.is_operating() is False and machine.temperature <= 50:
                 machine.turn_on()
-                if self._turn_on_notification:
+                if self._turn_on_notification and self._monitored:
                     n_text = machine.identification + ": temperature bellow 50° C - resuming operation"
                     self._notifier.show_toast("Machine Manager", n_text, duration=10, threaded=True)
             if machine.is_filtering() and machine.nas <= 3:
                 machine.stop_filtering()
-                if self._filtration_off_notification:
+                if self._filtration_off_notification and self._monitored:
                     n_text = machine.identification + ": NAS bellow 3 - Stopped filtration"
                     self._notifier.show_toast("Machine Manager", n_text, duration=10, threaded=True)
             if machine.is_filtering() is False and machine.nas >= 10:
                 machine.filter()
-                if self._filtration_on_notification:
+                if self._filtration_on_notification and self._monitored:
                     n_text = machine.identification + ": NAS exceeded value 12 - starting filtration"
                     self._notifier.show_toast("Machine Manager", n_text, duration=10, threaded=True)
 
